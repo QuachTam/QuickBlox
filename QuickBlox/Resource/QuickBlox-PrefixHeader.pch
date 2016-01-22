@@ -1,0 +1,21 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#define DEVICE_SIZE [[[[UIApplication sharedApplication] keyWindow] rootViewController].view convertRect:[[UIScreen mainScreen] bounds] fromView:nil].size
+
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <MagicalRecord/MagicalRecord.h>
+    #define _LSFromTable NSLocalizedStringFromTable
+    #define _LS NSLocalizedString
+#endif
