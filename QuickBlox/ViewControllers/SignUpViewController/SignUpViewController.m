@@ -1,18 +1,18 @@
 //
-//  LoginViewController.m
+//  SignUpViewController.m
 //  QuickBlox
 //
-//  Created by Tamqn on 1/22/16.
+//  Created by Tamqn on 1/27/16.
 //  Copyright © 2016 Tamqn. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "SignUpViewController.h"
 
-@interface LoginViewController ()
+@interface SignUpViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

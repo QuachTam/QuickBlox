@@ -34,6 +34,8 @@
 		FB4422391C51D4240083B341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4422381C51D4240083B341 /* AppDelegate.m */; };
 		FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44223C1C51D4530083B341 /* CustomAnimationController.m */; };
 		FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44223E1C51D4530083B341 /* SWRevealViewController.m */; };
+		FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */; };
+		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,10 @@
 		FB44223C1C51D4530083B341 /* CustomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationController.m; sourceTree = "<group>"; };
 		FB44223D1C51D4530083B341 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FB44223E1C51D4530083B341 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		FB6F7E801C5877E6002F63F3 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		FB6F7E841C587DB5002F63F3 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		FB6F7E851C587DB5002F63F3 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,8 @@
 				FB05A99D1C521D8D00F4DC97 /* LoginViewController */,
 				FB05A9951C521AFF00F4DC97 /* LeftViewController */,
 				FB05A9941C521AED00F4DC97 /* MainViewController */,
+				FB6F7E7F1C5877D0002F63F3 /* SignUpViewController */,
+				FB6F7E831C587DAA002F63F3 /* CartViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +257,24 @@
 				FB44223E1C51D4530083B341 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		FB6F7E7F1C5877D0002F63F3 /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB6F7E801C5877E6002F63F3 /* SignUpViewController.h */,
+				FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		FB6F7E831C587DAA002F63F3 /* CartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB6F7E841C587DB5002F63F3 /* CartViewController.h */,
+				FB6F7E851C587DB5002F63F3 /* CartViewController.m */,
+			);
+			path = CartViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,8 +414,10 @@
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
 				FB05A9981C521B1E00F4DC97 /* MainViewController.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
+				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
+				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
 				FB4422161C51CD1C0083B341 /* main.m in Sources */,

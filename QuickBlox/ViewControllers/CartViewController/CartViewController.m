@@ -1,37 +1,34 @@
 //
-//  LoginViewController.m
+//  CartViewController.m
 //  QuickBlox
 //
-//  Created by Tamqn on 1/22/16.
+//  Created by Tamqn on 1/27/16.
 //  Copyright © 2016 Tamqn. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "CartViewController.h"
 
-@interface LoginViewController ()
+@interface CartViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation CartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setHidden:NO];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setHidden:YES];
 }
 
 /*
