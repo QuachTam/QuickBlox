@@ -1,28 +1,26 @@
 //
-//  MainViewController.m
+//  SetupViewContronller.m
 //  QuickBlox
 //
-//  Created by Tamqn on 1/22/16.
+//  Created by Tamqn on 2/1/16.
 //  Copyright © 2016 Tamqn. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "SetupViewContronller.h"
 
-@interface MainViewController ()
+@interface SetupViewContronller ()
 
 @end
 
-@implementation MainViewController
+@implementation SetupViewContronller
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.hidesBackButton = YES;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
-        [self.sidebarButton setTarget: self.revealViewController];
-        [self.sidebarButton setAction: @selector(revealToggle:)];
+        [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
 }

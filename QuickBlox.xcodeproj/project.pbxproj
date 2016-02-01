@@ -14,18 +14,27 @@
 		FB05A9891C52176500F4DC97 /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A97D1C52176500F4DC97 /* home@3x.png */; };
 		FB05A98A1C52176500F4DC97 /* qrCode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A97E1C52176500F4DC97 /* qrCode@2x.png */; };
 		FB05A98B1C52176500F4DC97 /* qrCode@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A97F1C52176500F4DC97 /* qrCode@3x.png */; };
-		FB05A98C1C52176500F4DC97 /* reveal-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9801C52176500F4DC97 /* reveal-icon.png */; };
-		FB05A98D1C52176500F4DC97 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9811C52176500F4DC97 /* reveal-icon@2x.png */; };
 		FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9821C52176500F4DC97 /* shopping@2x.png */; };
 		FB05A98F1C52176500F4DC97 /* shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9831C52176500F4DC97 /* shopping@3x.png */; };
 		FB05A9901C52176500F4DC97 /* UITableContract.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9841C52176500F4DC97 /* UITableContract.png */; };
 		FB05A9911C52176500F4DC97 /* UITableContract@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9851C52176500F4DC97 /* UITableContract@2x.png */; };
 		FB05A9921C52176500F4DC97 /* UITableExpand.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9861C52176500F4DC97 /* UITableExpand.png */; };
 		FB05A9931C52176500F4DC97 /* UITableExpand@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB05A9871C52176500F4DC97 /* UITableExpand@2x.png */; };
-		FB05A9981C521B1E00F4DC97 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A9971C521B1E00F4DC97 /* MainViewController.m */; };
 		FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A99A1C521B3500F4DC97 /* LeftTableViewController.m */; };
 		FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A99F1C521D9A00F4DC97 /* LoginViewController.m */; };
 		FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */; };
+		FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */; };
+		FB117DC61C5F483F00F8E222 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */; };
+		FB117DC91C5F48B200F8E222 /* button_plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC71C5F48B200F8E222 /* button_plus@3x.png */; };
+		FB117DCA1C5F48B200F8E222 /* button_plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC81C5F48B200F8E222 /* button_plus@2x.png */; };
+		FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DCF1C5F5B2C00F8E222 /* ItemsTableViewController.m */; };
+		FB117DD41C5F5E3F00F8E222 /* ItemsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DD21C5F5E3F00F8E222 /* ItemsTableViewCell.m */; };
+		FB117DD81C5F77EC00F8E222 /* doneButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DD61C5F77EC00F8E222 /* doneButton@3x.png */; };
+		FB117DD91C5F77EC00F8E222 /* doneButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DD71C5F77EC00F8E222 /* doneButton@2x.png */; };
+		FB117DDC1C5F783B00F8E222 /* backButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DDA1C5F783B00F8E222 /* backButton@3x.png */; };
+		FB117DDD1C5F783B00F8E222 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DDB1C5F783B00F8E222 /* backButton@2x.png */; };
+		FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DE31C5F804A00F8E222 /* AddItemViewController.m */; };
+		FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */; };
 		FB4422161C51CD1C0083B341 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4422151C51CD1C0083B341 /* main.m */; };
 		FB44221F1C51CD1C0083B341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB44221D1C51CD1C0083B341 /* Main.storyboard */; };
 		FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4422201C51CD1C0083B341 /* QuickBlox.xcdatamodeld */; };
@@ -36,6 +45,8 @@
 		FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44223E1C51D4530083B341 /* SWRevealViewController.m */; };
 		FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */; };
 		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
+		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
+		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,22 +61,34 @@
 		FB05A97D1C52176500F4DC97 /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
 		FB05A97E1C52176500F4DC97 /* qrCode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrCode@2x.png"; sourceTree = "<group>"; };
 		FB05A97F1C52176500F4DC97 /* qrCode@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrCode@3x.png"; sourceTree = "<group>"; };
-		FB05A9801C52176500F4DC97 /* reveal-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon.png"; sourceTree = "<group>"; };
-		FB05A9811C52176500F4DC97 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
 		FB05A9821C52176500F4DC97 /* shopping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping@2x.png"; sourceTree = "<group>"; };
 		FB05A9831C52176500F4DC97 /* shopping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping@3x.png"; sourceTree = "<group>"; };
 		FB05A9841C52176500F4DC97 /* UITableContract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UITableContract.png; sourceTree = "<group>"; };
 		FB05A9851C52176500F4DC97 /* UITableContract@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITableContract@2x.png"; sourceTree = "<group>"; };
 		FB05A9861C52176500F4DC97 /* UITableExpand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UITableExpand.png; sourceTree = "<group>"; };
 		FB05A9871C52176500F4DC97 /* UITableExpand@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UITableExpand@2x.png"; sourceTree = "<group>"; };
-		FB05A9961C521B1E00F4DC97 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		FB05A9971C521B1E00F4DC97 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		FB05A9991C521B3500F4DC97 /* LeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewController.h; sourceTree = "<group>"; };
 		FB05A99A1C521B3500F4DC97 /* LeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewController.m; sourceTree = "<group>"; };
 		FB05A99E1C521D9A00F4DC97 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		FB05A99F1C521D9A00F4DC97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FB05A9A81C5225E100F4DC97 /* LeftCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftCustomCell.h; sourceTree = "<group>"; };
 		FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftCustomCell.m; sourceTree = "<group>"; };
+		FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@3x.png"; sourceTree = "<group>"; };
+		FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
+		FB117DC71C5F48B200F8E222 /* button_plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_plus@3x.png"; sourceTree = "<group>"; };
+		FB117DC81C5F48B200F8E222 /* button_plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_plus@2x.png"; sourceTree = "<group>"; };
+		FB117DCE1C5F5B2C00F8E222 /* ItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController.h; sourceTree = "<group>"; };
+		FB117DCF1C5F5B2C00F8E222 /* ItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewController.m; sourceTree = "<group>"; };
+		FB117DD11C5F5E3F00F8E222 /* ItemsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewCell.h; sourceTree = "<group>"; };
+		FB117DD21C5F5E3F00F8E222 /* ItemsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewCell.m; sourceTree = "<group>"; };
+		FB117DD61C5F77EC00F8E222 /* doneButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doneButton@3x.png"; sourceTree = "<group>"; };
+		FB117DD71C5F77EC00F8E222 /* doneButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doneButton@2x.png"; sourceTree = "<group>"; };
+		FB117DDA1C5F783B00F8E222 /* backButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@3x.png"; sourceTree = "<group>"; };
+		FB117DDB1C5F783B00F8E222 /* backButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backButton@2x.png"; sourceTree = "<group>"; };
+		FB117DE21C5F804A00F8E222 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
+		FB117DE31C5F804A00F8E222 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
+		FB117DE51C5F846600F8E222 /* AddItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemTableViewCell.h; sourceTree = "<group>"; };
+		FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemTableViewCell.m; sourceTree = "<group>"; };
 		FB4422111C51CD1C0083B341 /* QuickBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4422151C51CD1C0083B341 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB44221E1C51CD1C0083B341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +106,10 @@
 		FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		FB6F7E841C587DB5002F63F3 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
 		FB6F7E851C587DB5002F63F3 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		FB7D2FD11C5F0E6600EEF1EC /* SetupViewContronller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewContronller.h; sourceTree = "<group>"; };
+		FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewContronller.m; sourceTree = "<group>"; };
+		FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,12 +157,18 @@
 		FB05A97B1C52176500F4DC97 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FB117DDA1C5F783B00F8E222 /* backButton@3x.png */,
+				FB117DDB1C5F783B00F8E222 /* backButton@2x.png */,
+				FB117DD61C5F77EC00F8E222 /* doneButton@3x.png */,
+				FB117DD71C5F77EC00F8E222 /* doneButton@2x.png */,
+				FB117DC71C5F48B200F8E222 /* button_plus@3x.png */,
+				FB117DC81C5F48B200F8E222 /* button_plus@2x.png */,
+				FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */,
+				FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */,
 				FB05A97C1C52176500F4DC97 /* home@2x.png */,
 				FB05A97D1C52176500F4DC97 /* home@3x.png */,
 				FB05A97E1C52176500F4DC97 /* qrCode@2x.png */,
 				FB05A97F1C52176500F4DC97 /* qrCode@3x.png */,
-				FB05A9801C52176500F4DC97 /* reveal-icon.png */,
-				FB05A9811C52176500F4DC97 /* reveal-icon@2x.png */,
 				FB05A9821C52176500F4DC97 /* shopping@2x.png */,
 				FB05A9831C52176500F4DC97 /* shopping@3x.png */,
 				FB05A9841C52176500F4DC97 /* UITableContract.png */,
@@ -146,12 +179,13 @@
 			path = images;
 			sourceTree = "<group>";
 		};
-		FB05A9941C521AED00F4DC97 /* MainViewController */ = {
+		FB05A9941C521AED00F4DC97 /* ItemsTableViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FB05A9961C521B1E00F4DC97 /* MainViewController.h */,
-				FB05A9971C521B1E00F4DC97 /* MainViewController.m */,
+				FB117DCE1C5F5B2C00F8E222 /* ItemsTableViewController.h */,
+				FB117DCF1C5F5B2C00F8E222 /* ItemsTableViewController.m */,
 			);
+			name = ItemsTableViewController;
 			path = MainViewController;
 			sourceTree = "<group>";
 		};
@@ -178,8 +212,21 @@
 			children = (
 				FB05A9A81C5225E100F4DC97 /* LeftCustomCell.h */,
 				FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */,
+				FB117DD11C5F5E3F00F8E222 /* ItemsTableViewCell.h */,
+				FB117DD21C5F5E3F00F8E222 /* ItemsTableViewCell.m */,
+				FB117DE51C5F846600F8E222 /* AddItemTableViewCell.h */,
+				FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		FB117DDE1C5F791300F8E222 /* AddItemViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB117DE21C5F804A00F8E222 /* AddItemViewController.h */,
+				FB117DE31C5F804A00F8E222 /* AddItemViewController.m */,
+			);
+			path = AddItemViewController;
 			sourceTree = "<group>";
 		};
 		FB4422081C51CD1C0083B341 = {
@@ -230,9 +277,12 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB117DDE1C5F791300F8E222 /* AddItemViewController */,
+				FB7D2FD41C5F0E8E00EEF1EC /* StatisticsViewController */,
+				FB7D2FD01C5F0E5500EEF1EC /* SetupViewContronller */,
 				FB05A99D1C521D8D00F4DC97 /* LoginViewController */,
 				FB05A9951C521AFF00F4DC97 /* LeftViewController */,
-				FB05A9941C521AED00F4DC97 /* MainViewController */,
+				FB05A9941C521AED00F4DC97 /* ItemsTableViewController */,
 				FB6F7E7F1C5877D0002F63F3 /* SignUpViewController */,
 				FB6F7E831C587DAA002F63F3 /* CartViewController */,
 			);
@@ -275,6 +325,24 @@
 				FB6F7E851C587DB5002F63F3 /* CartViewController.m */,
 			);
 			path = CartViewController;
+			sourceTree = "<group>";
+		};
+		FB7D2FD01C5F0E5500EEF1EC /* SetupViewContronller */ = {
+			isa = PBXGroup;
+			children = (
+				FB7D2FD11C5F0E6600EEF1EC /* SetupViewContronller.h */,
+				FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */,
+			);
+			path = SetupViewContronller;
+			sourceTree = "<group>";
+		};
+		FB7D2FD41C5F0E8E00EEF1EC /* StatisticsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */,
+				FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */,
+			);
+			path = StatisticsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,21 +405,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */,
 				FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */,
 				FB05A98B1C52176500F4DC97 /* qrCode@3x.png in Resources */,
 				FB4422271C51CD1C0083B341 /* LaunchScreen.storyboard in Resources */,
 				FB05A9881C52176500F4DC97 /* home@2x.png in Resources */,
+				FB117DDD1C5F783B00F8E222 /* backButton@2x.png in Resources */,
+				FB117DCA1C5F48B200F8E222 /* button_plus@2x.png in Resources */,
 				FB4422241C51CD1C0083B341 /* Assets.xcassets in Resources */,
 				FB05A9891C52176500F4DC97 /* home@3x.png in Resources */,
+				FB117DC91C5F48B200F8E222 /* button_plus@3x.png in Resources */,
 				FB05A9921C52176500F4DC97 /* UITableExpand.png in Resources */,
+				FB117DD91C5F77EC00F8E222 /* doneButton@2x.png in Resources */,
 				FB05A9931C52176500F4DC97 /* UITableExpand@2x.png in Resources */,
+				FB117DDC1C5F783B00F8E222 /* backButton@3x.png in Resources */,
 				FB05A9911C52176500F4DC97 /* UITableContract@2x.png in Resources */,
 				FB05A98F1C52176500F4DC97 /* shopping@3x.png in Resources */,
-				FB05A98D1C52176500F4DC97 /* reveal-icon@2x.png in Resources */,
+				FB117DC61C5F483F00F8E222 /* reveal-icon@2x.png in Resources */,
 				FB05A98A1C52176500F4DC97 /* qrCode@2x.png in Resources */,
 				FB44221F1C51CD1C0083B341 /* Main.storyboard in Resources */,
+				FB117DD81C5F77EC00F8E222 /* doneButton@3x.png in Resources */,
 				FB05A9901C52176500F4DC97 /* UITableContract.png in Resources */,
-				FB05A98C1C52176500F4DC97 /* reveal-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +486,19 @@
 			files = (
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
-				FB05A9981C521B1E00F4DC97 /* MainViewController.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
+				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
+				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
+				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
+				FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */,
+				FB117DD41C5F5E3F00F8E222 /* ItemsTableViewCell.m in Sources */,
+				FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */,
 				FB4422161C51CD1C0083B341 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,18 +1,18 @@
 //
-//  CartViewController.m
+//  StatisticsViewController.m
 //  QuickBlox
 //
-//  Created by Tamqn on 1/27/16.
+//  Created by Tamqn on 2/1/16.
 //  Copyright © 2016 Tamqn. All rights reserved.
 //
 
-#import "CartViewController.h"
+#import "StatisticsViewController.h"
 
-@interface CartViewController ()
+@interface StatisticsViewController ()
 
 @end
 
-@implementation CartViewController
+@implementation StatisticsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
