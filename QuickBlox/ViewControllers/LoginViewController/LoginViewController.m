@@ -7,6 +7,9 @@
 //
 
 #import "LoginViewController.h"
+#import <Quickblox/Quickblox.h>
+#include "SWRevealViewController.h"
+#import "Keychain.h"
 
 @interface LoginViewController ()
 
@@ -17,6 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    Keychain *keyObject = [Keychain shareInstance];
+    [keyObject getKeyChain:^(NSString *password, NSString *email) {
+        if (email && password) {
+            [QBRequest logInWithUserEmail:email password:password successBlock:^(QBResponse *response, QBUUser *user) {
+                SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                [self.navigationController pushViewController:rootView animated:YES];
+            } errorBlock:^(QBResponse *response) {
+                NSLog(@"Response error %@:", response.error);
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,14 +49,24 @@
     [self.navigationController.navigationBar setHidden:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)actionForgotPassword:(id)sender {
+    
 }
-*/
+
+-(IBAction)actionLogin:(id)sender {
+    if (self.emailTextField.text.length && self.passwordTextField.text.length) {
+        [QBRequest logInWithUserEmail:self.emailTextField.text password:self.passwordTextField.text successBlock:^(QBResponse *response, QBUUser *user) {
+            SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+            [self.navigationController pushViewController:rootView animated:YES];
+        } errorBlock:^(QBResponse *response) {
+            NSLog(@"Response error %@:", response.error);
+        }];
+    }
+}
+
+- (void)saveKeychani:(NSString *)email password:(NSString*)password {
+    Keychain *keyObject = [Keychain shareInstance];
+    [keyObject setKeyChainWithPassword:password email:email];
+}
 
 @end

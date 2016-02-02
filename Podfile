@@ -15,6 +15,10 @@ pod 'WYPopoverController'
 pod 'MZFormSheetController'
 pod 'MBLocationManager'
 pod 'GoogleMaps'
+pod 'MBCalendarKit'
+pod 'QuickBlox'
+pod 'NMPaginator'
+pod "FDKeychain"
 
 end
 

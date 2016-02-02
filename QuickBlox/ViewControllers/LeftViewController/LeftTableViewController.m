@@ -8,6 +8,8 @@
 
 #import "LeftTableViewController.h"
 #import "LeftCustomCell.h"
+#import <Quickblox/Quickblox.h>
+#import "Keychain.h"
 
 @interface LeftTableViewController ()
 @property (nonatomic, strong) NSArray *itemsArray;
@@ -57,7 +59,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *name = [self.itemsArray objectAtIndex:indexPath.row];
     if ([name isEqualToString:@"Thoát"]) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
+        [QBRequest logOutWithSuccessBlock:^(QBResponse * _Nonnull response) {
+            Keychain *keyObject = [Keychain shareInstance];
+            [keyObject deleteKeyChain];
+           [self.navigationController popToRootViewControllerAnimated:YES];
+        } errorBlock:^(QBResponse * _Nonnull response) {
+            NSLog(@"logout error");
+        }];
     }else{
         NSString *stringIdentifier = nil;
         switch (indexPath.row) {

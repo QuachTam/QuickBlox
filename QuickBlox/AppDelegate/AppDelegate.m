@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import <Quickblox/Quickblox.h>
+
+const NSUInteger kApplicationID = 33971;
+NSString *const kAuthKey        = @"K8NJhtA66Xa6pwF";
+NSString *const kAuthSecret     = @"HXdyzv3HPyEzYa-";
+NSString *const kAccountKey     = @"zPcbuL6B9knt6pSuXqKj";
 
 @interface AppDelegate ()
 
@@ -17,6 +23,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [QBSettings setApplicationID:kApplicationID];
+    [QBSettings setAuthKey:kAuthKey];
+    [QBSettings setAuthSecret:kAuthSecret];
+    [QBSettings setAccountKey:kAccountKey];
     return YES;
 }
 

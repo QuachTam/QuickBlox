@@ -35,6 +35,17 @@
 		FB117DDD1C5F783B00F8E222 /* backButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DDB1C5F783B00F8E222 /* backButton@2x.png */; };
 		FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DE31C5F804A00F8E222 /* AddItemViewController.m */; };
 		FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */; };
+		FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA9691C6052030095D816 /* DatePickerViewController.m */; };
+		FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA96D1C6052990095D816 /* CommonFeature.m */; };
+		FB1AA9711C60B0340095D816 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA9701C60B0340095D816 /* Security.framework */; };
+		FB1AA9731C60B03F0095D816 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA9721C60B03F0095D816 /* libxml2.2.tbd */; };
+		FB1AA9751C60B04A0095D816 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA9741C60B04A0095D816 /* libresolv.9.tbd */; };
+		FB1AA9771C60B0530095D816 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA9761C60B0530095D816 /* libz.1.2.5.tbd */; };
+		FB1AA9791C60B05B0095D816 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA9781C60B05B0095D816 /* QuartzCore.framework */; };
+		FB1AA97B1C60B0640095D816 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA97A1C60B0640095D816 /* CoreGraphics.framework */; };
+		FB1AA97D1C60B06C0095D816 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA97C1C60B06C0095D816 /* MobileCoreServices.framework */; };
+		FB1AA97F1C60B0750095D816 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1AA97E1C60B0750095D816 /* SystemConfiguration.framework */; };
+		FB1AA9851C60D4460095D816 /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1AA9841C60D4460095D816 /* Keychain.m */; };
 		FB4422161C51CD1C0083B341 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4422151C51CD1C0083B341 /* main.m */; };
 		FB44221F1C51CD1C0083B341 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB44221D1C51CD1C0083B341 /* Main.storyboard */; };
 		FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB4422201C51CD1C0083B341 /* QuickBlox.xcdatamodeld */; };
@@ -89,6 +100,20 @@
 		FB117DE31C5F804A00F8E222 /* AddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemViewController.m; sourceTree = "<group>"; };
 		FB117DE51C5F846600F8E222 /* AddItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemTableViewCell.h; sourceTree = "<group>"; };
 		FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddItemTableViewCell.m; sourceTree = "<group>"; };
+		FB1AA9681C6052030095D816 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		FB1AA9691C6052030095D816 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		FB1AA96C1C6052990095D816 /* CommonFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFeature.h; sourceTree = "<group>"; };
+		FB1AA96D1C6052990095D816 /* CommonFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFeature.m; sourceTree = "<group>"; };
+		FB1AA9701C60B0340095D816 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FB1AA9721C60B03F0095D816 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		FB1AA9741C60B04A0095D816 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		FB1AA9761C60B0530095D816 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		FB1AA9781C60B05B0095D816 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB1AA97A1C60B0640095D816 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB1AA97C1C60B06C0095D816 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FB1AA97E1C60B0750095D816 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FB1AA9831C60D4460095D816 /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
+		FB1AA9841C60D4460095D816 /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
 		FB4422111C51CD1C0083B341 /* QuickBlox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickBlox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4422151C51CD1C0083B341 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FB44221E1C51CD1C0083B341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,6 +142,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1AA97F1C60B0750095D816 /* SystemConfiguration.framework in Frameworks */,
+				FB1AA97D1C60B06C0095D816 /* MobileCoreServices.framework in Frameworks */,
+				FB1AA97B1C60B0640095D816 /* CoreGraphics.framework in Frameworks */,
+				FB1AA9791C60B05B0095D816 /* QuartzCore.framework in Frameworks */,
+				FB1AA9771C60B0530095D816 /* libz.1.2.5.tbd in Frameworks */,
+				FB1AA9751C60B04A0095D816 /* libresolv.9.tbd in Frameworks */,
+				FB1AA9731C60B03F0095D816 /* libxml2.2.tbd in Frameworks */,
+				FB1AA9711C60B0340095D816 /* Security.framework in Frameworks */,
 				FB05A9771C52123000F4DC97 /* Foundation.framework in Frameworks */,
 				FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */,
 				CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */,
@@ -129,6 +162,14 @@
 		BC8682A5D6B2BD4F7C1B19F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB1AA97E1C60B0750095D816 /* SystemConfiguration.framework */,
+				FB1AA97C1C60B06C0095D816 /* MobileCoreServices.framework */,
+				FB1AA97A1C60B0640095D816 /* CoreGraphics.framework */,
+				FB1AA9781C60B05B0095D816 /* QuartzCore.framework */,
+				FB1AA9761C60B0530095D816 /* libz.1.2.5.tbd */,
+				FB1AA9741C60B04A0095D816 /* libresolv.9.tbd */,
+				FB1AA9721C60B03F0095D816 /* libxml2.2.tbd */,
+				FB1AA9701C60B0340095D816 /* Security.framework */,
 				FB05A9761C52123000F4DC97 /* Foundation.framework */,
 				FB05A9741C52122A00F4DC97 /* UIKit.framework */,
 				6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */,
@@ -229,6 +270,33 @@
 			path = AddItemViewController;
 			sourceTree = "<group>";
 		};
+		FB1AA9671C6051F30095D816 /* DatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB1AA9681C6052030095D816 /* DatePickerViewController.h */,
+				FB1AA9691C6052030095D816 /* DatePickerViewController.m */,
+			);
+			path = DatePickerViewController;
+			sourceTree = "<group>";
+		};
+		FB1AA96B1C60526A0095D816 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				FB1AA96C1C6052990095D816 /* CommonFeature.h */,
+				FB1AA96D1C6052990095D816 /* CommonFeature.m */,
+				FB1AA9831C60D4460095D816 /* Keychain.h */,
+				FB1AA9841C60D4460095D816 /* Keychain.m */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		FB1AA96F1C60888B0095D816 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		FB4422081C51CD1C0083B341 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +318,8 @@
 		FB4422131C51CD1C0083B341 /* QuickBlox */ = {
 			isa = PBXGroup;
 			children = (
+				FB1AA96F1C60888B0095D816 /* CoreData */,
+				FB1AA96B1C60526A0095D816 /* Commons */,
 				FB05A9A71C5225D700F4DC97 /* CustomCell */,
 				FB4422361C51D4240083B341 /* AppDelegate */,
 				FB44223A1C51D4530083B341 /* SWRevealViewController */,
@@ -277,6 +347,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB1AA9671C6051F30095D816 /* DatePickerViewController */,
 				FB117DDE1C5F791300F8E222 /* AddItemViewController */,
 				FB7D2FD41C5F0E8E00EEF1EC /* StatisticsViewController */,
 				FB7D2FD01C5F0E5500EEF1EC /* SetupViewContronller */,
@@ -487,10 +558,13 @@
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
+				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
+				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
+				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,

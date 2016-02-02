@@ -7,6 +7,7 @@
 //
 
 #import "SignUpViewController.h"
+#import <Quickblox/Quickblox.h>
 
 @interface SignUpViewController ()
 
@@ -43,5 +44,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)actionRegisterButton:(id)sender {
+    if (self.nameTextField.text.length && self.emailTextField.text.length && self.phoneTextField.text.length && self.passwordTextField.text.length) {
+        if ([self.passwordTextField.text isEqualToString:self.rePasswordTextField.text]) {
+            QBUUser *user = [QBUUser user];
+            user.password = self.passwordTextField.text;
+            user.login = self.nameTextField.text;
+            user.email = self.emailTextField.text;
+            user.phone = self.phoneTextField.text;
+            
+            // Registration/sign up of User
+            [QBRequest signUp:user successBlock:^(QBResponse *response, QBUUser *user) {
+                // Sign up was successful
+                [self showMessage:@"Dang ky thanh cong"];
+            } errorBlock:^(QBResponse *response) {
+                // Handle error here
+                [self showMessage:@"Dang ky loi"];
+            }];
+        }else{
+            // alert
+            [self showMessage:@"Sai mat khau"];
+        }
+    }else{
+        // alert
+        [self showMessage:@"Nhap thieu thong tin"];
+    }
+}
+
+- (void)showMessage:(NSString *)message {
+    [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+}
 
 @end
