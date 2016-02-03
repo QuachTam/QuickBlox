@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ModelItem.h"
 
 @interface AddItemViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UILabel *titleViewLabel;
+@property (nonatomic, strong) ModelItem *modelItem;
 - (IBAction)actionBackButton:(id)sender;
 - (IBAction)actionDoneButton:(id)sender;
+
 
 @end

@@ -38,6 +38,16 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setHidden:NO];
+    Keychain *keyObject = [Keychain shareInstance];
+    [keyObject getKeyChain:^(NSString *password, NSString *email) {
+        if (email && password) {
+            self.emailTextField.text = email;
+            self.passwordTextField.text = password;
+        }else{
+            self.emailTextField.text = @"";
+            self.passwordTextField.text = @"";
+        }
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -51,6 +61,10 @@
         [QBRequest logInWithUserEmail:self.emailTextField.text password:self.passwordTextField.text successBlock:^(QBResponse *response, QBUUser *user) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+            if (sender) {
+                Keychain *keyObject = [Keychain shareInstance];
+                [keyObject setKeyChainWithPassword:self.passwordTextField.text email:self.emailTextField.text];
+            }
             [self.navigationController pushViewController:rootView animated:YES];
         } errorBlock:^(QBResponse *response) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];

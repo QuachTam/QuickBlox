@@ -33,7 +33,10 @@
     [self.paginator fetchFirstPage];
 }
 
-
+- (void)paginator:(id)paginator didReceiveResults:(NSArray *)results {
+    [[Storage instance].itemList addObjectsFromArray:results];
+    [self.tableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -70,7 +73,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;//[[Storage instance].itemList count];
+    return [[Storage instance].itemList count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -79,9 +82,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemsTableViewCell *cell = (ItemsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"itemCell"];
-//    QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
-//    NSString* name = object_custom.fields[@"name"];
-//    cell.nameLabel.text = name;
+    QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
+    NSString* name = object_custom.fields[@"name"];
+    cell.nameLabel.text = name;
     return cell;
 }
 

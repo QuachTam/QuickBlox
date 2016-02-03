@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CDFD51C6261C800E9DB1A /* ModelItem.m */; };
 		CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */; };
 		FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05A9741C52122A00F4DC97 /* UIKit.framework */; };
 		FB05A9771C52123000F4DC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05A9761C52123000F4DC97 /* Foundation.framework */; };
@@ -66,6 +67,8 @@
 /* Begin PBXFileReference section */
 		1E1AE0F2D676F4E814334650 /* Pods-QuickBlox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.debug.xcconfig"; sourceTree = "<group>"; };
 		6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickBlox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A55CDFD41C6261C800E9DB1A /* ModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelItem.h; sourceTree = "<group>"; };
+		A55CDFD51C6261C800E9DB1A /* ModelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelItem.m; sourceTree = "<group>"; };
 		F25E304E13CF1AEC9B86541E /* Pods-QuickBlox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.release.xcconfig"; sourceTree = "<group>"; };
 		FB05A9741C52122A00F4DC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB05A9761C52123000F4DC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -443,6 +446,8 @@
 				FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */,
 				FBFB7ABD1C61A9F00088ED92 /* Storage.h */,
 				FBFB7ABE1C61A9F00088ED92 /* Storage.m */,
+				A55CDFD41C6261C800E9DB1A /* ModelItem.h */,
+				A55CDFD51C6261C800E9DB1A /* ModelItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
+				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
@@ -723,6 +729,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
 				INFOPLIST_FILE = QuickBlox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,6 +744,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
 				INFOPLIST_FILE = QuickBlox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";

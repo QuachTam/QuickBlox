@@ -20,4 +20,69 @@
     // Configure the view for the selected state
 }
 
+- (BOOL)isNameTextField {
+    return (self.nameTextField.text != nil && self.nameTextField.text.length > 0);
+}
+
+- (BOOL)isDateInputTextField {
+    return (self.dateInputTextField.text != nil && self.dateInputTextField.text.length > 0);
+}
+
+- (BOOL)isDateOutputTextField {
+    return (self.dateOutputTextField.text != nil && self.dateOutputTextField.text.length > 0);
+}
+
+- (BOOL)isMoneyInputTextField {
+    return (self.moneyInputTextField.text != nil && self.moneyInputTextField.text.length > 0);
+}
+
+- (BOOL)isMoneyOutputTextField {
+    return (self.moneyOutputTextField.text != nil && self.moneyOutputTextField.text.length > 0);
+}
+
+- (BOOL)isQrCodeTextField {
+    return (self.qrCodeTextField.text != nil && self.qrCodeTextField.text.length > 0);
+}
+
+- (BOOL)isInfoTextView {
+    return (self.infoTextView.text != nil && self.infoTextView.text.length > 0);
+}
+
+- (void)actionValidInput:(void(^)(BOOL isValid))success {
+    BOOL isValidInput = YES;
+    if (![self isNameTextField]) {
+        self.nameTextField.backgroundColor = [UIColor redColor];
+        isValidInput = NO;
+    }else{
+        self.nameTextField.backgroundColor = [UIColor whiteColor];
+        self.modelItem.name = self.nameTextField.text;
+    }
+    
+    if (![self isMoneyInputTextField]) {
+        self.moneyInputTextField.backgroundColor = [UIColor redColor];
+        isValidInput = NO;
+    }else{
+        self.moneyInputTextField.backgroundColor = [UIColor whiteColor];
+        self.modelItem.moneyInput = self.moneyInputTextField.text;
+    }
+    
+    if (![self isMoneyOutputTextField]) {
+        self.moneyOutputTextField.backgroundColor = [UIColor redColor];
+        isValidInput = NO;
+    }else{
+        self.moneyOutputTextField.backgroundColor = [UIColor whiteColor];
+        self.modelItem.moneyOutput = self.moneyOutputTextField.text;
+    }
+    
+    if (![self isQrCodeTextField]) {
+        self.qrCodeTextField.backgroundColor = [UIColor redColor];
+        isValidInput = NO;
+    }else{
+        self.qrCodeTextField.backgroundColor = [UIColor whiteColor];
+        self.modelItem.qrCode = self.qrCodeTextField.text;
+    }
+    if (success) {
+        success(isValidInput);
+    }
+}
 @end

@@ -38,7 +38,7 @@
     }
     [requestParameters setObject:@(pageSize) forKey:@"limit"];
     
-    [QBRequest objectsWithClassName:kMovieClassName extendedRequest:requestParameters
+    [QBRequest objectsWithClassName:kItemClassName extendedRequest:requestParameters
                        successBlock:^(QBResponse *response, NSArray *objects, QBResponsePage *page) {
                            [weakSelf receivedResults:objects total:_totalCount];
                        } errorBlock:^(QBResponse *response) {
@@ -51,7 +51,7 @@
 {
     __weak __typeof(self)weakSelf = self;
     
-    [QBRequest countObjectsWithClassName:kMovieClassName extendedRequest:nil
+    [QBRequest countObjectsWithClassName:kItemClassName extendedRequest:nil
                             successBlock:^(QBResponse *response, NSUInteger count) {
                                 _totalCount = count;
                                 

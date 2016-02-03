@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kMovieClassName @"Item"
+#define kItemClassName @"Item"
 
 @interface Storage : NSObject
 
