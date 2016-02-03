@@ -11,7 +11,6 @@
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-- (IBAction)actionForgotPassword:(id)sender;
 - (IBAction)actionLogin:(id)senderl;
 
 @end

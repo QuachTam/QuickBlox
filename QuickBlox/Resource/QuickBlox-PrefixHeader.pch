@@ -16,6 +16,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <MagicalRecord/MagicalRecord.h>
+#import <MBProgressHUD/MBProgressHUD.h>
     #define _LSFromTable NSLocalizedStringFromTable
     #define _LS NSLocalizedString
 #endif

@@ -58,6 +58,9 @@
 		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
+		FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */; };
+		FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */; };
+		FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABE1C61A9F00088ED92 /* Storage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +138,12 @@
 		FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewContronller.m; sourceTree = "<group>"; };
 		FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		FBFB7AB71C61A73D0088ED92 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectsPaginator.h; sourceTree = "<group>"; };
+		FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectsPaginator.m; sourceTree = "<group>"; };
+		FBFB7ABD1C61A9F00088ED92 /* Storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		FBFB7ABE1C61A9F00088ED92 /* Storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,6 +327,7 @@
 		FB4422131C51CD1C0083B341 /* QuickBlox */ = {
 			isa = PBXGroup;
 			children = (
+				FBFB7ABA1C61A9E70088ED92 /* Models */,
 				FB1AA96F1C60888B0095D816 /* CoreData */,
 				FB1AA96B1C60526A0095D816 /* Commons */,
 				FB05A9A71C5225D700F4DC97 /* CustomCell */,
@@ -347,6 +357,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */,
 				FB1AA9671C6051F30095D816 /* DatePickerViewController */,
 				FB117DDE1C5F791300F8E222 /* AddItemViewController */,
 				FB7D2FD41C5F0E8E00EEF1EC /* StatisticsViewController */,
@@ -414,6 +425,26 @@
 				FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */,
 			);
 			path = StatisticsViewController;
+			sourceTree = "<group>";
+		};
+		FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB7AB71C61A73D0088ED92 /* ForgotPasswordViewController.h */,
+				FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */,
+			);
+			path = ForgotPasswordViewController;
+			sourceTree = "<group>";
+		};
+		FBFB7ABA1C61A9E70088ED92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */,
+				FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */,
+				FBFB7ABD1C61A9F00088ED92 /* Storage.h */,
+				FBFB7ABE1C61A9F00088ED92 /* Storage.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,12 +594,15 @@
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
+				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
+				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
+				FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
 				FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */,
 				FB117DD41C5F5E3F00F8E222 /* ItemsTableViewCell.m in Sources */,

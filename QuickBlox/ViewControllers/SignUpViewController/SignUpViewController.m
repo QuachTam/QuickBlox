@@ -76,4 +76,7 @@
     [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
 }
 
+- (IBAction)actionBackButton:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

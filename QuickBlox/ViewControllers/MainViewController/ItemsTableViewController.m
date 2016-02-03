@@ -9,9 +9,12 @@
 #import "ItemsTableViewController.h"
 #import "ItemsTableViewCell.h"
 #import "AddItemViewController.h"
+#import "ObjectsPaginator.h"
+#import "Storage.h"
+#import <Quickblox/Quickblox.h>
 
-@interface ItemsTableViewController ()
-
+@interface ItemsTableViewController ()<NMPaginatorDelegate>
+@property (nonatomic, strong) ObjectsPaginator *paginator;
 @end
 
 @implementation ItemsTableViewController
@@ -26,11 +29,38 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    self.paginator = [[ObjectsPaginator alloc] initWithPageSize:10 delegate:self];
+    [self.paginator fetchFirstPage];
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark
+#pragma mark Paginator
+
+- (void)fetchNextPage
+{
+    [self.paginator fetchNextPage];
+}
+
+#pragma mark
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // when reaching bottom, load a new page
+    if (scrollView.contentOffset.y == scrollView.contentSize.height - scrollView.bounds.size.height) {
+        // ask next page only if we haven't reached last page
+        if (![self.paginator reachedLastPage]) {
+            // fetch next page of results
+            [self fetchNextPage];
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -40,7 +70,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 4;//[[Storage instance].itemList count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,6 +79,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemsTableViewCell *cell = (ItemsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+//    QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
+//    NSString* name = object_custom.fields[@"name"];
+//    cell.nameLabel.text = name;
     return cell;
 }
 

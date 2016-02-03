@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ItemsTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIView *nameLabel;
-@property (weak, nonatomic) IBOutlet UIView *moneyLabel;
-@property (weak, nonatomic) IBOutlet UIView *infoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end

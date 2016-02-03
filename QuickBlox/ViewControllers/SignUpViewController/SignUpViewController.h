@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *rePasswordTextField;
+- (IBAction)actionBackButton:(id)sender;
 
 @end

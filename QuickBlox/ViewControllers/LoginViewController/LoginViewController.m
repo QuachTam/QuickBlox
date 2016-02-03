@@ -20,16 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     Keychain *keyObject = [Keychain shareInstance];
     [keyObject getKeyChain:^(NSString *password, NSString *email) {
         if (email && password) {
-            [QBRequest logInWithUserEmail:email password:password successBlock:^(QBResponse *response, QBUUser *user) {
-                SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-                [self.navigationController pushViewController:rootView animated:YES];
-            } errorBlock:^(QBResponse *response) {
-                NSLog(@"Response error %@:", response.error);
-            }];
+            self.emailTextField.text = email;
+            self.passwordTextField.text = password;
+            [self actionLogin:nil];
         }
     }];
 }
@@ -49,16 +45,15 @@
     [self.navigationController.navigationBar setHidden:YES];
 }
 
-- (IBAction)actionForgotPassword:(id)sender {
-    
-}
-
 -(IBAction)actionLogin:(id)sender {
     if (self.emailTextField.text.length && self.passwordTextField.text.length) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [QBRequest logInWithUserEmail:self.emailTextField.text password:self.passwordTextField.text successBlock:^(QBResponse *response, QBUUser *user) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
             [self.navigationController pushViewController:rootView animated:YES];
         } errorBlock:^(QBResponse *response) {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             NSLog(@"Response error %@:", response.error);
         }];
     }
