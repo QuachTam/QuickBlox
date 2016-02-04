@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface ModelItem : NSObject
+@property (strong, nonatomic) NSString *ID;
+@property (strong, nonatomic) NSString *uuid;
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSDate *dateInput;
-@property (strong, nonatomic) NSDate *dateOutput;
+@property (strong, nonatomic) NSNumber *dateInput;
+@property (strong, nonatomic) NSNumber *dateOutput;
 @property (strong, nonatomic) NSString *moneyInput;
 @property (strong, nonatomic) NSString *moneyOutput;
 @property (strong, nonatomic) NSString *qrCode;

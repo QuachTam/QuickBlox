@@ -20,4 +20,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 
 - (void)actionValidInput:(void(^)(BOOL isValid))success;
+- (void)setupDataForCell;
 @end

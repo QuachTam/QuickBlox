@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *format_date_type_yyyy_mm_dd_hh_mm = @"dd-MM-yyyy HH:mm";
+
 @interface CommonFeature : NSObject
 + (CommonFeature*)shareInstance;
 + (void)setShadownWithBoderWidth:(NSInteger)width view:(UIView*)view;
++ (NSString*)convertDateToString:(NSDate *)date withFormat:(NSString*)formatDate;
++ (NSTimeInterval)convertDateToLongtime:(NSDate*)date;
++ (NSDate*)convertLongtimeToDate:(NSTimeInterval)timeInMiliseconds;
 @end

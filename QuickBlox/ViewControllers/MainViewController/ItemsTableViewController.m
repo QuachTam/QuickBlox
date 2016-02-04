@@ -12,6 +12,7 @@
 #import "ObjectsPaginator.h"
 #import "Storage.h"
 #import <Quickblox/Quickblox.h>
+#import "ModelItem.h"
 
 @interface ItemsTableViewController ()<NMPaginatorDelegate>
 @property (nonatomic, strong) ObjectsPaginator *paginator;
@@ -29,11 +30,14 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    [[Storage instance].itemList removeAllObjects];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.paginator = [[ObjectsPaginator alloc] initWithPageSize:10 delegate:self];
     [self.paginator fetchFirstPage];
 }
 
 - (void)paginator:(id)paginator didReceiveResults:(NSArray *)results {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [[Storage instance].itemList addObjectsFromArray:results];
     [self.tableView reloadData];
 }
@@ -46,8 +50,7 @@
 #pragma mark
 #pragma mark Paginator
 
-- (void)fetchNextPage
-{
+- (void)fetchNextPage {
     [self.paginator fetchNextPage];
 }
 
@@ -84,19 +87,41 @@
     ItemsTableViewCell *cell = (ItemsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"itemCell"];
     QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
     NSString* name = object_custom.fields[@"name"];
+    NSString* moneyOut = object_custom.fields[@"moneyOutput"];
+    NSString* info = object_custom.fields[@"info"];
+
     cell.nameLabel.text = name;
+    cell.moneyLabel.text = moneyOut;
+    cell.infoLabel.text = info;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *stringIdentifier = @"viewInfoItem";
     if (stringIdentifier) {
+        QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
+        ModelItem *modelItem = [self convertQBCOCustomToModelItem:object_custom];
+        
         AddItemViewController *viewDetail = [self.storyboard instantiateViewControllerWithIdentifier:@"AddItemViewController"];
         viewDetail.titleViewLabel.text = @"Thong tin mat hang";
+        viewDetail.modelItem = modelItem;
         [self.navigationController pushViewController:viewDetail animated:YES];
     }
 }
 
+- (ModelItem*)convertQBCOCustomToModelItem:(QBCOCustomObject *)customObject {
+    ModelItem *model = [[ModelItem alloc] init];
+    model.ID = customObject.fields[@"ID"];
+    model.uuid = customObject.fields[@"uuid"];
+    model.name = customObject.fields[@"name"];
+    model.dateInput = [NSNumber numberWithInteger:[customObject.fields[@"dateInput"] integerValue]];
+    model.dateOutput = [NSNumber numberWithInteger:[customObject.fields[@"dateOutput"] integerValue]];
+    model.moneyInput = customObject.fields[@"moneyInput"];
+    model.moneyOutput = customObject.fields[@"moneyOutput"];
+    model.qrCode = customObject.fields[@"qrCode"];
+    model.info = customObject.fields[@"info"];
+    return model;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

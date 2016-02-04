@@ -20,6 +20,16 @@
     // Configure the view for the selected state
 }
 
+- (void)setupDataForCell {
+    self.nameTextField.text = self.modelItem.name;
+    self.dateInputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateInput doubleValue]] withFormat:format_date_type_yyyy_mm_dd_hh_mm];
+    self.dateOutputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateOutput doubleValue]] withFormat:format_date_type_yyyy_mm_dd_hh_mm];;
+    self.moneyInputTextField.text = self.modelItem.moneyInput;
+    self.moneyOutputTextField.text = self.modelItem.moneyOutput;
+    self.qrCodeTextField.text = self.modelItem.qrCode;
+    self.infoTextView.text = self.modelItem.info;
+}
+
 - (BOOL)isNameTextField {
     return (self.nameTextField.text != nil && self.nameTextField.text.length > 0);
 }
@@ -81,6 +91,8 @@
         self.qrCodeTextField.backgroundColor = [UIColor whiteColor];
         self.modelItem.qrCode = self.qrCodeTextField.text;
     }
+    self.modelItem.info = self.infoTextView.text;
+    
     if (success) {
         success(isValidInput);
     }

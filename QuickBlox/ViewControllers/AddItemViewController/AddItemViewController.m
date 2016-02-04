@@ -54,6 +54,7 @@
     AddItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"addCustomCell" forIndexPath:indexPath];
     cell.modelItem = self.modelItem;
     cell.tag = 100;
+    [cell setupDataForCell];
     return cell;
 }
 
@@ -64,11 +65,12 @@
     viewDetail.didSelectedDate = ^(NSDate *date){
         if ([[segue identifier] isEqualToString:@"dateInputIdentifier"]) {
             NSLog(@"date: %@", date);
-            self.modelItem.dateInput = date;
+            self.modelItem.dateInput = @([CommonFeature convertDateToLongtime:date]);
         }else{
             NSLog(@"date: %@", date);
-            self.modelItem.dateOutput = date;
+            self.modelItem.dateOutput = @([CommonFeature convertDateToLongtime:date]);
         }
+        [self.tableView reloadData];
     };
 }
 
@@ -92,8 +94,8 @@
     object.className = kItemClassName;
     object.fields[@"uuid"] = [[[NSUUID UUID] UUIDString] lowercaseString];
     object.fields[@"name"] = self.modelItem.name;
-    object.fields[@"dateInput"] = self.modelItem.dateInput;
-    object.fields[@"dateOutput"] = self.modelItem.dateOutput;
+    object.fields[@"dateInput"] = [self.modelItem.dateInput stringValue];
+    object.fields[@"dateOutput"] = [self.modelItem.dateOutput stringValue];
     object.fields[@"moneyInput"] = self.modelItem.moneyInput;
     object.fields[@"moneyOutput"] = self.modelItem.moneyOutput;
     object.fields[@"qrCode"] = self.modelItem.qrCode;
@@ -104,18 +106,18 @@
         // save new movie to local storage
         [[Storage instance].itemList addObject:object];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                        message:@"You have created a new movie!"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thành công"
+                                                        message:@"Bạn vừa tạo một sản phẩm mới!"
                                                        delegate:weakSelf
-                                              cancelButtonTitle:@"OK"
+                                              cancelButtonTitle:@"Đồng ý"
                                               otherButtonTitles:nil];
         [alert show];
     } errorBlock:^(QBResponse *response) {
         NSLog(@"Response error: %@", [response.error description]);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error in movie creation"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Có lỗi trong khi tạo sản phẩm"
                                                         message:[response.error description]
                                                        delegate:nil
-                                              cancelButtonTitle:@"OK"
+                                              cancelButtonTitle:@"Đồng ý"
                                               otherButtonTitles:nil];
         [alert show];
     }];
