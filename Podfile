@@ -19,6 +19,8 @@ pod 'MBCalendarKit'
 pod 'QuickBlox'
 pod 'NMPaginator'
 pod "FDKeychain"
+pod 'SwipeBack'
+pod 'Charts/Realm'
 
 end
 

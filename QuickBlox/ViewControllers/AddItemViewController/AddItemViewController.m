@@ -101,26 +101,45 @@
     object.fields[@"qrCode"] = self.modelItem.qrCode;
     object.fields[@"info"] = self.modelItem.info;
     __weak typeof(self)weakSelf = self;
-    [QBRequest createObject:object successBlock:^(QBResponse *response, QBCOCustomObject *object) {
-        
-        // save new movie to local storage
-        [[Storage instance].itemList addObject:object];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thành công"
-                                                        message:@"Bạn vừa tạo một sản phẩm mới!"
-                                                       delegate:weakSelf
-                                              cancelButtonTitle:@"Đồng ý"
-                                              otherButtonTitles:nil];
-        [alert show];
-    } errorBlock:^(QBResponse *response) {
-        NSLog(@"Response error: %@", [response.error description]);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Có lỗi trong khi tạo sản phẩm"
-                                                        message:[response.error description]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Đồng ý"
-                                              otherButtonTitles:nil];
-        [alert show];
-    }];
+    if (self.modelItem.ID) {
+        object.ID = self.modelItem.ID;
+        [QBRequest updateObject:object successBlock:^(QBResponse * _Nonnull response, QBCOCustomObject * _Nullable object) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thành công"
+                                                            message:@"Chỉn sửa thông tin thành công"
+                                                           delegate:weakSelf
+                                                  cancelButtonTitle:@"Đồng ý"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } errorBlock:^(QBResponse * _Nonnull response) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Chỉn sửa thông tin lỗi"
+                                                            message:[response.error description]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Đồng ý"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }else{
+        [QBRequest createObject:object successBlock:^(QBResponse *response, QBCOCustomObject *object) {
+            
+            // save new movie to local storage
+            [[Storage instance].itemList addObject:object];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thành công"
+                                                            message:@"Bạn vừa tạo một sản phẩm mới!"
+                                                           delegate:weakSelf
+                                                  cancelButtonTitle:@"Đồng ý"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } errorBlock:^(QBResponse *response) {
+            NSLog(@"Response error: %@", [response.error description]);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Có lỗi trong khi tạo sản phẩm"
+                                                            message:[response.error description]
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Đồng ý"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
 }
 
 @end

@@ -13,6 +13,7 @@
 #import "Storage.h"
 #import <Quickblox/Quickblox.h>
 #import "ModelItem.h"
+#import <SwipeBack/SwipeBack.h>
 
 @interface ItemsTableViewController ()<NMPaginatorDelegate>
 @property (nonatomic, strong) ObjectsPaginator *paginator;
@@ -34,6 +35,15 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.paginator = [[ObjectsPaginator alloc] initWithPageSize:10 delegate:self];
     [self.paginator fetchFirstPage];
+    // Disable iOS 7 back gesture
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.navigationController.interactivePopGestureRecognizer.enabled = false;
+    });
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.swipeBackEnabled = NO;
 }
 
 - (void)paginator:(id)paginator didReceiveResults:(NSArray *)results {
@@ -111,8 +121,7 @@
 
 - (ModelItem*)convertQBCOCustomToModelItem:(QBCOCustomObject *)customObject {
     ModelItem *model = [[ModelItem alloc] init];
-    model.ID = customObject.fields[@"ID"];
-    model.uuid = customObject.fields[@"uuid"];
+    model.ID = customObject.ID;
     model.name = customObject.fields[@"name"];
     model.dateInput = [NSNumber numberWithInteger:[customObject.fields[@"dateInput"] integerValue]];
     model.dateOutput = [NSNumber numberWithInteger:[customObject.fields[@"dateOutput"] integerValue]];
