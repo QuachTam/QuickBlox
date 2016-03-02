@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52288E51C8742570032DD5C /* CustomCellOnlyText.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288E41C8742570032DD5C /* CustomCellOnlyText.m */; };
+		A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */; };
+		A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */; };
 		A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CDFD51C6261C800E9DB1A /* ModelItem.m */; };
 		CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */; };
 		FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05A9741C52122A00F4DC97 /* UIKit.framework */; };
@@ -67,6 +70,12 @@
 /* Begin PBXFileReference section */
 		1E1AE0F2D676F4E814334650 /* Pods-QuickBlox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.debug.xcconfig"; sourceTree = "<group>"; };
 		6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickBlox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52288E31C8742570032DD5C /* CustomCellOnlyText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellOnlyText.h; sourceTree = "<group>"; };
+		A52288E41C8742570032DD5C /* CustomCellOnlyText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellOnlyText.m; sourceTree = "<group>"; };
+		A52288E61C8746B60032DD5C /* SubStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubStatisticsViewController.h; sourceTree = "<group>"; };
+		A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubStatisticsViewController.m; sourceTree = "<group>"; };
+		A52288E91C874EE80032DD5C /* CustomCellStatisticsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellStatisticsDetail.h; sourceTree = "<group>"; };
+		A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellStatisticsDetail.m; sourceTree = "<group>"; };
 		A55CDFD41C6261C800E9DB1A /* ModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelItem.h; sourceTree = "<group>"; };
 		A55CDFD51C6261C800E9DB1A /* ModelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelItem.m; sourceTree = "<group>"; };
 		F25E304E13CF1AEC9B86541E /* Pods-QuickBlox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +278,10 @@
 				FB117DD21C5F5E3F00F8E222 /* ItemsTableViewCell.m */,
 				FB117DE51C5F846600F8E222 /* AddItemTableViewCell.h */,
 				FB117DE61C5F846600F8E222 /* AddItemTableViewCell.m */,
+				A52288E31C8742570032DD5C /* CustomCellOnlyText.h */,
+				A52288E41C8742570032DD5C /* CustomCellOnlyText.m */,
+				A52288E91C874EE80032DD5C /* CustomCellStatisticsDetail.h */,
+				A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -426,6 +439,8 @@
 			children = (
 				FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */,
 				FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */,
+				A52288E61C8746B60032DD5C /* SubStatisticsViewController.h */,
+				A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */,
 			);
 			path = StatisticsViewController;
 			sourceTree = "<group>";
@@ -597,17 +612,20 @@
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
 				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
+				A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
 				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
+				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
+				A52288E51C8742570032DD5C /* CustomCellOnlyText.m in Sources */,
 				FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
 				FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */,

@@ -100,6 +100,9 @@
     object.fields[@"moneyOutput"] = self.modelItem.moneyOutput;
     object.fields[@"qrCode"] = self.modelItem.qrCode;
     object.fields[@"info"] = self.modelItem.info;
+    if (!self.modelItem.ID) {
+        object.fields[@"isSell"] = @(0);
+    }
     __weak typeof(self)weakSelf = self;
     if (self.modelItem.ID) {
         object.ID = self.modelItem.ID;
@@ -120,10 +123,8 @@
         }];
     }else{
         [QBRequest createObject:object successBlock:^(QBResponse *response, QBCOCustomObject *object) {
-            
             // save new movie to local storage
             [[Storage instance].itemList addObject:object];
-            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Thành công"
                                                             message:@"Bạn vừa tạo một sản phẩm mới!"
                                                            delegate:weakSelf

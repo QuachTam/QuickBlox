@@ -16,4 +16,6 @@ static NSString *format_date_type_yyyy_mm_dd_hh_mm = @"dd-MM-yyyy HH:mm";
 + (NSString*)convertDateToString:(NSDate *)date withFormat:(NSString*)formatDate;
 + (NSTimeInterval)convertDateToLongtime:(NSDate*)date;
 + (NSDate*)convertLongtimeToDate:(NSTimeInterval)timeInMiliseconds;
++ (NSInteger)getYearFormDate:(NSDate *)date;
++ (NSInteger)getMonthFormDate:(NSDate *)date;
 @end

@@ -7,9 +7,13 @@
 //
 
 #import "StatisticsViewController.h"
+#import <Quickblox/Quickblox.h>
+#import "Storage.h"
+#import "CustomCellOnlyText.h"
+#import "SubStatisticsViewController.h"
 
 @interface StatisticsViewController ()
-
+@property (nonatomic, strong) NSMutableDictionary *dictData;
 @end
 
 @implementation StatisticsViewController
@@ -23,7 +27,54 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    self.dictData = [NSMutableDictionary new];
+    NSMutableDictionary *getRequest = [NSMutableDictionary dictionary];
+//    [getRequest setObject:@(0) forKey:@"isSell"];
+    [QBRequest objectsWithClassName:kItemClassName extendedRequest:getRequest successBlock:^(QBResponse *response, NSArray *objects, QBResponsePage *page) {
+        [self handleData:objects];
+    } errorBlock:^(QBResponse *response) {
+        NSLog(@"Response error: %@", [response.error description]);
+    }];
 }
+
+- (void)handleData:(NSArray *)arrayData {
+    for (NSInteger index=0; index<arrayData.count; index++) {
+        QBCOCustomObject *object = [arrayData objectAtIndex:index];
+        NSDate *dateOutObject = [CommonFeature convertLongtimeToDate:[object.fields[@"dateOutput"] doubleValue]];
+        NSInteger year = [CommonFeature getYearFormDate:dateOutObject];
+        NSMutableArray *array = [self.dictData objectForKey:[NSString stringWithFormat:@"%ld", year]];
+        if (!array) {
+            array =[NSMutableArray new];
+            [self.dictData setObject:array forKey:[NSString stringWithFormat:@"%ld", year]];
+        }
+        [array addObject:object];
+    }
+    [self.tbView reloadData];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dictData allKeys].count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomCellOnlyText *cell = (CustomCellOnlyText *)[tableView dequeueReusableCellWithIdentifier:@"CustomCellOnlyText" forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"Nam %@", [[self.dictData allKeys] objectAtIndex:indexPath.row]];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSMutableArray *arrayData = [self.dictData valueForKey:[[self.dictData allKeys] objectAtIndex:indexPath.row]];
+    SubStatisticsViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SubStatisticsViewController"];
+    rootView.arrayData = [arrayData copy];
+    [self.navigationController pushViewController:rootView animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

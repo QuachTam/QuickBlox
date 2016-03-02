@@ -52,4 +52,18 @@
     NSString *stringFromDate = [formatter stringFromDate:date];
     return stringFromDate;
 }
+
++ (NSInteger)getYearFormDate:(NSDate *)date {
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:NSYearCalendarUnit fromDate:date];
+    NSInteger year  = [components year];
+    return year;
+}
+
++ (NSInteger)getMonthFormDate:(NSDate *)date {
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components = [gregorian components:NSMonthCalendarUnit fromDate:date];
+    NSInteger month  = [components month];
+    return month;
+}
 @end

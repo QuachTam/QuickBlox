@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
-@interface StatisticsViewController : UIViewController
+@interface StatisticsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
+@property (weak, nonatomic) IBOutlet UITableView *tbView;
 
 @end
