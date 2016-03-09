@@ -12,6 +12,5 @@
 @interface ItemsTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
 - (IBAction)actionQRCode:(id)sender;
-- (IBAction)actionAddItem:(id)sender;
 
 @end

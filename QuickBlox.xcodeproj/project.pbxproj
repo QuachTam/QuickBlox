@@ -62,6 +62,11 @@
 		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
+		FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */; };
+		FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */; };
+		FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */; };
+		FB9DDBF01C9027C4003BA958 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */; };
+		FB9DDBF11C9027C4003BA958 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */; };
 		FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */; };
 		FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */; };
 		FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABE1C61A9F00088ED92 /* Storage.m */; };
@@ -150,6 +155,17 @@
 		FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewContronller.m; sourceTree = "<group>"; };
 		FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
+		FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
+		FB9DDBE61C9027C4003BA958 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		FB9DDBE71C9027C4003BA958 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		FB9DDBE91C9027C4003BA958 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		FB9DDBEB1C9027C4003BA958 /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
+		FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
 		FBFB7AB71C61A73D0088ED92 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectsPaginator.h; sourceTree = "<group>"; };
@@ -343,6 +359,7 @@
 		FB4422131C51CD1C0083B341 /* QuickBlox */ = {
 			isa = PBXGroup;
 			children = (
+				FB9DDBE01C9027C4003BA958 /* Third Party */,
 				FBFB7ABA1C61A9E70088ED92 /* Models */,
 				FB1AA96F1C60888B0095D816 /* CoreData */,
 				FB1AA96B1C60526A0095D816 /* Commons */,
@@ -443,6 +460,32 @@
 				A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */,
 			);
 			path = StatisticsViewController;
+			sourceTree = "<group>";
+		};
+		FB9DDBE01C9027C4003BA958 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				FB9DDBE11C9027C4003BA958 /* QRCodeReaderViewController */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		FB9DDBE11C9027C4003BA958 /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */,
+				FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */,
+				FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */,
+				FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */,
+				FB9DDBE61C9027C4003BA958 /* QRCodeReaderDelegate.h */,
+				FB9DDBE71C9027C4003BA958 /* QRCodeReaderView.h */,
+				FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */,
+				FB9DDBE91C9027C4003BA958 /* QRCodeReaderViewController.h */,
+				FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */,
+				FB9DDBEB1C9027C4003BA958 /* QRToggleTorchButton.h */,
+				FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */,
+			);
+			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
 		FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */ = {
@@ -608,12 +651,16 @@
 			files = (
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
+				FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
 				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
+				FB9DDBF01C9027C4003BA958 /* QRCodeReaderViewController.m in Sources */,
+				FB9DDBF11C9027C4003BA958 /* QRToggleTorchButton.m in Sources */,
 				A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
+				FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
 				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
@@ -622,6 +669,7 @@
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
+				FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,

@@ -14,8 +14,10 @@
 #import <Quickblox/Quickblox.h>
 #import "ModelItem.h"
 #import <SwipeBack/SwipeBack.h>
+#import "QRCodeReaderViewController.h"
+#import "QRCodeReader.h"
 
-@interface ItemsTableViewController ()<NMPaginatorDelegate>
+@interface ItemsTableViewController ()<NMPaginatorDelegate, QRCodeReaderDelegate>
 @property (nonatomic, strong) ObjectsPaginator *paginator;
 @end
 
@@ -174,10 +176,42 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+#pragma mark QRCodeReader
 - (IBAction)actionQRCode:(id)sender {
+    if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
+        static QRCodeReaderViewController *vc = nil;
+        static dispatch_once_t onceToken;
+        
+        dispatch_once(&onceToken, ^{
+            QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+            vc.modalPresentationStyle = UIModalPresentationFormSheet;
+        });
+        vc.delegate = self;
+        
+        [vc setCompletionWithBlock:^(NSString *resultAsString) {
+            NSLog(@"Completion with result: %@", resultAsString);
+        }];
+        
+        [self presentViewController:vc animated:YES completion:NULL];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
 }
 
-- (IBAction)actionAddItem:(id)sender {
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 @end

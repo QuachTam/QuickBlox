@@ -665,7 +665,6 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" image="button_plus.png"/>
                                     <connections>
-                                        <action selector="actionAddItem:" destination="5y8-ql-cvd" eventType="touchUpInside" id="z9I-BH-R2F"/>
                                         <segue destination="XXT-qh-XBf" kind="push" id="RGF-Xn-RqR"/>
                                     </connections>
                                 </button>
