@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SubStatisticsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+- (IBAction)actionBackView:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *tbView;
 @property (nonatomic, strong) NSArray *arrayData;
 @end

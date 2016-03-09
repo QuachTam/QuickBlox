@@ -48,32 +48,34 @@
 - (IBAction)actionRegisterButton:(id)sender {
     if (self.nameTextField.text.length && self.emailTextField.text.length && self.phoneTextField.text.length && self.passwordTextField.text.length) {
         if ([self.passwordTextField.text isEqualToString:self.rePasswordTextField.text]) {
-            QBUUser *user = [QBUUser user];
-            user.password = self.passwordTextField.text;
-            user.login = self.nameTextField.text;
-            user.email = self.emailTextField.text;
-            user.phone = self.phoneTextField.text;
-            
-            // Registration/sign up of User
-            [QBRequest signUp:user successBlock:^(QBResponse *response, QBUUser *user) {
-                // Sign up was successful
-                [self showMessage:@"Dang ky thanh cong"];
-            } errorBlock:^(QBResponse *response) {
-                // Handle error here
-                [self showMessage:@"Dang ky loi"];
-            }];
+            if (self.passwordTextField.text.length<8) {
+                [CommonFeature showAlertTitle:nil Message:@"password should contain 8 letters" duration:2.0 showIn:self blockDismissView:nil];
+            }else{
+                QBUUser *user = [QBUUser user];
+                user.password = self.passwordTextField.text;
+                user.login = self.nameTextField.text;
+                user.email = self.emailTextField.text;
+                user.phone = self.phoneTextField.text;
+                
+                // Registration/sign up of User
+                [QBRequest signUp:user successBlock:^(QBResponse *response, QBUUser *user) {
+                    // Sign up was successful
+                    [CommonFeature showAlertTitle:nil Message:@"Dang ky thanh cong" duration:2.0 showIn:self blockDismissView:^{
+                        [self actionBackButton:nil];
+                    }];
+                } errorBlock:^(QBResponse *response) {
+                    // Handle error here
+                    [CommonFeature showAlertTitle:nil Message:@"Dang ky loi" duration:2.0 showIn:self blockDismissView:nil];
+                }];
+            }
         }else{
             // alert
-            [self showMessage:@"Sai mat khau"];
+            [CommonFeature showAlertTitle:nil Message:@"Sai mat khau" duration:1.0 showIn:self blockDismissView:nil];
         }
     }else{
         // alert
-        [self showMessage:@"Nhap thieu thong tin"];
+        [CommonFeature showAlertTitle:nil Message:@"Nhap thieu thong tin" duration:1.0 showIn:self blockDismissView:nil];
     }
-}
-
-- (void)showMessage:(NSString *)message {
-    [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
 }
 
 - (IBAction)actionBackButton:(id)sender {

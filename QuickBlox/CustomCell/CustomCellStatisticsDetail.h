@@ -13,5 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *moneyInput;
 @property (weak, nonatomic) IBOutlet UILabel *moneyOutput;
 @property (weak, nonatomic) IBOutlet UILabel *moneyResult;
+@property (weak, nonatomic) IBOutlet UILabel *moneyValueInput;
+@property (weak, nonatomic) IBOutlet UILabel *moneyValueOutput;
+@property (weak, nonatomic) IBOutlet UILabel *moneyValueResult;
 
 @end

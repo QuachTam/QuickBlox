@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.dictData = [NSMutableDictionary new];
     self.arraykeys = [NSArray new];
@@ -62,13 +63,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCellStatisticsDetail *cell = (CustomCellStatisticsDetail *)[tableView dequeueReusableCellWithIdentifier:@"CustomCellStatisticsDetail" forIndexPath:indexPath];
-    cell.monthLabel.text = [NSString stringWithFormat:@"Thang %@", [[self.dictData allKeys] objectAtIndex:indexPath.row]];
+    cell.monthLabel.text = [NSString stringWithFormat:@"Tháng %@", [[self.dictData allKeys] objectAtIndex:indexPath.row]];
     CGFloat moneyInput = [self getMoneyInputInMonth:[self.dictData valueForKey:[self.arraykeys objectAtIndex:indexPath.row]]];
     CGFloat moneyOutput = [self getMoneyOutputInMonth:[self.dictData valueForKey:[self.arraykeys objectAtIndex:indexPath.row]]];
     CGFloat moneyResult = moneyOutput - moneyInput;
-    cell.moneyInput.text = [NSString localizedStringWithFormat:@"So tien nhap: %.2f", moneyInput];
-    cell.moneyOutput.text = [NSString localizedStringWithFormat:@"So tien ban: %.2f", moneyOutput];
-    cell.moneyResult.text = [NSString localizedStringWithFormat:@"So tien lai: %.2f", moneyResult];
+    cell.moneyInput.text = @"Tổng tiền nhập:";
+    cell.moneyOutput.text = @"Tổng tiền bán:";
+    cell.moneyResult.text = @"Tổng thu nhập:";
+    
+    cell.moneyValueInput.text = [NSString localizedStringWithFormat:@"%.2f", moneyInput];
+    cell.moneyValueOutput.text = [NSString localizedStringWithFormat:@"%.2f", moneyOutput];
+    cell.moneyValueResult.text = [NSString localizedStringWithFormat:@"%.2f", moneyResult];
     return cell;
 }
 
@@ -105,4 +110,7 @@
 }
 */
 
+- (IBAction)actionBackView:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

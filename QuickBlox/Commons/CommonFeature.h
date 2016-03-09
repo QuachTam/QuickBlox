@@ -18,4 +18,5 @@ static NSString *format_date_type_yyyy_mm_dd_hh_mm = @"dd-MM-yyyy HH:mm";
 + (NSDate*)convertLongtimeToDate:(NSTimeInterval)timeInMiliseconds;
 + (NSInteger)getYearFormDate:(NSDate *)date;
 + (NSInteger)getMonthFormDate:(NSDate *)date;
++ (void)showAlertTitle:(NSString*)title Message:(NSString *)message duration:(NSInteger)duration showIn:(id)supperView blockDismissView:(void(^)(void))block;
 @end

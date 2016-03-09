@@ -66,4 +66,19 @@
     NSInteger month  = [components month];
     return month;
 }
+
++ (void)showAlertTitle:(NSString*)title Message:(NSString *)message duration:(NSInteger)duration showIn:(id)supperView blockDismissView:(void(^)(void))block{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [supperView presentViewController:alert animated:YES completion:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:^{
+            // do something ?
+            if (block) {
+                block();
+            }
+        }];
+    });
+}
 @end

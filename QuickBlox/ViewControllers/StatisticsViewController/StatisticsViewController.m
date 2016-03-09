@@ -27,12 +27,15 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     self.dictData = [NSMutableDictionary new];
     NSMutableDictionary *getRequest = [NSMutableDictionary dictionary];
 //    [getRequest setObject:@(0) forKey:@"isSell"];
     [QBRequest objectsWithClassName:kItemClassName extendedRequest:getRequest successBlock:^(QBResponse *response, NSArray *objects, QBResponsePage *page) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         [self handleData:objects];
     } errorBlock:^(QBResponse *response) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         NSLog(@"Response error: %@", [response.error description]);
     }];
 }
@@ -64,7 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCellOnlyText *cell = (CustomCellOnlyText *)[tableView dequeueReusableCellWithIdentifier:@"CustomCellOnlyText" forIndexPath:indexPath];
-    cell.textLabel.text = [NSString stringWithFormat:@"Nam %@", [[self.dictData allKeys] objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Thống kê năm %@", [[self.dictData allKeys] objectAtIndex:indexPath.row]];
     return cell;
 }
 
