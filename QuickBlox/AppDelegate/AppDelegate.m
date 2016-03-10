@@ -8,11 +8,15 @@
 
 #import "AppDelegate.h"
 #import <Quickblox/Quickblox.h>
+#import "GAITracker.h"
+#import "GAI.h"
+#import "GAIFields.h"
 
 const NSUInteger kApplicationID = 33971;
 NSString *const kAuthKey        = @"K8NJhtA66Xa6pwF";
 NSString *const kAuthSecret     = @"HXdyzv3HPyEzYa-";
 NSString *const kAccountKey     = @"zPcbuL6B9knt6pSuXqKj";
+NSString *const kGoogleAnalytics = @"UA-74945025-2";
 
 @interface AppDelegate ()
 
@@ -20,6 +24,23 @@ NSString *const kAccountKey     = @"zPcbuL6B9knt6pSuXqKj";
 
 @implementation AppDelegate
 
+- (void)setUpGoogleAnalytics {
+    /********** Testing **********/
+    //  [[GAI sharedInstance] setDryRun:YES];
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    /* send uncaught exceptions to Google Analytics. */
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    
+    /********** Sampling Rate 20 seconds. **********/
+    [GAI sharedInstance].dispatchInterval = 20;
+    
+    /* Initialize tracker */
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:kGoogleAnalytics];
+    /********** Sampling Rate **********/
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+    [tracker set:kGAIAppVersion value:version];
+    [tracker set:kGAISampleRate value:@"50.0"]; // sampling rate of 50%
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -27,6 +48,9 @@ NSString *const kAccountKey     = @"zPcbuL6B9knt6pSuXqKj";
     [QBSettings setAuthKey:kAuthKey];
     [QBSettings setAuthSecret:kAuthSecret];
     [QBSettings setAccountKey:kAccountKey];
+    
+    [self setUpGoogleAnalytics];
+    
     return YES;
 }
 

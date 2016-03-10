@@ -63,6 +63,8 @@
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
 		FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8DFD6C1C916CF0004C344A /* AdmodManager.m */; };
+		FB8DFD7A1C91713F004C344A /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */; };
+		FB8DFD7C1C9171E7004C344A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */; };
 		FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */; };
 		FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */; };
 		FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */; };
@@ -158,6 +160,18 @@
 		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		FB8DFD6B1C916CF0004C344A /* AdmodManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmodManager.h; sourceTree = "<group>"; };
 		FB8DFD6C1C916CF0004C344A /* AdmodManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmodManager.m; sourceTree = "<group>"; };
+		FB8DFD6F1C91713F004C344A /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		FB8DFD701C91713F004C344A /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		FB8DFD711C91713F004C344A /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		FB8DFD721C91713F004C344A /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		FB8DFD731C91713F004C344A /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		FB8DFD741C91713F004C344A /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		FB8DFD751C91713F004C344A /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		FB8DFD761C91713F004C344A /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		FB8DFD771C91713F004C344A /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		FB8DFD781C91713F004C344A /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
 		FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8DFD7C1C9171E7004C344A /* libsqlite3.0.tbd in Frameworks */,
 				FB1AA97F1C60B0750095D816 /* SystemConfiguration.framework in Frameworks */,
 				FB1AA97D1C60B06C0095D816 /* MobileCoreServices.framework in Frameworks */,
 				FB1AA97B1C60B0640095D816 /* CoreGraphics.framework in Frameworks */,
@@ -193,6 +208,7 @@
 				FB05A9771C52123000F4DC97 /* Foundation.framework in Frameworks */,
 				FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */,
 				CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */,
+				FB8DFD7A1C91713F004C344A /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +218,7 @@
 		BC8682A5D6B2BD4F7C1B19F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */,
 				FB1AA97E1C60B0750095D816 /* SystemConfiguration.framework */,
 				FB1AA97C1C60B06C0095D816 /* MobileCoreServices.framework */,
 				FB1AA97A1C60B0640095D816 /* CoreGraphics.framework */,
@@ -467,9 +484,28 @@
 			path = StatisticsViewController;
 			sourceTree = "<group>";
 		};
+		FB8DFD6E1C91713F004C344A /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				FB8DFD6F1C91713F004C344A /* GAI.h */,
+				FB8DFD701C91713F004C344A /* GAIDictionaryBuilder.h */,
+				FB8DFD711C91713F004C344A /* GAIEcommerceFields.h */,
+				FB8DFD721C91713F004C344A /* GAIEcommerceProduct.h */,
+				FB8DFD731C91713F004C344A /* GAIEcommerceProductAction.h */,
+				FB8DFD741C91713F004C344A /* GAIEcommercePromotion.h */,
+				FB8DFD751C91713F004C344A /* GAIFields.h */,
+				FB8DFD761C91713F004C344A /* GAILogger.h */,
+				FB8DFD771C91713F004C344A /* GAITrackedViewController.h */,
+				FB8DFD781C91713F004C344A /* GAITracker.h */,
+				FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */,
+			);
+			path = "Google Analytics";
+			sourceTree = "<group>";
+		};
 		FB9DDBE01C9027C4003BA958 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				FB8DFD6E1C91713F004C344A /* Google Analytics */,
 				FB9DDBE11C9027C4003BA958 /* QRCodeReaderViewController */,
 			);
 			path = "Third Party";
@@ -808,6 +844,12 @@
 				INFOPLIST_FILE = QuickBlox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickBlox/Third",
+					Party/Google,
+					Analytics,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "40b90986-a370-4707-a1ca-fd58ace54248";
@@ -825,6 +867,12 @@
 				INFOPLIST_FILE = QuickBlox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/QuickBlox/Third",
+					Party/Google,
+					Analytics,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "40b90986-a370-4707-a1ca-fd58ace54248";
