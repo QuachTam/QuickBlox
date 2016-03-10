@@ -18,6 +18,7 @@
     #import <MagicalRecord/MagicalRecord.h>
     #import <MBProgressHUD/MBProgressHUD.h>
     #import "CommonFeature.h"
+    #import "AdmodManager.h"
     #define _LSFromTable NSLocalizedStringFromTable
     #define _LS NSLocalizedString
 #endif

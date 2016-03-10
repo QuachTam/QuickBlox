@@ -62,6 +62,7 @@
 		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
+		FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8DFD6C1C916CF0004C344A /* AdmodManager.m */; };
 		FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */; };
 		FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */; };
 		FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */; };
@@ -155,6 +156,8 @@
 		FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewContronller.m; sourceTree = "<group>"; };
 		FB7D2FD51C5F0E9900EEF1EC /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		FB8DFD6B1C916CF0004C344A /* AdmodManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmodManager.h; sourceTree = "<group>"; };
+		FB8DFD6C1C916CF0004C344A /* AdmodManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmodManager.m; sourceTree = "<group>"; };
 		FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
 		FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
 		FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
@@ -327,6 +330,8 @@
 				FB1AA96D1C6052990095D816 /* CommonFeature.m */,
 				FB1AA9831C60D4460095D816 /* Keychain.h */,
 				FB1AA9841C60D4460095D816 /* Keychain.m */,
+				FB8DFD6B1C916CF0004C344A /* AdmodManager.h */,
+				FB8DFD6C1C916CF0004C344A /* AdmodManager.m */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB9DDBF01C9027C4003BA958 /* QRCodeReaderViewController.m in Sources */,
 				FB9DDBF11C9027C4003BA958 /* QRToggleTorchButton.m in Sources */,
+				FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */,
 				A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */,

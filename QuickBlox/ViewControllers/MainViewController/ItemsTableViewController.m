@@ -5,6 +5,7 @@
 //  Created by Tamqn on 2/1/16.
 //  Copyright © 2016 Tamqn. All rights reserved.
 //
+@import GoogleMobileAds;
 
 #import "ItemsTableViewController.h"
 #import "ItemsTableViewCell.h"
@@ -41,6 +42,9 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.navigationController.interactivePopGestureRecognizer.enabled = false;
     });
+    
+    AdmodManager *managerAd = [AdmodManager sharedInstance];
+    [managerAd showAdmodInViewController];
 }
 
 - (void)viewWillAppear:(BOOL)animated

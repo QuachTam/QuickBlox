@@ -11,6 +11,7 @@
 #include "SWRevealViewController.h"
 #import "Keychain.h"
 
+
 @interface LoginViewController ()
 
 @end
@@ -28,6 +29,8 @@
             [self actionLogin:nil];
         }
     }];
+    AdmodManager *managerAd = [AdmodManager sharedInstance];
+    [managerAd showAdmodInViewController];
 }
 
 - (void)didReceiveMemoryWarning {
