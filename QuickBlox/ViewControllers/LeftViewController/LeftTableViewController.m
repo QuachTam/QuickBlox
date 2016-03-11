@@ -13,18 +13,24 @@
 
 @interface LeftTableViewController ()
 @property (nonatomic, strong) NSArray *itemsArray;
+@property (nonatomic, strong) NSArray *iconItemsArray;
 @end
 
 @implementation LeftTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self headerView];
+}
+
+- (void)headerView {
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.tableView.tableHeaderView = header;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //update the header's frame and set it again
+    CGRect newFrame = self.tableView.tableHeaderView.frame;
+    newFrame.size.height = newFrame.size.height;
+    self.tableView.tableHeaderView.frame = newFrame;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +41,7 @@
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
         _itemsArray = @[@"Kho hàng", @"Giỏ hàng", @"Thống kê", @"Thiết lập", @"Thoát"];
+        _iconItemsArray = @[@"home", @"shopping", @"analyticsIcon", @"settingIcon", @"logoutIcon"];
     }
     return _itemsArray;
 }
@@ -51,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LeftCustomCell *cell = (LeftCustomCell *)[tableView dequeueReusableCellWithIdentifier:@"LeftCustomCell" forIndexPath:indexPath];
-    cell.itemIcon.image = [UIImage imageNamed:@"home"];
+    cell.itemIcon.image = [UIImage imageNamed:[self.iconItemsArray objectAtIndex:indexPath.row]];
     cell.itemName.text = [self.itemsArray objectAtIndex:indexPath.row];
     return cell;
 }
@@ -90,19 +97,4 @@
     }
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    
-//    // Set the title of navigation bar by using the menu items
-//    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//    UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;
-//    destViewController.title = [[self.itemsArray objectAtIndex:indexPath.row] capitalizedString];
-//    
-//    // Set the photo if it navigates to the PhotoView
-//    if ([segue.identifier isEqualToString:@"showPhoto"]) {
-//        UINavigationController *navController = segue.destinationViewController;
-//        PhotoViewController *photoController = [navController childViewControllers].firstObject;
-//        NSString *photoFilename = [NSString stringWithFormat:@"%@_photo", [menuItems objectAtIndex:indexPath.row]];
-//        photoController.photoFilename = photoFilename;
-//    }
-//}
 @end

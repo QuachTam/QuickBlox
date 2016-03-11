@@ -8,7 +8,7 @@
 @class GADBannerView;
 @import GoogleMobileAds;
 
-static NSString *ClientAppID = @"ca-app-pub-9259023205127043/4645494013";
+static NSString *ClientAppID = @"ca-app-pub-9259023205127043/7494555614";
 
 #import "AdmodManager.h"
 

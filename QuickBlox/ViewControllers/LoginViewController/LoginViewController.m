@@ -18,9 +18,19 @@
 
 @implementation LoginViewController
 
+- (void)setupView {
+    self.loginButton.layer.cornerRadius = 4.0f;
+    self.loginButton.layer.masksToBounds = YES;
+    
+    self.loginView.layer.cornerRadius = 4.0f;
+    self.loginView.layer.masksToBounds = YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupView];
+    
     Keychain *keyObject = [Keychain shareInstance];
     [keyObject getKeyChain:^(NSString *password, NSString *email) {
         if (email && password) {

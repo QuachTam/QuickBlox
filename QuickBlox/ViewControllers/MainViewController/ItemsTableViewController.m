@@ -35,7 +35,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     [[Storage instance].itemList removeAllObjects];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     self.paginator = [[ObjectsPaginator alloc] initWithPageSize:10 delegate:self];
     [self.paginator fetchFirstPage];
     // Disable iOS 7 back gesture
@@ -45,17 +45,30 @@
     
     AdmodManager *managerAd = [AdmodManager sharedInstance];
     [managerAd showAdmodInViewController];
+    [self footerView];
 }
+
+- (void)footerView {
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    self.tableView.tableFooterView = header;
+    
+    //update the header's frame and set it again
+    CGRect newFrame = self.tableView.tableFooterView.frame;
+    newFrame.size.height = newFrame.size.height;
+    self.tableView.tableFooterView.frame = newFrame;
+}
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.swipeBackEnabled = NO;
+    [self.tableView reloadData];
 }
 
 - (void)paginator:(id)paginator didReceiveResults:(NSArray *)results {
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
     [[Storage instance].itemList addObjectsFromArray:results];
     [self.tableView reloadData];
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +80,10 @@
 #pragma mark Paginator
 
 - (void)fetchNextPage {
-    [self.paginator fetchNextPage];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.paginator fetchNextPage];
+    });
 }
 
 #pragma mark
@@ -96,20 +112,25 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 99;
+    return [self heightForBasicCellAtIndexPaths:indexPath tableView:tableView];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemsTableViewCell *cell = (ItemsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+    [self configureformTableViewCell:cell atIndexPath:indexPath tableView:tableView];
+    return cell;
+}
+
+- (void)configureformTableViewCell:(ItemsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath tableView:(UITableView*)tableView{
+    // some code for initializing cell content
     QBCOCustomObject *object_custom = [Storage instance].itemList[indexPath.row];
     NSString* name = object_custom.fields[@"name"];
     NSString* moneyOut = object_custom.fields[@"moneyOutput"];
     NSString* info = object_custom.fields[@"info"];
-
+    
     cell.nameLabel.text = name;
-    cell.moneyLabel.text = moneyOut;
+    cell.moneyLabel.text = [NSString localizedStringWithFormat:@"%.2f", [moneyOut doubleValue]];
     cell.infoLabel.text = info;
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -137,49 +158,25 @@
     model.info = customObject.fields[@"info"];
     return model;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (CGFloat)heightForBasicCellAtIndexPaths:(NSIndexPath *)indexPath tableView:(UITableView*)tableView{
+    static ItemsTableViewCell *sizingCell = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sizingCell = [tableView dequeueReusableCellWithIdentifier:@"itemCell"];
+    });
+    
+    [self configureformTableViewCell:sizingCell atIndexPath:indexPath tableView:tableView];
+    return [self calculateHeightForConfiguredSizingCells:sizingCell];
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (CGFloat)calculateHeightForConfiguredSizingCells:(UITableViewCell *)sizingCell {
+    [sizingCell setNeedsLayout];
+    [sizingCell layoutIfNeeded];
+    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1.0f; // Add 1.0f for the cell separator height
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 #pragma mark QRCodeReader
 - (IBAction)actionQRCode:(id)sender {
     if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {

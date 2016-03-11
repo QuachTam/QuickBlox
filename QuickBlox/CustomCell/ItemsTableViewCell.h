@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RWLabel.h"
 
 @interface ItemsTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet RWLabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+@property (weak, nonatomic) IBOutlet RWLabel *infoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end

@@ -18,6 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.registerButton.layer.cornerRadius = 4.0f;
+    self.registerButton.layer.masksToBounds = YES;
+    
+    self.registerView.layer.cornerRadius = 4.0f;
+    self.registerView.layer.masksToBounds = YES;
+    
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.scrollView.contentSize = self.view.frame.size;
 }
 
 - (void)didReceiveMemoryWarning {

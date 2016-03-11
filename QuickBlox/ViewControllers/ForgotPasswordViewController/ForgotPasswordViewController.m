@@ -18,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.reSendButton.layer.cornerRadius = 4.0f;
+    self.reSendButton.layer.masksToBounds = YES;
+    
+    self.forgotView.layer.cornerRadius = 4.0f;
+    self.forgotView.layer.masksToBounds = YES;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -63,13 +63,20 @@
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
 		FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8DFD6C1C916CF0004C344A /* AdmodManager.m */; };
-		FB8DFD7A1C91713F004C344A /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */; };
 		FB8DFD7C1C9171E7004C344A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */; };
-		FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */; };
-		FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */; };
-		FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */; };
-		FB9DDBF01C9027C4003BA958 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */; };
-		FB9DDBF11C9027C4003BA958 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */; };
+		FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74131C92A0C800CF017B /* RWLabel.m */; };
+		FBCB742E1C92AE1300CF017B /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCB74211C92AE1300CF017B /* libGoogleAnalyticsServices.a */; };
+		FBCB742F1C92AE1300CF017B /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74241C92AE1300CF017B /* QRCameraSwitchButton.m */; };
+		FBCB74301C92AE1300CF017B /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74261C92AE1300CF017B /* QRCodeReader.m */; };
+		FBCB74311C92AE1300CF017B /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74291C92AE1300CF017B /* QRCodeReaderView.m */; };
+		FBCB74321C92AE1300CF017B /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB742B1C92AE1300CF017B /* QRCodeReaderViewController.m */; };
+		FBCB74331C92AE1300CF017B /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB742D1C92AE1300CF017B /* QRToggleTorchButton.m */; };
+		FBCB74361C92D0DE00CF017B /* settingIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB74341C92D0DE00CF017B /* settingIcon@3x.png */; };
+		FBCB74371C92D0DE00CF017B /* settingIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB74351C92D0DE00CF017B /* settingIcon@2x.png */; };
+		FBCB743A1C92D1CE00CF017B /* analyticsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB74381C92D1CE00CF017B /* analyticsIcon@2x.png */; };
+		FBCB743B1C92D1CE00CF017B /* analyticsIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB74391C92D1CE00CF017B /* analyticsIcon@3x.png */; };
+		FBCB743E1C92D25400CF017B /* logoutIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */; };
+		FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */; };
 		FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */; };
 		FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */; };
 		FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABE1C61A9F00088ED92 /* Storage.m */; };
@@ -160,29 +167,37 @@
 		FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		FB8DFD6B1C916CF0004C344A /* AdmodManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmodManager.h; sourceTree = "<group>"; };
 		FB8DFD6C1C916CF0004C344A /* AdmodManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmodManager.m; sourceTree = "<group>"; };
-		FB8DFD6F1C91713F004C344A /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		FB8DFD701C91713F004C344A /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		FB8DFD711C91713F004C344A /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
-		FB8DFD721C91713F004C344A /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		FB8DFD731C91713F004C344A /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		FB8DFD741C91713F004C344A /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		FB8DFD751C91713F004C344A /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		FB8DFD761C91713F004C344A /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		FB8DFD771C91713F004C344A /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		FB8DFD781C91713F004C344A /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
-		FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
-		FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
-		FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
-		FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
-		FB9DDBE61C9027C4003BA958 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
-		FB9DDBE71C9027C4003BA958 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
-		FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
-		FB9DDBE91C9027C4003BA958 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
-		FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
-		FB9DDBEB1C9027C4003BA958 /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
-		FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
+		FBCB74121C92A0C800CF017B /* RWLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLabel.h; sourceTree = "<group>"; };
+		FBCB74131C92A0C800CF017B /* RWLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLabel.m; sourceTree = "<group>"; };
+		FBCB74171C92AE1300CF017B /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		FBCB74181C92AE1300CF017B /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		FBCB74191C92AE1300CF017B /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		FBCB741A1C92AE1300CF017B /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		FBCB741B1C92AE1300CF017B /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		FBCB741C1C92AE1300CF017B /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		FBCB741D1C92AE1300CF017B /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		FBCB741E1C92AE1300CF017B /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		FBCB741F1C92AE1300CF017B /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		FBCB74201C92AE1300CF017B /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		FBCB74211C92AE1300CF017B /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		FBCB74231C92AE1300CF017B /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		FBCB74241C92AE1300CF017B /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		FBCB74251C92AE1300CF017B /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
+		FBCB74261C92AE1300CF017B /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
+		FBCB74271C92AE1300CF017B /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		FBCB74281C92AE1300CF017B /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		FBCB74291C92AE1300CF017B /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		FBCB742A1C92AE1300CF017B /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		FBCB742B1C92AE1300CF017B /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		FBCB742C1C92AE1300CF017B /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
+		FBCB742D1C92AE1300CF017B /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
+		FBCB74341C92D0DE00CF017B /* settingIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingIcon@3x.png"; sourceTree = "<group>"; };
+		FBCB74351C92D0DE00CF017B /* settingIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingIcon@2x.png"; sourceTree = "<group>"; };
+		FBCB74381C92D1CE00CF017B /* analyticsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analyticsIcon@2x.png"; sourceTree = "<group>"; };
+		FBCB74391C92D1CE00CF017B /* analyticsIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analyticsIcon@3x.png"; sourceTree = "<group>"; };
+		FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutIcon@3x.png"; sourceTree = "<group>"; };
+		FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutIcon@2x.png"; sourceTree = "<group>"; };
 		FBFB7AB71C61A73D0088ED92 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectsPaginator.h; sourceTree = "<group>"; };
@@ -198,6 +213,7 @@
 			files = (
 				FB8DFD7C1C9171E7004C344A /* libsqlite3.0.tbd in Frameworks */,
 				FB1AA97F1C60B0750095D816 /* SystemConfiguration.framework in Frameworks */,
+				FBCB742E1C92AE1300CF017B /* libGoogleAnalyticsServices.a in Frameworks */,
 				FB1AA97D1C60B06C0095D816 /* MobileCoreServices.framework in Frameworks */,
 				FB1AA97B1C60B0640095D816 /* CoreGraphics.framework in Frameworks */,
 				FB1AA9791C60B05B0095D816 /* QuartzCore.framework in Frameworks */,
@@ -208,7 +224,6 @@
 				FB05A9771C52123000F4DC97 /* Foundation.framework in Frameworks */,
 				FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */,
 				CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */,
-				FB8DFD7A1C91713F004C344A /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +270,12 @@
 		FB05A97B1C52176500F4DC97 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */,
+				FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */,
+				FBCB74381C92D1CE00CF017B /* analyticsIcon@2x.png */,
+				FBCB74391C92D1CE00CF017B /* analyticsIcon@3x.png */,
+				FBCB74341C92D0DE00CF017B /* settingIcon@3x.png */,
+				FBCB74351C92D0DE00CF017B /* settingIcon@2x.png */,
 				FB117DDA1C5F783B00F8E222 /* backButton@3x.png */,
 				FB117DDB1C5F783B00F8E222 /* backButton@2x.png */,
 				FB117DD61C5F77EC00F8E222 /* doneButton@3x.png */,
@@ -343,6 +364,8 @@
 		FB1AA96B1C60526A0095D816 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				FBCB74121C92A0C800CF017B /* RWLabel.h */,
+				FBCB74131C92A0C800CF017B /* RWLabel.m */,
 				FB1AA96C1C6052990095D816 /* CommonFeature.h */,
 				FB1AA96D1C6052990095D816 /* CommonFeature.m */,
 				FB1AA9831C60D4460095D816 /* Keychain.h */,
@@ -381,7 +404,7 @@
 		FB4422131C51CD1C0083B341 /* QuickBlox */ = {
 			isa = PBXGroup;
 			children = (
-				FB9DDBE01C9027C4003BA958 /* Third Party */,
+				FBCB74151C92AE1300CF017B /* ThirdParty */,
 				FBFB7ABA1C61A9E70088ED92 /* Models */,
 				FB1AA96F1C60888B0095D816 /* CoreData */,
 				FB1AA96B1C60526A0095D816 /* Commons */,
@@ -484,47 +507,47 @@
 			path = StatisticsViewController;
 			sourceTree = "<group>";
 		};
-		FB8DFD6E1C91713F004C344A /* Google Analytics */ = {
+		FBCB74151C92AE1300CF017B /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				FB8DFD6F1C91713F004C344A /* GAI.h */,
-				FB8DFD701C91713F004C344A /* GAIDictionaryBuilder.h */,
-				FB8DFD711C91713F004C344A /* GAIEcommerceFields.h */,
-				FB8DFD721C91713F004C344A /* GAIEcommerceProduct.h */,
-				FB8DFD731C91713F004C344A /* GAIEcommerceProductAction.h */,
-				FB8DFD741C91713F004C344A /* GAIEcommercePromotion.h */,
-				FB8DFD751C91713F004C344A /* GAIFields.h */,
-				FB8DFD761C91713F004C344A /* GAILogger.h */,
-				FB8DFD771C91713F004C344A /* GAITrackedViewController.h */,
-				FB8DFD781C91713F004C344A /* GAITracker.h */,
-				FB8DFD791C91713F004C344A /* libGoogleAnalyticsServices.a */,
+				FBCB74161C92AE1300CF017B /* GoogleAnalytics */,
+				FBCB74221C92AE1300CF017B /* QRCodeReaderViewController */,
 			);
-			path = "Google Analytics";
+			path = ThirdParty;
 			sourceTree = "<group>";
 		};
-		FB9DDBE01C9027C4003BA958 /* Third Party */ = {
+		FBCB74161C92AE1300CF017B /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				FB8DFD6E1C91713F004C344A /* Google Analytics */,
-				FB9DDBE11C9027C4003BA958 /* QRCodeReaderViewController */,
+				FBCB74171C92AE1300CF017B /* GAI.h */,
+				FBCB74181C92AE1300CF017B /* GAIDictionaryBuilder.h */,
+				FBCB74191C92AE1300CF017B /* GAIEcommerceFields.h */,
+				FBCB741A1C92AE1300CF017B /* GAIEcommerceProduct.h */,
+				FBCB741B1C92AE1300CF017B /* GAIEcommerceProductAction.h */,
+				FBCB741C1C92AE1300CF017B /* GAIEcommercePromotion.h */,
+				FBCB741D1C92AE1300CF017B /* GAIFields.h */,
+				FBCB741E1C92AE1300CF017B /* GAILogger.h */,
+				FBCB741F1C92AE1300CF017B /* GAITrackedViewController.h */,
+				FBCB74201C92AE1300CF017B /* GAITracker.h */,
+				FBCB74211C92AE1300CF017B /* libGoogleAnalyticsServices.a */,
 			);
-			path = "Third Party";
+			path = GoogleAnalytics;
 			sourceTree = "<group>";
 		};
-		FB9DDBE11C9027C4003BA958 /* QRCodeReaderViewController */ = {
+		FBCB74221C92AE1300CF017B /* QRCodeReaderViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FB9DDBE21C9027C4003BA958 /* QRCameraSwitchButton.h */,
-				FB9DDBE31C9027C4003BA958 /* QRCameraSwitchButton.m */,
-				FB9DDBE41C9027C4003BA958 /* QRCodeReader.h */,
-				FB9DDBE51C9027C4003BA958 /* QRCodeReader.m */,
-				FB9DDBE61C9027C4003BA958 /* QRCodeReaderDelegate.h */,
-				FB9DDBE71C9027C4003BA958 /* QRCodeReaderView.h */,
-				FB9DDBE81C9027C4003BA958 /* QRCodeReaderView.m */,
-				FB9DDBE91C9027C4003BA958 /* QRCodeReaderViewController.h */,
-				FB9DDBEA1C9027C4003BA958 /* QRCodeReaderViewController.m */,
-				FB9DDBEB1C9027C4003BA958 /* QRToggleTorchButton.h */,
-				FB9DDBEC1C9027C4003BA958 /* QRToggleTorchButton.m */,
+				FBCB74231C92AE1300CF017B /* QRCameraSwitchButton.h */,
+				FBCB74241C92AE1300CF017B /* QRCameraSwitchButton.m */,
+				FBCB74251C92AE1300CF017B /* QRCodeReader.h */,
+				FBCB74261C92AE1300CF017B /* QRCodeReader.m */,
+				FBCB74271C92AE1300CF017B /* QRCodeReaderDelegate.h */,
+				FBCB74281C92AE1300CF017B /* QRCodeReaderView.h */,
+				FBCB74291C92AE1300CF017B /* QRCodeReaderView.m */,
+				FBCB742A1C92AE1300CF017B /* QRCodeReaderViewController.h */,
+				FBCB742B1C92AE1300CF017B /* QRCodeReaderViewController.m */,
+				FBCB742C1C92AE1300CF017B /* QRToggleTorchButton.h */,
+				FBCB742D1C92AE1300CF017B /* QRToggleTorchButton.m */,
 			);
 			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
@@ -611,6 +634,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCB74361C92D0DE00CF017B /* settingIcon@3x.png in Resources */,
+				FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */,
 				FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */,
 				FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */,
 				FB05A98B1C52176500F4DC97 /* qrCode@3x.png in Resources */,
@@ -619,11 +644,15 @@
 				FB117DDD1C5F783B00F8E222 /* backButton@2x.png in Resources */,
 				FB117DCA1C5F48B200F8E222 /* button_plus@2x.png in Resources */,
 				FB4422241C51CD1C0083B341 /* Assets.xcassets in Resources */,
+				FBCB743A1C92D1CE00CF017B /* analyticsIcon@2x.png in Resources */,
 				FB05A9891C52176500F4DC97 /* home@3x.png in Resources */,
 				FB117DC91C5F48B200F8E222 /* button_plus@3x.png in Resources */,
 				FB05A9921C52176500F4DC97 /* UITableExpand.png in Resources */,
 				FB117DD91C5F77EC00F8E222 /* doneButton@2x.png in Resources */,
+				FBCB74371C92D0DE00CF017B /* settingIcon@2x.png in Resources */,
 				FB05A9931C52176500F4DC97 /* UITableExpand@2x.png in Resources */,
+				FBCB743E1C92D25400CF017B /* logoutIcon@3x.png in Resources */,
+				FBCB743B1C92D1CE00CF017B /* analyticsIcon@3x.png in Resources */,
 				FB117DDC1C5F783B00F8E222 /* backButton@3x.png in Resources */,
 				FB05A9911C52176500F4DC97 /* UITableContract@2x.png in Resources */,
 				FB05A98F1C52176500F4DC97 /* shopping@3x.png in Resources */,
@@ -691,19 +720,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
+				FBCB74331C92AE1300CF017B /* QRToggleTorchButton.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
-				FB9DDBEE1C9027C4003BA958 /* QRCodeReader.m in Sources */,
+				FBCB74311C92AE1300CF017B /* QRCodeReaderView.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
+				FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */,
 				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
+				FBCB74321C92AE1300CF017B /* QRCodeReaderViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
-				FB9DDBF01C9027C4003BA958 /* QRCodeReaderViewController.m in Sources */,
-				FB9DDBF11C9027C4003BA958 /* QRToggleTorchButton.m in Sources */,
 				FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */,
 				A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */,
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
-				FB9DDBEF1C9027C4003BA958 /* QRCodeReaderView.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
+				FBCB742F1C92AE1300CF017B /* QRCameraSwitchButton.m in Sources */,
 				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
@@ -711,7 +741,6 @@
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
-				FB9DDBED1C9027C4003BA958 /* QRCameraSwitchButton.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
@@ -719,6 +748,7 @@
 				FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
 				FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */,
+				FBCB74301C92AE1300CF017B /* QRCodeReader.m in Sources */,
 				FB117DD41C5F5E3F00F8E222 /* ItemsTableViewCell.m in Sources */,
 				FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */,
 				FB4422161C51CD1C0083B341 /* main.m in Sources */,
@@ -764,7 +794,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -787,7 +817,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "2ba6f322-cbf5-4435-a95f-ebd061eedbce";
+				PROVISIONING_PROFILE = "de1c9c9d-0e2d-4782-b7cc-d807c8dbd209";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,7 +840,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -826,7 +856,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "2ba6f322-cbf5-4435-a95f-ebd061eedbce";
+				PROVISIONING_PROFILE = "de1c9c9d-0e2d-4782-b7cc-d807c8dbd209";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -837,10 +867,33 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E1AE0F2D676F4E814334650 /* Pods-QuickBlox.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FDKeychain\"",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/MBCalendarKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBLocationManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MZAppearance\"",
+					"\"${PODS_ROOT}/Headers/Public/MZFormSheetController\"",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"\"${PODS_ROOT}/Headers/Public/NMPaginator\"",
+					"\"${PODS_ROOT}/Headers/Public/PureLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/QuickBlox\"",
+					"\"${PODS_ROOT}/Headers/Public/SwipeBack\"",
+					"\"${PODS_ROOT}/Headers/Public/WYPopoverController\"",
+					"\"${PODS_ROOT}/QuickBlox/ThirdParty/GoogleAnalytics\"",
+				);
 				INFOPLIST_FILE = QuickBlox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -849,10 +902,14 @@
 					"$(PROJECT_DIR)/QuickBlox/Third",
 					Party/Google,
 					Analytics,
+					"$(PROJECT_DIR)/QuickBlox/Third",
+					Party/Google,
+					Analytics,
+					"$(PROJECT_DIR)/QuickBlox/ThirdParty/GoogleAnalytics",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40b90986-a370-4707-a1ca-fd58ace54248";
+				PROVISIONING_PROFILE = "de1c9c9d-0e2d-4782-b7cc-d807c8dbd209";
 			};
 			name = Debug;
 		};
@@ -860,10 +917,33 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F25E304E13CF1AEC9B86541E /* Pods-QuickBlox.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/FDKeychain\"",
+					"\"${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleMaps\"",
+					"\"${PODS_ROOT}/Headers/Public/JSONModel\"",
+					"\"${PODS_ROOT}/Headers/Public/MBCalendarKit\"",
+					"\"${PODS_ROOT}/Headers/Public/MBLocationManager\"",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"\"${PODS_ROOT}/Headers/Public/MZAppearance\"",
+					"\"${PODS_ROOT}/Headers/Public/MZFormSheetController\"",
+					"\"${PODS_ROOT}/Headers/Public/MagicalRecord\"",
+					"\"${PODS_ROOT}/Headers/Public/NMPaginator\"",
+					"\"${PODS_ROOT}/Headers/Public/PureLayout\"",
+					"\"${PODS_ROOT}/Headers/Public/QuickBlox\"",
+					"\"${PODS_ROOT}/Headers/Public/SwipeBack\"",
+					"\"${PODS_ROOT}/Headers/Public/WYPopoverController\"",
+					"\"${PODS_ROOT}/QuickBlox/ThirdParty/GoogleAnalytics\"",
+				);
 				INFOPLIST_FILE = QuickBlox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -872,10 +952,14 @@
 					"$(PROJECT_DIR)/QuickBlox/Third",
 					Party/Google,
 					Analytics,
+					"$(PROJECT_DIR)/QuickBlox/Third",
+					Party/Google,
+					Analytics,
+					"$(PROJECT_DIR)/QuickBlox/ThirdParty/GoogleAnalytics",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tamqn.QuickBlox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "40b90986-a370-4707-a1ca-fd58ace54248";
+				PROVISIONING_PROFILE = "de1c9c9d-0e2d-4782-b7cc-d807c8dbd209";
 			};
 			name = Release;
 		};
