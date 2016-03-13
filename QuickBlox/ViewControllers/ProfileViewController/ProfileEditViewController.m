@@ -197,7 +197,8 @@
             [QBRequest updateCurrentUser:params successBlock:^(QBResponse * _Nonnull response, QBUUser * _Nullable user) {
                 [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
                 [CommonFeature showAlertTitle:nil Message:@"Upload avatar successfully" duration:2.0 showIn:self blockDismissView:^{
-                   [self.tbView reloadData]; 
+                   [self.tbView reloadData];
+                    [[NSNotificationCenter defaultCenter] postNotificationName:@"didCompleteUpdateProfile" object:nil];
                 }];
             } errorBlock:^(QBResponse * _Nonnull response) {
                 // error block
@@ -219,6 +220,7 @@
             [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
             [CommonFeature showAlertTitle:nil Message:@"Upload avatar successfully" duration:2.0 showIn:self blockDismissView:^{
                 [self.tbView reloadData];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"didCompleteUpdateProfile" object:nil];
             }];
         } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
             

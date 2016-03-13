@@ -19,6 +19,8 @@
     
     self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width/2;
     self.avatarImageView.layer.masksToBounds = YES;
+    self.avatarImageView.layer.borderWidth = 2.0f;
+    self.avatarImageView.layer.masksToBounds = YES;
 }
 
 -(void)changeAvatar{

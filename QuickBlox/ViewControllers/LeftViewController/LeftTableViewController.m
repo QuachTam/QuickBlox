@@ -22,6 +22,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self headerView];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateProfile) name:@"didCompleteUpdateProfile" object:nil];
+}
+
+- (void)updateProfile {
+    CustomViewProfile *header = (CustomViewProfile*)self.tableView.tableHeaderView;
+    NSUInteger userProfilePictureID = [QBSession currentSession].currentUser.blobID; // user - an instance of QBUUser class
+    // download user profile picture
+    [QBRequest downloadFileWithID:userProfilePictureID successBlock:^(QBResponse * _Nonnull response, NSData * _Nonnull fileData) {
+        if (fileData) {
+            UIImage *image = [UIImage imageWithData:fileData];
+            header.avatarImage.image = image;
+        }
+    } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
+        
+    } errorBlock:^(QBResponse * _Nonnull response) {
+        header.avatarImage.image = [UIImage imageNamed:@"profileDefault"];
+    }];
 }
 
 - (void)headerView {
@@ -32,6 +49,7 @@
     CGRect newFrame = self.tableView.tableHeaderView.frame;
     newFrame.size.height = newFrame.size.height;
     self.tableView.tableHeaderView.frame = newFrame;
+    [self updateProfile];
 }
 
 - (void)didReceiveMemoryWarning {

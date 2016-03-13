@@ -14,6 +14,8 @@
     // Initialization code
     self.avatarImage.layer.cornerRadius = self.avatarImage.frame.size.width/2;
     self.avatarImage.layer.masksToBounds = YES;
+    self.avatarImage.layer.borderWidth = 2.0f;
+    self.avatarImage.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
