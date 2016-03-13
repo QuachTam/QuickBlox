@@ -11,6 +11,7 @@
 static NSString *ClientAppID = @"ca-app-pub-9259023205127043/7494555614";
 
 #import "AdmodManager.h"
+#import <PureLayout/PureLayout.h>
 
 @implementation AdmodManager
 
@@ -25,13 +26,20 @@ static NSString *ClientAppID = @"ca-app-pub-9259023205127043/7494555614";
 
 - (void)showAdmodInViewController {
     UIViewController *root = [self getCurrentViewController];
-    UIView *viewBannerAdMod = [[UIView alloc] initWithFrame:CGRectMake(0, root.view.frame.size.height-kGADAdSizeBanner.size.height, root.view.frame.size.width, kGADAdSizeBanner.size.height)];
+    UIView *viewBannerAdMod = [[UIView alloc] initForAutoLayout];
     GADBannerView *bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     bannerView_.adUnitID = ClientAppID;
     bannerView_.rootViewController = root;
-    [bannerView_ loadRequest:[GADRequest request]];
+    GADRequest *request = [GADRequest request];
+//    request.testDevices = [NSArray arrayWithObjects:@"Simulator",nil];
+    [bannerView_ loadRequest:request];
     [viewBannerAdMod addSubview:bannerView_];
     [root.view addSubview:viewBannerAdMod];
+    
+    [viewBannerAdMod autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [viewBannerAdMod autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    [viewBannerAdMod autoSetDimension:ALDimensionHeight toSize:kGADAdSizeBanner.size.height];
+    [viewBannerAdMod autoSetDimension:ALDimensionWidth toSize:root.view.frame.size.width];
 }
 
 #pragma mark getCurrentViewController

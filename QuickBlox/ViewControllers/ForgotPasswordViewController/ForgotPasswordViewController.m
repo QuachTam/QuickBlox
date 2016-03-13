@@ -48,7 +48,7 @@
 - (IBAction)actionForgotpassword:(id)sender {
     // Reset User's password with email
     if (self.emailTextField.text.length) {
-        [QBRequest resetUserPasswordWithEmail:@"test@test.te" successBlock:^(QBResponse *response) {
+        [QBRequest resetUserPasswordWithEmail:self.emailTextField.text successBlock:^(QBResponse *response) {
             // Reset was successful
             [UIAlertController alertControllerWithTitle:nil message:@"Gui thanh cong" preferredStyle:UIAlertControllerStyleAlert];
         } errorBlock:^(QBResponse *response) {

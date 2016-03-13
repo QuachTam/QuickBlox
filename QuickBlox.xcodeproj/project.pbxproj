@@ -11,6 +11,12 @@
 		A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */; };
 		A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */; };
 		A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A55CDFD51C6261C800E9DB1A /* ModelItem.m */; };
+		A5E26C191C95816100CD1B5B /* CustomViewProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E26C181C95816100CD1B5B /* CustomViewProfile.m */; };
+		A5E26C1B1C95816F00CD1B5B /* CustomViewProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5E26C1A1C95816F00CD1B5B /* CustomViewProfile.xib */; };
+		A5E26C251C959A0100CD1B5B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E26C241C959A0100CD1B5B /* ProfileViewController.m */; };
+		A5E26C281C959A3600CD1B5B /* ProfileEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E26C271C959A3600CD1B5B /* ProfileEditViewController.m */; };
+		A5E26C2B1C959AB900CD1B5B /* CustomCellProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E26C2A1C959AB900CD1B5B /* CustomCellProfile.m */; };
+		A5E26C2E1C959D2000CD1B5B /* CustomCellEditProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E26C2D1C959D2000CD1B5B /* CustomCellEditProfile.m */; };
 		CF75E46EDA998F50FB311E4E /* libPods-QuickBlox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */; };
 		FB05A9751C52122A00F4DC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05A9741C52122A00F4DC97 /* UIKit.framework */; };
 		FB05A9771C52123000F4DC97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB05A9761C52123000F4DC97 /* Foundation.framework */; };
@@ -93,6 +99,17 @@
 		A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellStatisticsDetail.m; sourceTree = "<group>"; };
 		A55CDFD41C6261C800E9DB1A /* ModelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelItem.h; sourceTree = "<group>"; };
 		A55CDFD51C6261C800E9DB1A /* ModelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelItem.m; sourceTree = "<group>"; };
+		A5E26C171C95816100CD1B5B /* CustomViewProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewProfile.h; sourceTree = "<group>"; };
+		A5E26C181C95816100CD1B5B /* CustomViewProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewProfile.m; sourceTree = "<group>"; };
+		A5E26C1A1C95816F00CD1B5B /* CustomViewProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewProfile.xib; sourceTree = "<group>"; };
+		A5E26C231C959A0100CD1B5B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		A5E26C241C959A0100CD1B5B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		A5E26C261C959A3600CD1B5B /* ProfileEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileEditViewController.h; sourceTree = "<group>"; };
+		A5E26C271C959A3600CD1B5B /* ProfileEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileEditViewController.m; sourceTree = "<group>"; };
+		A5E26C291C959AB900CD1B5B /* CustomCellProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellProfile.h; sourceTree = "<group>"; };
+		A5E26C2A1C959AB900CD1B5B /* CustomCellProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellProfile.m; sourceTree = "<group>"; };
+		A5E26C2C1C959D2000CD1B5B /* CustomCellEditProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellEditProfile.h; sourceTree = "<group>"; };
+		A5E26C2D1C959D2000CD1B5B /* CustomCellEditProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellEditProfile.m; sourceTree = "<group>"; };
 		F25E304E13CF1AEC9B86541E /* Pods-QuickBlox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.release.xcconfig"; sourceTree = "<group>"; };
 		FB05A9741C52122A00F4DC97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FB05A9761C52123000F4DC97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -230,6 +247,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5E26C221C9599F100CD1B5B /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5E26C231C959A0100CD1B5B /* ProfileViewController.h */,
+				A5E26C241C959A0100CD1B5B /* ProfileViewController.m */,
+				A5E26C261C959A3600CD1B5B /* ProfileEditViewController.h */,
+				A5E26C271C959A3600CD1B5B /* ProfileEditViewController.m */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		BC8682A5D6B2BD4F7C1B19F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +367,13 @@
 				A52288E41C8742570032DD5C /* CustomCellOnlyText.m */,
 				A52288E91C874EE80032DD5C /* CustomCellStatisticsDetail.h */,
 				A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */,
+				A5E26C171C95816100CD1B5B /* CustomViewProfile.h */,
+				A5E26C181C95816100CD1B5B /* CustomViewProfile.m */,
+				A5E26C1A1C95816F00CD1B5B /* CustomViewProfile.xib */,
+				A5E26C291C959AB900CD1B5B /* CustomCellProfile.h */,
+				A5E26C2A1C959AB900CD1B5B /* CustomCellProfile.m */,
+				A5E26C2C1C959D2000CD1B5B /* CustomCellEditProfile.h */,
+				A5E26C2D1C959D2000CD1B5B /* CustomCellEditProfile.m */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -435,6 +470,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A5E26C221C9599F100CD1B5B /* ProfileViewController */,
 				FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */,
 				FB1AA9671C6051F30095D816 /* DatePickerViewController */,
 				FB117DDE1C5F791300F8E222 /* AddItemViewController */,
@@ -635,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCB74361C92D0DE00CF017B /* settingIcon@3x.png in Resources */,
+				A5E26C1B1C95816F00CD1B5B /* CustomViewProfile.xib in Resources */,
 				FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */,
 				FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */,
 				FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */,
@@ -721,8 +758,11 @@
 			files = (
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FBCB74331C92AE1300CF017B /* QRToggleTorchButton.m in Sources */,
+				A5E26C2E1C959D2000CD1B5B /* CustomCellEditProfile.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
 				FBCB74311C92AE1300CF017B /* QRCodeReaderView.m in Sources */,
+				A5E26C281C959A3600CD1B5B /* ProfileEditViewController.m in Sources */,
+				A5E26C251C959A0100CD1B5B /* ProfileViewController.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
 				FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */,
@@ -740,7 +780,9 @@
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
+				A5E26C191C95816100CD1B5B /* CustomViewProfile.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
+				A5E26C2B1C959AB900CD1B5B /* CustomCellProfile.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,

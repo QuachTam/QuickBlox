@@ -10,6 +10,7 @@
 #import "LeftCustomCell.h"
 #import <Quickblox/Quickblox.h>
 #import "Keychain.h"
+#import "CustomViewProfile.h"
 
 @interface LeftTableViewController ()
 @property (nonatomic, strong) NSArray *itemsArray;
@@ -24,10 +25,10 @@
 }
 
 - (void)headerView {
-    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    CustomViewProfile *header = [[[NSBundle mainBundle] loadNibNamed:@"CustomViewProfile"
+                                          owner:self
+                                        options:nil] objectAtIndex:0];
     self.tableView.tableHeaderView = header;
-    
-    //update the header's frame and set it again
     CGRect newFrame = self.tableView.tableHeaderView.frame;
     newFrame.size.height = newFrame.size.height;
     self.tableView.tableHeaderView.frame = newFrame;

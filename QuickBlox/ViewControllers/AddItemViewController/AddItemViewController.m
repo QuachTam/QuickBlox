@@ -64,10 +64,8 @@
     DatePickerViewController *viewDetail = [segue destinationViewController];
     viewDetail.didSelectedDate = ^(NSDate *date){
         if ([[segue identifier] isEqualToString:@"dateInputIdentifier"]) {
-            NSLog(@"date: %@", date);
             self.modelItem.dateInput = @([CommonFeature convertDateToLongtime:date]);
         }else{
-            NSLog(@"date: %@", date);
             self.modelItem.dateOutput = @([CommonFeature convertDateToLongtime:date]);
         }
         [self.tableView reloadData];

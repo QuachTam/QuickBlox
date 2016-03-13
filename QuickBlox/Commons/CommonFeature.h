@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 static NSString *format_date_type_yyyy_mm_dd_hh_mm = @"dd-MM-yyyy HH:mm";
+static NSString *format_date_type_dd_mm_yyyy = @"dd-MM-yyyy";
 
 @interface CommonFeature : NSObject
 + (CommonFeature*)shareInstance;

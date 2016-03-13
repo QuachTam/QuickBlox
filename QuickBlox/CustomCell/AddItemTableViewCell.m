@@ -22,8 +22,8 @@
 
 - (void)setupDataForCell {
     self.nameTextField.text = self.modelItem.name;
-    self.dateInputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateInput doubleValue]] withFormat:format_date_type_yyyy_mm_dd_hh_mm];
-    self.dateOutputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateOutput doubleValue]] withFormat:format_date_type_yyyy_mm_dd_hh_mm];;
+    self.dateInputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateInput doubleValue]] withFormat:format_date_type_dd_mm_yyyy];
+    self.dateOutputTextField.text = [CommonFeature convertDateToString:[CommonFeature convertLongtimeToDate:[self.modelItem.dateOutput doubleValue]] withFormat:format_date_type_dd_mm_yyyy];
     self.moneyInputTextField.text = self.modelItem.moneyInput;
     self.moneyOutputTextField.text = self.modelItem.moneyOutput;
     self.qrCodeTextField.text = self.modelItem.qrCode;
