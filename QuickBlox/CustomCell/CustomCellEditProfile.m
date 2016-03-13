@@ -12,6 +12,19 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeAvatar)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.avatarImageView setUserInteractionEnabled:YES];
+    [self.avatarImageView addGestureRecognizer:singleTap];
+    
+    self.avatarImageView.layer.cornerRadius = self.avatarImageView.frame.size.width/2;
+    self.avatarImageView.layer.masksToBounds = YES;
+}
+
+-(void)changeAvatar{
+    if (self.didClickUpdateAvatar) {
+        self.didClickUpdateAvatar();
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

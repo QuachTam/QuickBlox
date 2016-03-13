@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomCellEditProfile : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *avatarImage;
-@property (weak, nonatomic) IBOutlet UITextField *name;
-@property (weak, nonatomic) IBOutlet UITextField *phone;
-@property (weak, nonatomic) IBOutlet UITextField *address;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
-
+@property (nonatomic, copy, readwrite) void(^didClickUpdateAvatar)();
 @end

@@ -41,8 +41,8 @@
 
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"Kho hàng", @"Giỏ hàng", @"Thống kê", @"Thiết lập", @"Thoát"];
-        _iconItemsArray = @[@"home", @"shopping", @"analyticsIcon", @"settingIcon", @"logoutIcon"];
+        _itemsArray = @[@"Profile", @"Kho hàng", @"Giỏ hàng", @"Thống kê", @"Thiết lập", @"Thoát"];
+        _iconItemsArray = @[@"profileIcon", @"home", @"shopping", @"analyticsIcon", @"settingIcon", @"logoutIcon"];
     }
     return _itemsArray;
 }
@@ -78,15 +78,18 @@
         NSString *stringIdentifier = nil;
         switch (indexPath.row) {
             case 0:
-                stringIdentifier = @"khohang";
+                stringIdentifier = @"profile";
                 break;
             case 1:
-                stringIdentifier = @"giohang";
+                stringIdentifier = @"khohang";
                 break;
             case 2:
-                stringIdentifier = @"thongke";
+                stringIdentifier = @"giohang";
                 break;
             case 3:
+                stringIdentifier = @"thongke";
+                break;
+            case 4:
                 stringIdentifier = @"thietlap";
                 break;
             default:

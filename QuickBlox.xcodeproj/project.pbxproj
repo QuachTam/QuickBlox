@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52010F31C95C0A100943E53 /* profileDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A52010F11C95C0A100943E53 /* profileDefault@3x.png */; };
+		A52010F41C95C0A100943E53 /* profileDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A52010F21C95C0A100943E53 /* profileDefault@2x.png */; };
+		A52010F71C95C49200943E53 /* profileIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A52010F51C95C49200943E53 /* profileIcon@3x.png */; };
+		A52010F81C95C49200943E53 /* profileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A52010F61C95C49200943E53 /* profileIcon@2x.png */; };
+		A52010FB1C95D40800943E53 /* CameraObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A52010FA1C95D40800943E53 /* CameraObject.m */; };
+		A52010FE1C95D4E600943E53 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = A52010FD1C95D4E600943E53 /* UIActionSheet+Blocks.m */; };
 		A52288E51C8742570032DD5C /* CustomCellOnlyText.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288E41C8742570032DD5C /* CustomCellOnlyText.m */; };
 		A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288E71C8746B60032DD5C /* SubStatisticsViewController.m */; };
 		A52288EB1C874EE80032DD5C /* CustomCellStatisticsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = A52288EA1C874EE80032DD5C /* CustomCellStatisticsDetail.m */; };
@@ -91,6 +97,14 @@
 /* Begin PBXFileReference section */
 		1E1AE0F2D676F4E814334650 /* Pods-QuickBlox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickBlox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickBlox/Pods-QuickBlox.debug.xcconfig"; sourceTree = "<group>"; };
 		6D665E4A0388CE6629C03EAF /* libPods-QuickBlox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickBlox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A52010F11C95C0A100943E53 /* profileDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileDefault@3x.png"; sourceTree = "<group>"; };
+		A52010F21C95C0A100943E53 /* profileDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileDefault@2x.png"; sourceTree = "<group>"; };
+		A52010F51C95C49200943E53 /* profileIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileIcon@3x.png"; sourceTree = "<group>"; };
+		A52010F61C95C49200943E53 /* profileIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profileIcon@2x.png"; sourceTree = "<group>"; };
+		A52010F91C95D40800943E53 /* CameraObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraObject.h; sourceTree = "<group>"; };
+		A52010FA1C95D40800943E53 /* CameraObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraObject.m; sourceTree = "<group>"; };
+		A52010FC1C95D4E600943E53 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		A52010FD1C95D4E600943E53 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
 		A52288E31C8742570032DD5C /* CustomCellOnlyText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellOnlyText.h; sourceTree = "<group>"; };
 		A52288E41C8742570032DD5C /* CustomCellOnlyText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellOnlyText.m; sourceTree = "<group>"; };
 		A52288E61C8746B60032DD5C /* SubStatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubStatisticsViewController.h; sourceTree = "<group>"; };
@@ -298,6 +312,10 @@
 		FB05A97B1C52176500F4DC97 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A52010F51C95C49200943E53 /* profileIcon@3x.png */,
+				A52010F61C95C49200943E53 /* profileIcon@2x.png */,
+				A52010F11C95C0A100943E53 /* profileDefault@3x.png */,
+				A52010F21C95C0A100943E53 /* profileDefault@2x.png */,
 				FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */,
 				FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */,
 				FBCB74381C92D1CE00CF017B /* analyticsIcon@2x.png */,
@@ -399,6 +417,10 @@
 		FB1AA96B1C60526A0095D816 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				A52010F91C95D40800943E53 /* CameraObject.h */,
+				A52010FA1C95D40800943E53 /* CameraObject.m */,
+				A52010FC1C95D4E600943E53 /* UIActionSheet+Blocks.h */,
+				A52010FD1C95D4E600943E53 /* UIActionSheet+Blocks.m */,
 				FBCB74121C92A0C800CF017B /* RWLabel.h */,
 				FBCB74131C92A0C800CF017B /* RWLabel.m */,
 				FB1AA96C1C6052990095D816 /* CommonFeature.h */,
@@ -672,6 +694,7 @@
 			files = (
 				FBCB74361C92D0DE00CF017B /* settingIcon@3x.png in Resources */,
 				A5E26C1B1C95816F00CD1B5B /* CustomViewProfile.xib in Resources */,
+				A52010F71C95C49200943E53 /* profileIcon@3x.png in Resources */,
 				FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */,
 				FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */,
 				FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */,
@@ -693,9 +716,12 @@
 				FB117DDC1C5F783B00F8E222 /* backButton@3x.png in Resources */,
 				FB05A9911C52176500F4DC97 /* UITableContract@2x.png in Resources */,
 				FB05A98F1C52176500F4DC97 /* shopping@3x.png in Resources */,
+				A52010F81C95C49200943E53 /* profileIcon@2x.png in Resources */,
+				A52010F31C95C0A100943E53 /* profileDefault@3x.png in Resources */,
 				FB117DC61C5F483F00F8E222 /* reveal-icon@2x.png in Resources */,
 				FB05A98A1C52176500F4DC97 /* qrCode@2x.png in Resources */,
 				FB44221F1C51CD1C0083B341 /* Main.storyboard in Resources */,
+				A52010F41C95C0A100943E53 /* profileDefault@2x.png in Resources */,
 				FB117DD81C5F77EC00F8E222 /* doneButton@3x.png in Resources */,
 				FB05A9901C52176500F4DC97 /* UITableContract.png in Resources */,
 			);
@@ -779,12 +805,14 @@
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
+				A52010FE1C95D4E600943E53 /* UIActionSheet+Blocks.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				A5E26C191C95816100CD1B5B /* CustomViewProfile.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				A5E26C2B1C959AB900CD1B5B /* CustomCellProfile.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
+				A52010FB1C95D40800943E53 /* CameraObject.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
 				A52288E51C8742570032DD5C /* CustomCellOnlyText.m in Sources */,
 				FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */,

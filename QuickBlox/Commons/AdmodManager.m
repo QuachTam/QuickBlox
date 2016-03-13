@@ -31,7 +31,7 @@ static NSString *ClientAppID = @"ca-app-pub-9259023205127043/7494555614";
     bannerView_.adUnitID = ClientAppID;
     bannerView_.rootViewController = root;
     GADRequest *request = [GADRequest request];
-//    request.testDevices = [NSArray arrayWithObjects:@"Simulator",nil];
+    request.testDevices = [NSArray arrayWithObjects:@"Simulator",nil];
     [bannerView_ loadRequest:request];
     [viewBannerAdMod addSubview:bannerView_];
     [root.view addSubview:viewBannerAdMod];

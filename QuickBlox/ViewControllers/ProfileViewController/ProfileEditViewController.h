@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileEditViewController : UIViewController
+@interface ProfileEditViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tbView;
+- (IBAction)actionBack:(id)sender;
+- (IBAction)actionDone:(id)sender;
+
 
 @end

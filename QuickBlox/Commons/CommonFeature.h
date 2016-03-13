@@ -20,4 +20,6 @@ static NSString *format_date_type_dd_mm_yyyy = @"dd-MM-yyyy";
 + (NSInteger)getYearFormDate:(NSDate *)date;
 + (NSInteger)getMonthFormDate:(NSDate *)date;
 + (void)showAlertTitle:(NSString*)title Message:(NSString *)message duration:(NSInteger)duration showIn:(id)supperView blockDismissView:(void(^)(void))block;
++ (UIImage *)imageResize :(UIImage*)img andResizeTo:(CGSize)newSize;
++ (UIImage*)imageWithImage:(UIImage*) sourceImage scaledToWidth: (float) i_width;
 @end
