@@ -39,8 +39,6 @@
 		FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A99A1C521B3500F4DC97 /* LeftTableViewController.m */; };
 		FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A99F1C521D9A00F4DC97 /* LoginViewController.m */; };
 		FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */; };
-		FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */; };
-		FB117DC61C5F483F00F8E222 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */; };
 		FB117DC91C5F48B200F8E222 /* button_plus@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC71C5F48B200F8E222 /* button_plus@3x.png */; };
 		FB117DCA1C5F48B200F8E222 /* button_plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB117DC81C5F48B200F8E222 /* button_plus@2x.png */; };
 		FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB117DCF1C5F5B2C00F8E222 /* ItemsTableViewController.m */; };
@@ -76,6 +74,14 @@
 		FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD61C5F0E9900EEF1EC /* StatisticsViewController.m */; };
 		FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8DFD6C1C916CF0004C344A /* AdmodManager.m */; };
 		FB8DFD7C1C9171E7004C344A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */; };
+		FBB0C8EE1C96560D00D9D420 /* Friends.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8EC1C96560D00D9D420 /* Friends.png */; };
+		FBB0C8EF1C96560D00D9D420 /* Friends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8ED1C96560D00D9D420 /* Friends@2x.png */; };
+		FBB0C8F61C9656A500D9D420 /* IconDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8F41C9656A500D9D420 /* IconDefault@2x.png */; };
+		FBB0C8F71C9656A500D9D420 /* IconDefault@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8F51C9656A500D9D420 /* IconDefault@3x.png */; };
+		FBB0C8FE1C965AB600D9D420 /* editButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8FC1C965AB600D9D420 /* editButton@3x.png */; };
+		FBB0C8FF1C965AB600D9D420 /* editButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C8FD1C965AB600D9D420 /* editButton@2x.png */; };
+		FBB0C9021C965BDE00D9D420 /* reveal-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C9001C965BDE00D9D420 /* reveal-icon@3x.png */; };
+		FBB0C9031C965BDE00D9D420 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBB0C9011C965BDE00D9D420 /* reveal-icon@2x.png */; };
 		FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74131C92A0C800CF017B /* RWLabel.m */; };
 		FBCB742E1C92AE1300CF017B /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCB74211C92AE1300CF017B /* libGoogleAnalyticsServices.a */; };
 		FBCB742F1C92AE1300CF017B /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB74241C92AE1300CF017B /* QRCameraSwitchButton.m */; };
@@ -89,6 +95,17 @@
 		FBCB743B1C92D1CE00CF017B /* analyticsIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB74391C92D1CE00CF017B /* analyticsIcon@3x.png */; };
 		FBCB743E1C92D25400CF017B /* logoutIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */; };
 		FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */; };
+		FBFAB4BC1C96981500B41597 /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAB4BB1C96981500B41597 /* MemberViewController.m */; };
+		FBFAB4BF1C969D2200B41597 /* CustomCellMember.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAB4BE1C969D2200B41597 /* CustomCellMember.m */; };
+		FBFAB4C21C969E7A00B41597 /* addFriend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C01C969E7A00B41597 /* addFriend@3x.png */; };
+		FBFAB4C31C969E7A00B41597 /* addFriend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C11C969E7A00B41597 /* addFriend@2x.png */; };
+		FBFAB4C81C96A0CB00B41597 /* member@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C41C96A0CB00B41597 /* member@2x.png */; };
+		FBFAB4C91C96A0CB00B41597 /* member@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C51C96A0CB00B41597 /* member@3x.png */; };
+		FBFAB4CA1C96A0CB00B41597 /* friend@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C61C96A0CB00B41597 /* friend@3x.png */; };
+		FBFAB4CB1C96A0CB00B41597 /* friend@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBFAB4C71C96A0CB00B41597 /* friend@2x.png */; };
+		FBFAB4D01C96A33C00B41597 /* StorageUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAB4CD1C96A33C00B41597 /* StorageUser.m */; };
+		FBFAB4D11C96A33C00B41597 /* UsersPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAB4CF1C96A33C00B41597 /* UsersPaginator.m */; };
+		FBFAB4D61C96AD3A00B41597 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFAB4D51C96AD3A00B41597 /* UserModel.m */; };
 		FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */; };
 		FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */; };
 		FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABE1C61A9F00088ED92 /* Storage.m */; };
@@ -145,8 +162,6 @@
 		FB05A99F1C521D9A00F4DC97 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		FB05A9A81C5225E100F4DC97 /* LeftCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftCustomCell.h; sourceTree = "<group>"; };
 		FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftCustomCell.m; sourceTree = "<group>"; };
-		FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@3x.png"; sourceTree = "<group>"; };
-		FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
 		FB117DC71C5F48B200F8E222 /* button_plus@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_plus@3x.png"; sourceTree = "<group>"; };
 		FB117DC81C5F48B200F8E222 /* button_plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_plus@2x.png"; sourceTree = "<group>"; };
 		FB117DCE1C5F5B2C00F8E222 /* ItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController.h; sourceTree = "<group>"; };
@@ -199,6 +214,14 @@
 		FB8DFD6B1C916CF0004C344A /* AdmodManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdmodManager.h; sourceTree = "<group>"; };
 		FB8DFD6C1C916CF0004C344A /* AdmodManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdmodManager.m; sourceTree = "<group>"; };
 		FB8DFD7B1C9171E7004C344A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		FBB0C8EC1C96560D00D9D420 /* Friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Friends.png; sourceTree = "<group>"; };
+		FBB0C8ED1C96560D00D9D420 /* Friends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Friends@2x.png"; sourceTree = "<group>"; };
+		FBB0C8F41C9656A500D9D420 /* IconDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconDefault@2x.png"; sourceTree = "<group>"; };
+		FBB0C8F51C9656A500D9D420 /* IconDefault@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconDefault@3x.png"; sourceTree = "<group>"; };
+		FBB0C8FC1C965AB600D9D420 /* editButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@3x.png"; sourceTree = "<group>"; };
+		FBB0C8FD1C965AB600D9D420 /* editButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@2x.png"; sourceTree = "<group>"; };
+		FBB0C9001C965BDE00D9D420 /* reveal-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@3x.png"; sourceTree = "<group>"; };
+		FBB0C9011C965BDE00D9D420 /* reveal-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reveal-icon@2x.png"; sourceTree = "<group>"; };
 		FBCB74121C92A0C800CF017B /* RWLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLabel.h; sourceTree = "<group>"; };
 		FBCB74131C92A0C800CF017B /* RWLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLabel.m; sourceTree = "<group>"; };
 		FBCB74171C92AE1300CF017B /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
@@ -229,6 +252,22 @@
 		FBCB74391C92D1CE00CF017B /* analyticsIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "analyticsIcon@3x.png"; sourceTree = "<group>"; };
 		FBCB743C1C92D25400CF017B /* logoutIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutIcon@3x.png"; sourceTree = "<group>"; };
 		FBCB743D1C92D25400CF017B /* logoutIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logoutIcon@2x.png"; sourceTree = "<group>"; };
+		FBFAB4BA1C96981500B41597 /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewController.h; sourceTree = "<group>"; };
+		FBFAB4BB1C96981500B41597 /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewController.m; sourceTree = "<group>"; };
+		FBFAB4BD1C969D2200B41597 /* CustomCellMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellMember.h; sourceTree = "<group>"; };
+		FBFAB4BE1C969D2200B41597 /* CustomCellMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellMember.m; sourceTree = "<group>"; };
+		FBFAB4C01C969E7A00B41597 /* addFriend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addFriend@3x.png"; sourceTree = "<group>"; };
+		FBFAB4C11C969E7A00B41597 /* addFriend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addFriend@2x.png"; sourceTree = "<group>"; };
+		FBFAB4C41C96A0CB00B41597 /* member@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "member@2x.png"; sourceTree = "<group>"; };
+		FBFAB4C51C96A0CB00B41597 /* member@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "member@3x.png"; sourceTree = "<group>"; };
+		FBFAB4C61C96A0CB00B41597 /* friend@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friend@3x.png"; sourceTree = "<group>"; };
+		FBFAB4C71C96A0CB00B41597 /* friend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friend@2x.png"; sourceTree = "<group>"; };
+		FBFAB4CC1C96A33C00B41597 /* StorageUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageUser.h; sourceTree = "<group>"; };
+		FBFAB4CD1C96A33C00B41597 /* StorageUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StorageUser.m; sourceTree = "<group>"; };
+		FBFAB4CE1C96A33C00B41597 /* UsersPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersPaginator.h; sourceTree = "<group>"; };
+		FBFAB4CF1C96A33C00B41597 /* UsersPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersPaginator.m; sourceTree = "<group>"; };
+		FBFAB4D41C96AD3A00B41597 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		FBFAB4D51C96AD3A00B41597 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		FBFB7AB71C61A73D0088ED92 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
 		FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectsPaginator.h; sourceTree = "<group>"; };
@@ -312,6 +351,20 @@
 		FB05A97B1C52176500F4DC97 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FBFAB4C41C96A0CB00B41597 /* member@2x.png */,
+				FBFAB4C51C96A0CB00B41597 /* member@3x.png */,
+				FBFAB4C61C96A0CB00B41597 /* friend@3x.png */,
+				FBFAB4C71C96A0CB00B41597 /* friend@2x.png */,
+				FBFAB4C01C969E7A00B41597 /* addFriend@3x.png */,
+				FBFAB4C11C969E7A00B41597 /* addFriend@2x.png */,
+				FBB0C9001C965BDE00D9D420 /* reveal-icon@3x.png */,
+				FBB0C9011C965BDE00D9D420 /* reveal-icon@2x.png */,
+				FBB0C8FC1C965AB600D9D420 /* editButton@3x.png */,
+				FBB0C8FD1C965AB600D9D420 /* editButton@2x.png */,
+				FBB0C8F41C9656A500D9D420 /* IconDefault@2x.png */,
+				FBB0C8F51C9656A500D9D420 /* IconDefault@3x.png */,
+				FBB0C8EC1C96560D00D9D420 /* Friends.png */,
+				FBB0C8ED1C96560D00D9D420 /* Friends@2x.png */,
 				A52010F51C95C49200943E53 /* profileIcon@3x.png */,
 				A52010F61C95C49200943E53 /* profileIcon@2x.png */,
 				A52010F11C95C0A100943E53 /* profileDefault@3x.png */,
@@ -328,8 +381,6 @@
 				FB117DD71C5F77EC00F8E222 /* doneButton@2x.png */,
 				FB117DC71C5F48B200F8E222 /* button_plus@3x.png */,
 				FB117DC81C5F48B200F8E222 /* button_plus@2x.png */,
-				FB117DC31C5F483F00F8E222 /* reveal-icon@3x.png */,
-				FB117DC41C5F483F00F8E222 /* reveal-icon@2x.png */,
 				FB05A97C1C52176500F4DC97 /* home@2x.png */,
 				FB05A97D1C52176500F4DC97 /* home@3x.png */,
 				FB05A97E1C52176500F4DC97 /* qrCode@2x.png */,
@@ -392,6 +443,8 @@
 				A5E26C2A1C959AB900CD1B5B /* CustomCellProfile.m */,
 				A5E26C2C1C959D2000CD1B5B /* CustomCellEditProfile.h */,
 				A5E26C2D1C959D2000CD1B5B /* CustomCellEditProfile.m */,
+				FBFAB4BD1C969D2200B41597 /* CustomCellMember.h */,
+				FBFAB4BE1C969D2200B41597 /* CustomCellMember.m */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -492,6 +545,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBFAB4B91C96980A00B41597 /* MemberViewController */,
 				A5E26C221C9599F100CD1B5B /* ProfileViewController */,
 				FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */,
 				FB1AA9671C6051F30095D816 /* DatePickerViewController */,
@@ -610,6 +664,41 @@
 			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
+		FBFAB4B91C96980A00B41597 /* MemberViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBFAB4BA1C96981500B41597 /* MemberViewController.h */,
+				FBFAB4BB1C96981500B41597 /* MemberViewController.m */,
+			);
+			path = MemberViewController;
+			sourceTree = "<group>";
+		};
+		FBFAB4D21C96A34300B41597 /* UserStore */ = {
+			isa = PBXGroup;
+			children = (
+				FBFAB4CC1C96A33C00B41597 /* StorageUser.h */,
+				FBFAB4CD1C96A33C00B41597 /* StorageUser.m */,
+				FBFAB4CE1C96A33C00B41597 /* UsersPaginator.h */,
+				FBFAB4CF1C96A33C00B41597 /* UsersPaginator.m */,
+				FBFAB4D41C96AD3A00B41597 /* UserModel.h */,
+				FBFAB4D51C96AD3A00B41597 /* UserModel.m */,
+			);
+			name = UserStore;
+			sourceTree = "<group>";
+		};
+		FBFAB4D31C96A35400B41597 /* ItemsStore */ = {
+			isa = PBXGroup;
+			children = (
+				FBFB7ABD1C61A9F00088ED92 /* Storage.h */,
+				FBFB7ABE1C61A9F00088ED92 /* Storage.m */,
+				A55CDFD41C6261C800E9DB1A /* ModelItem.h */,
+				A55CDFD51C6261C800E9DB1A /* ModelItem.m */,
+				FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */,
+				FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */,
+			);
+			name = ItemsStore;
+			sourceTree = "<group>";
+		};
 		FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,12 +711,8 @@
 		FBFB7ABA1C61A9E70088ED92 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FBFB7ABB1C61A9F00088ED92 /* ObjectsPaginator.h */,
-				FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */,
-				FBFB7ABD1C61A9F00088ED92 /* Storage.h */,
-				FBFB7ABE1C61A9F00088ED92 /* Storage.m */,
-				A55CDFD41C6261C800E9DB1A /* ModelItem.h */,
-				A55CDFD51C6261C800E9DB1A /* ModelItem.m */,
+				FBFAB4D31C96A35400B41597 /* ItemsStore */,
+				FBFAB4D21C96A34300B41597 /* UserStore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -693,21 +778,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCB74361C92D0DE00CF017B /* settingIcon@3x.png in Resources */,
+				FBB0C8F61C9656A500D9D420 /* IconDefault@2x.png in Resources */,
 				A5E26C1B1C95816F00CD1B5B /* CustomViewProfile.xib in Resources */,
 				A52010F71C95C49200943E53 /* profileIcon@3x.png in Resources */,
+				FBB0C9031C965BDE00D9D420 /* reveal-icon@2x.png in Resources */,
 				FBCB743F1C92D25400CF017B /* logoutIcon@2x.png in Resources */,
-				FB117DC51C5F483F00F8E222 /* reveal-icon@3x.png in Resources */,
 				FB05A98E1C52176500F4DC97 /* shopping@2x.png in Resources */,
 				FB05A98B1C52176500F4DC97 /* qrCode@3x.png in Resources */,
+				FBB0C8F71C9656A500D9D420 /* IconDefault@3x.png in Resources */,
 				FB4422271C51CD1C0083B341 /* LaunchScreen.storyboard in Resources */,
 				FB05A9881C52176500F4DC97 /* home@2x.png in Resources */,
 				FB117DDD1C5F783B00F8E222 /* backButton@2x.png in Resources */,
+				FBFAB4CA1C96A0CB00B41597 /* friend@3x.png in Resources */,
 				FB117DCA1C5F48B200F8E222 /* button_plus@2x.png in Resources */,
+				FBFAB4C21C969E7A00B41597 /* addFriend@3x.png in Resources */,
+				FBFAB4C81C96A0CB00B41597 /* member@2x.png in Resources */,
 				FB4422241C51CD1C0083B341 /* Assets.xcassets in Resources */,
 				FBCB743A1C92D1CE00CF017B /* analyticsIcon@2x.png in Resources */,
 				FB05A9891C52176500F4DC97 /* home@3x.png in Resources */,
 				FB117DC91C5F48B200F8E222 /* button_plus@3x.png in Resources */,
 				FB05A9921C52176500F4DC97 /* UITableExpand.png in Resources */,
+				FBB0C8EF1C96560D00D9D420 /* Friends@2x.png in Resources */,
 				FB117DD91C5F77EC00F8E222 /* doneButton@2x.png in Resources */,
 				FBCB74371C92D0DE00CF017B /* settingIcon@2x.png in Resources */,
 				FB05A9931C52176500F4DC97 /* UITableExpand@2x.png in Resources */,
@@ -718,10 +809,16 @@
 				FB05A98F1C52176500F4DC97 /* shopping@3x.png in Resources */,
 				A52010F81C95C49200943E53 /* profileIcon@2x.png in Resources */,
 				A52010F31C95C0A100943E53 /* profileDefault@3x.png in Resources */,
-				FB117DC61C5F483F00F8E222 /* reveal-icon@2x.png in Resources */,
+				FBB0C8EE1C96560D00D9D420 /* Friends.png in Resources */,
+				FBB0C8FF1C965AB600D9D420 /* editButton@2x.png in Resources */,
 				FB05A98A1C52176500F4DC97 /* qrCode@2x.png in Resources */,
+				FBB0C8FE1C965AB600D9D420 /* editButton@3x.png in Resources */,
+				FBFAB4C31C969E7A00B41597 /* addFriend@2x.png in Resources */,
+				FBFAB4C91C96A0CB00B41597 /* member@3x.png in Resources */,
 				FB44221F1C51CD1C0083B341 /* Main.storyboard in Resources */,
 				A52010F41C95C0A100943E53 /* profileDefault@2x.png in Resources */,
+				FBFAB4CB1C96A0CB00B41597 /* friend@2x.png in Resources */,
+				FBB0C9021C965BDE00D9D420 /* reveal-icon@3x.png in Resources */,
 				FB117DD81C5F77EC00F8E222 /* doneButton@3x.png in Resources */,
 				FB05A9901C52176500F4DC97 /* UITableContract.png in Resources */,
 			);
@@ -784,6 +881,7 @@
 			files = (
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FBCB74331C92AE1300CF017B /* QRToggleTorchButton.m in Sources */,
+				FBFAB4D11C96A33C00B41597 /* UsersPaginator.m in Sources */,
 				A5E26C2E1C959D2000CD1B5B /* CustomCellEditProfile.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
 				FBCB74311C92AE1300CF017B /* QRCodeReaderView.m in Sources */,
@@ -792,6 +890,7 @@
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
 				FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */,
+				FBFAB4D01C96A33C00B41597 /* StorageUser.m in Sources */,
 				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
 				FBCB74321C92AE1300CF017B /* QRCodeReaderViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
@@ -804,13 +903,16 @@
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
+				FBFAB4BF1C969D2200B41597 /* CustomCellMember.m in Sources */,
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
+				FBFAB4D61C96AD3A00B41597 /* UserModel.m in Sources */,
 				A52010FE1C95D4E600943E53 /* UIActionSheet+Blocks.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				A5E26C191C95816100CD1B5B /* CustomViewProfile.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				A5E26C2B1C959AB900CD1B5B /* CustomCellProfile.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
+				FBFAB4BC1C96981500B41597 /* MemberViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				A52010FB1C95D40800943E53 /* CameraObject.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,

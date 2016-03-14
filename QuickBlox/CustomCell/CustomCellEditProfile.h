@@ -16,4 +16,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, copy, readwrite) void(^didClickUpdateAvatar)();
+- (void)actionValidInput:(void(^)(BOOL isValid))success;
 @end

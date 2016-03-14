@@ -37,7 +37,7 @@
     } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
         
     } errorBlock:^(QBResponse * _Nonnull response) {
-        header.avatarImage.image = [UIImage imageNamed:@"profileDefault"];
+        header.avatarImage.image = [UIImage imageNamed:@"IconDefault.png"];
     }];
 }
 
@@ -59,8 +59,8 @@
 
 - (NSArray *)itemsArray {
     if (!_itemsArray) {
-        _itemsArray = @[@"Profile", @"Kho hàng", @"Giỏ hàng", @"Thống kê", @"Thiết lập", @"Thoát"];
-        _iconItemsArray = @[@"profileIcon", @"home", @"shopping", @"analyticsIcon", @"settingIcon", @"logoutIcon"];
+        _itemsArray = @[@"Profile", @"Kho hàng", @"Giỏ hàng", @"Thống kê", @"Thiết lập", @"Friends", @"Members", @"Thoát"];
+        _iconItemsArray = @[@"profileIcon", @"home", @"shopping", @"analyticsIcon", @"settingIcon",@"friend", @"member", @"logoutIcon"];
     }
     return _itemsArray;
 }
@@ -110,6 +110,13 @@
             case 4:
                 stringIdentifier = @"thietlap";
                 break;
+            case 5:
+                stringIdentifier = @"friends";
+                break;
+            case 6:
+                stringIdentifier = @"member";
+                break;
+
             default:
                 break;
         }

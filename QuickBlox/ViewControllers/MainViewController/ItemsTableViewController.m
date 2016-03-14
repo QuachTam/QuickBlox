@@ -17,6 +17,7 @@
 #import <SwipeBack/SwipeBack.h>
 #import "QRCodeReaderViewController.h"
 #import "QRCodeReader.h"
+#import "ProfileEditViewController.h"
 
 @interface ItemsTableViewController ()<NMPaginatorDelegate, QRCodeReaderDelegate>
 @property (nonatomic, strong) ObjectsPaginator *paginator;
@@ -46,6 +47,12 @@
     AdmodManager *managerAd = [AdmodManager sharedInstance];
     [managerAd showAdmodInViewController];
     [self footerView];
+    
+    QBUUser *currentUser = [QBSession currentSession].currentUser;
+    if (!currentUser.customData || currentUser.blobID<1) {
+        ProfileEditViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileEditViewController"];
+        [self.navigationController pushViewController:rootView animated:YES];
+    }
 }
 
 - (void)footerView {

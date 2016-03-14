@@ -11,6 +11,7 @@
 #import "CustomCellEditProfile.h"
 #import "CameraObject.h"
 #import "UIActionSheet+Blocks.h"
+#import <JSONModel/JSONModel.h>
 
 @interface ProfileEditViewController () <CameraObjectDelegate, UITextFieldDelegate, UITextViewDelegate>
 @property (nonatomic, strong) QBUUser *user;
@@ -31,6 +32,16 @@
     self.user = [QBSession currentSession].currentUser;
     self.userName = self.user.fullName;
     self.userPhone = self.user.phone;
+    if (self.user.customData) {
+        NSData *data = [self.user.customData dataUsingEncoding:NSUTF8StringEncoding];
+        NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data
+                                                                     options:kNilOptions
+                                                                       error:nil];
+        if (jsonResponse) {
+            self.userAddresss = [jsonResponse valueForKey:@"address"];
+            self.userDescription = [jsonResponse valueForKey:@"description"];
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -41,7 +52,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = [self heightForBasicCellAtIndexPaths:indexPath tableView:tableView];
-    return height;// > 282 ? height : 282;
+    return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -51,30 +62,37 @@
 }
 
 - (void)configureformTableViewCell:(CustomCellEditProfile *)cell atIndexPath:(NSIndexPath *)indexPath tableView:(UITableView*)tableView{
-    // some code for initializing cell content
+    cell.tag = 100;
     cell.didClickUpdateAvatar = ^{
         [self actionShowCamera];
     };
     cell.nameTextField.text = self.userName;
     cell.phoneTextField.text = self.userPhone;
+    cell.addressTextField.text = self.userAddresss;
+    cell.descriptionTextView.text = self.userDescription;
+    
     NSUInteger userProfilePictureID = self.user.blobID; // user - an instance of QBUUser class
-    // download user profile picture
-    cell.activityIndicator.hidden = NO;
-    [cell.activityIndicator startAnimating];
-    [QBRequest downloadFileWithID:userProfilePictureID successBlock:^(QBResponse * _Nonnull response, NSData * _Nonnull fileData) {
-        if (fileData) {
-            UIImage *image = [UIImage imageWithData:fileData];
-            cell.avatarImageView.image = image;
+    if (userProfilePictureID) {
+        cell.activityIndicator.hidden = NO;
+        [cell.activityIndicator startAnimating];
+        [QBRequest downloadFileWithID:userProfilePictureID successBlock:^(QBResponse * _Nonnull response, NSData * _Nonnull fileData) {
+            if (fileData) {
+                UIImage *image = [UIImage imageWithData:fileData];
+                cell.avatarImageView.image = image;
+                [cell.activityIndicator stopAnimating];
+                cell.activityIndicator.hidden = YES;
+            }
+        } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
+            
+        } errorBlock:^(QBResponse * _Nonnull response) {
+            cell.avatarImageView.image = [UIImage imageNamed:@"profileDefault"];
             [cell.activityIndicator stopAnimating];
             cell.activityIndicator.hidden = YES;
-        }
-    } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
-        
-    } errorBlock:^(QBResponse * _Nonnull response) {
-        cell.avatarImageView.image = [UIImage imageNamed:@"profileDefault"];
+        }];
+    }else{
         [cell.activityIndicator stopAnimating];
         cell.activityIndicator.hidden = YES;
-    }];
+    }
 }
 
 - (CGFloat)heightForBasicCellAtIndexPaths:(NSIndexPath *)indexPath tableView:(UITableView*)tableView{
@@ -101,28 +119,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 #pragma mark UITextFieldDelegate
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    if (textField.tag==1) {
-        self.userName = textField.text;
-    }
-    if (textField.tag==2) {
-        self.userPhone = textField.text;
+    switch (textField.tag) {
+        case 1:
+            self.userName = textField.text;
+            break;
+        case 2:
+            self.userPhone = textField.text;
+            break;
+        case 3:
+            self.userAddresss = textField.text;
+            break;
+        default:
+            break;
     }
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     self.isChange = YES;
     return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    self.isChange = YES;
+    return YES;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    self.userDescription = textView.text;
 }
 
 #pragma mark CameraObjectDelegate
@@ -170,18 +195,32 @@
 - (void)updateInfoCurrentUser {
     [self.view endEditing:YES];
     if (self.isChange) {
-        QBUpdateUserParameters *updateParameters = [QBUpdateUserParameters new];
-        updateParameters.website = @"www.mysite.com";
-        updateParameters.phone = self.userPhone;
-        updateParameters.fullName = self.userName;
-        [QBRequest updateCurrentUser:updateParameters successBlock:^(QBResponse *response, QBUUser *user) {
-            [CommonFeature showAlertTitle:nil Message:@"Update Profile successfully" duration:2.0 showIn:self blockDismissView:^{
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"didCompleteUpdateProfile" object:nil];
-            }];
-            self.isChange = NO;
-        } errorBlock:^(QBResponse *response) {
-            [CommonFeature showAlertTitle:nil Message:@"Update Profile error" duration:2.0 showIn:self blockDismissView:nil];
-            self.isChange = NO;
+        CustomCellEditProfile *cell = (CustomCellEditProfile*)[self.tbView viewWithTag:100];
+        [cell actionValidInput:^(BOOL isValid) {
+            if (isValid) {
+                [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+                QBUpdateUserParameters *updateParameters = [QBUpdateUserParameters new];
+                updateParameters.website = @"www.mysite.com";
+                updateParameters.phone = self.userPhone;
+                updateParameters.fullName = self.userName;
+                NSDictionary *contentDictionary = @{@"address":self.userAddresss, @"description":self.userDescription};
+                NSData *data = [NSJSONSerialization dataWithJSONObject:contentDictionary options:NSJSONWritingPrettyPrinted error:nil];
+                NSString *jsonStr = [[NSString alloc] initWithData:data
+                                                          encoding:NSUTF8StringEncoding];
+                updateParameters.customData = jsonStr;
+                
+                [QBRequest updateCurrentUser:updateParameters successBlock:^(QBResponse *response, QBUUser *user) {
+                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+                    [CommonFeature showAlertTitle:nil Message:@"Update Profile successfully" duration:2.0 showIn:self blockDismissView:^{
+                        [[NSNotificationCenter defaultCenter] postNotificationName:@"didCompleteUpdateProfile" object:nil];
+                    }];
+                    self.isChange = NO;
+                } errorBlock:^(QBResponse *response) {
+                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+                    [CommonFeature showAlertTitle:nil Message:@"Update Profile error" duration:2.0 showIn:self blockDismissView:nil];
+                    self.isChange = NO;
+                }];
+            }
         }];
     }
 }

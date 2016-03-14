@@ -21,6 +21,7 @@ pod 'NMPaginator'
 pod "FDKeychain"
 pod 'SwipeBack'
 pod 'Google-Mobile-Ads-SDK'
+pod 'SDWebImage'
 
 end
 
