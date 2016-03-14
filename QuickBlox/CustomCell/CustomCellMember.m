@@ -17,6 +17,9 @@
     self.avatarImageView.layer.borderWidth = 2.0f;
     self.avatarImageView.layer.masksToBounds = YES;
     self.avatarImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    self.friendButton.layer.cornerRadius = 4.0f;
+    self.friendButton.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -1452,20 +1452,20 @@
                                                         <constraint firstAttribute="height" constant="50" id="fDc-sL-wbO"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="294" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-wz-LgH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="294" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-wz-LgH" customClass="RWLabel">
                                                     <rect key="frame" x="73" y="10" width="215" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="294" translatesAutoresizingMaskIntoConstraints="NO" id="p1J-WH-fO8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="294" translatesAutoresizingMaskIntoConstraints="NO" id="p1J-WH-fO8" customClass="RWLabel">
                                                     <rect key="frame" x="73" y="16" width="215" height="42"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFI-b9-PtY">
-                                                    <rect key="frame" x="296" y="18" width="71" height="28"/>
+                                                    <rect key="frame" x="296" y="8" width="71" height="28"/>
                                                     <color key="backgroundColor" red="0.17254901959999999" green="0.69411764710000001" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="71" id="dm5-VF-Z1G"/>
@@ -1475,15 +1475,24 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Wt-4e-LZp">
+                                                    <rect key="frame" x="30" y="22" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="Pdi-3s-R57"/>
+                                                        <constraint firstAttribute="height" constant="20" id="fV1-hU-C0b"/>
+                                                    </constraints>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="0Wt-4e-LZp" firstAttribute="leading" secondItem="tIA-si-sX2" secondAttribute="trailing" constant="-35" id="0pQ-fd-A6H"/>
                                                 <constraint firstItem="p1J-WH-fO8" firstAttribute="top" secondItem="Glb-wz-LgH" secondAttribute="bottom" constant="6" id="4vV-7t-FiB"/>
                                                 <constraint firstItem="Glb-wz-LgH" firstAttribute="leading" secondItem="tIA-si-sX2" secondAttribute="trailing" constant="8" id="8XO-qH-Dca"/>
                                                 <constraint firstItem="tIA-si-sX2" firstAttribute="top" secondItem="GKY-f1-xUd" secondAttribute="top" constant="8" id="9Jz-Bh-cFY"/>
-                                                <constraint firstItem="gFI-b9-PtY" firstAttribute="top" secondItem="GKY-f1-xUd" secondAttribute="topMargin" constant="10" id="AhF-w6-TLP"/>
+                                                <constraint firstItem="gFI-b9-PtY" firstAttribute="top" secondItem="GKY-f1-xUd" secondAttribute="topMargin" id="AhF-w6-TLP"/>
                                                 <constraint firstAttribute="bottom" secondItem="p1J-WH-fO8" secondAttribute="bottom" constant="10" id="BhZ-NU-JWH"/>
                                                 <constraint firstItem="p1J-WH-fO8" firstAttribute="leading" secondItem="Glb-wz-LgH" secondAttribute="leading" id="HJ4-wf-3GN"/>
                                                 <constraint firstItem="tIA-si-sX2" firstAttribute="leading" secondItem="GKY-f1-xUd" secondAttribute="leading" constant="15" id="IVJ-AI-5T7"/>
+                                                <constraint firstItem="tIA-si-sX2" firstAttribute="top" secondItem="0Wt-4e-LZp" secondAttribute="bottom" constant="-34" id="LX4-b5-xHl"/>
                                                 <constraint firstAttribute="trailing" secondItem="Glb-wz-LgH" secondAttribute="trailing" constant="8" id="REg-VR-hqd"/>
                                                 <constraint firstAttribute="trailing" secondItem="p1J-WH-fO8" secondAttribute="trailing" constant="8" id="T0P-ng-c2S"/>
                                                 <constraint firstItem="gFI-b9-PtY" firstAttribute="trailing" secondItem="GKY-f1-xUd" secondAttribute="trailingMargin" id="hzf-BS-mOO"/>
@@ -1502,6 +1511,7 @@
                                             <outlet property="avatarImageView" destination="tIA-si-sX2" id="CnA-xc-eWb"/>
                                             <outlet property="descriptionLabel" destination="p1J-WH-fO8" id="GzS-TK-Fjc"/>
                                             <outlet property="friendButton" destination="gFI-b9-PtY" id="FSA-cm-wxF"/>
+                                            <outlet property="indicator" destination="0Wt-4e-LZp" id="ZwA-be-lz9"/>
                                             <outlet property="nameLabel" destination="Glb-wz-LgH" id="v0I-a3-yD0"/>
                                         </connections>
                                     </tableViewCell>

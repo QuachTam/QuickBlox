@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RWLabel.h"
 
 @interface CustomCellMember : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet RWLabel *nameLabel;
+@property (weak, nonatomic) IBOutlet RWLabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *friendButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end

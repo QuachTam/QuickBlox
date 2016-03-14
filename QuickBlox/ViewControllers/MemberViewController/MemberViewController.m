@@ -17,6 +17,7 @@
 @interface MemberViewController ()<NMPaginatorDelegate>
 @property (nonatomic, strong) UsersPaginator *paginator;
 @property (nonatomic, strong) NSMutableArray *arrayTemp;
+@property (nonatomic, strong) QBUUser *currentUser;
 @end
 
 @implementation MemberViewController
@@ -31,8 +32,8 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    self.currentUser = [QBSession currentSession].currentUser;
     self.arrayTemp = [NSMutableArray new];
-    
     self.paginator = [[UsersPaginator alloc] initWithPageSize:10 delegate:self];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [self.paginator fetchFirstPage];
@@ -66,42 +67,44 @@
 
 - (void)paginator:(id)paginator didReceiveResults:(NSArray *)results {
     [self.arrayTemp removeAllObjects];
-    for (NSInteger index = 0; index < results.count; index++) {
-        QBUUser *user = [results objectAtIndex:index];
-        if (user.blobID>0) {
-            [QBRequest blobWithID:user.blobID successBlock:^(QBResponse * _Nonnull response, QBCBlob * _Nullable blob) {
-                UserModel *userModel;
-                if (blob) {
-                    userModel = [[UserModel alloc] initWithUser:user blob:blob];
-                }else{
-                    userModel = [[UserModel alloc] initWithUser:user blob:[QBCBlob new]];
-                }
-                [[StorageUser instance].users addObject:userModel];
-                if (index == results.count-1) {
-                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-                    [self.tbView reloadData];
-                }
-            } errorBlock:^(QBResponse * _Nonnull response) {
-                if (index == results.count-1) {
-                    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-                    [self.tbView reloadData];
-                }
-            }];
-        }else{
-            UserModel *userModel = [[UserModel alloc] initWithUser:user blob:[QBCBlob new]];
-            [[StorageUser instance].users addObject:userModel];
-            if (index == results.count-1) {
-                [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-                [self.tbView reloadData];
-            }
-        }
+    self.arrayTemp = [NSMutableArray arrayWithArray:results];
+    [self startInstance];
+}
+
+- (void)startInstance {
+    if (self.arrayTemp.count>0) {
+        QBUUser *user = [self.arrayTemp objectAtIndex:0];
+        __weak __typeof(self)strong = self;
+        [self addUser:user success:^(QBUUser *user, QBCBlob *blob) {
+            UserModel *model = [[UserModel alloc] initWithUser:user blob:blob];
+            [[StorageUser instance].users addObject:model];
+            [strong startInstance];
+        }];
+    }else{
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [self.tbView reloadData];
     }
 }
 
-
-
-- (void)addUser:(QBUUser*)user blob:(QBCBlob*)blob {
-    
+- (void)addUser:(QBUUser*)user success:(void(^)(QBUUser *user, QBCBlob *blob))success{
+    if (user.blobID>0) {
+        [QBRequest blobWithID:user.blobID successBlock:^(QBResponse * _Nonnull response, QBCBlob * _Nullable blob) {
+            [self.arrayTemp removeObjectAtIndex:0];
+            if (success) {
+                success (user, blob);
+            }
+        } errorBlock:^(QBResponse * _Nonnull response) {
+            [self.arrayTemp removeObjectAtIndex:0];
+            if (success) {
+                success (user, [QBCBlob new]);
+            }
+        }];
+    } else {
+        [self.arrayTemp removeObjectAtIndex:0];
+        if (success) {
+            success (user, [QBCBlob new]);
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -112,7 +115,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat height = [self heightForBasicCellAtIndexPaths:indexPath tableView:tableView];
-    return height ;
+    return height >69 ? height:69;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -126,11 +129,24 @@
     UserModel *userModel = [StorageUser instance].users[indexPath.row];
     cell.nameLabel.text = userModel.fullName;
     cell.descriptionLabel.text = userModel.descriptions;
-    
-    NSURL* url = [NSURL URLWithString:userModel.privateUrl];
-    [cell.avatarImageView sd_setImageWithURL:url completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    if (self.currentUser.ID == userModel.ID) {
+        cell.friendButton.hidden = YES;
+    }else{
+        cell.friendButton.hidden = NO;
+    }
+    if (userModel.privateUrl.length) {
+        cell.indicator.hidden = NO;
+        [cell.indicator startAnimating];
         
-    }];
+        NSURL* url = [NSURL URLWithString:userModel.privateUrl];
+        [cell.avatarImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"IconDefault"] options:SDWebImageCacheMemoryOnly completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            [cell.indicator stopAnimating];
+            cell.indicator.hidden = YES;
+        }];
+    }else{
+        [cell.indicator stopAnimating];
+        cell.indicator.hidden = YES;
+    }
 }
 
 - (CGFloat)heightForBasicCellAtIndexPaths:(NSIndexPath *)indexPath tableView:(UITableView*)tableView{

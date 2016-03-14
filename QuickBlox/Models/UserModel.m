@@ -14,8 +14,13 @@
     self = [super init];
     if (self) {
         self.user = user;
+        self.blob = blob;
     }
     return self;
+}
+
+- (NSInteger)ID {
+    return self.user.ID;
 }
 
 - (NSString *)fullName {

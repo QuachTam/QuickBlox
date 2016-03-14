@@ -10,6 +10,7 @@
 #import <QuickBlox/Quickblox.h>
 
 @interface UserModel : NSObject
+@property (nonatomic, readonly) NSInteger ID;
 @property (nonatomic, strong) NSString *fullName;
 @property (nonatomic, strong) NSString *descriptions;
 @property (nonatomic, strong) NSString *privateUrl;
