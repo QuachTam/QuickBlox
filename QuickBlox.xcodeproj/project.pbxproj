@@ -68,6 +68,20 @@
 		FB4422391C51D4240083B341 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4422381C51D4240083B341 /* AppDelegate.m */; };
 		FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44223C1C51D4530083B341 /* CustomAnimationController.m */; };
 		FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44223E1C51D4530083B341 /* SWRevealViewController.m */; };
+		FB5C6F281C994E4000AFD31D /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F231C994E4000AFD31D /* CallViewController.m */; };
+		FB5C6F291C994E4000AFD31D /* LocalVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F251C994E4000AFD31D /* LocalVideoView.m */; };
+		FB5C6F2A1C994E4000AFD31D /* OpponentsFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F271C994E4000AFD31D /* OpponentsFlowLayout.m */; };
+		FB5C6F321C994E6E00AFD31D /* QBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F2D1C994E6E00AFD31D /* QBButton.m */; };
+		FB5C6F331C994E6E00AFD31D /* QBButtonsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F2F1C994E6E00AFD31D /* QBButtonsFactory.m */; };
+		FB5C6F341C994E6E00AFD31D /* QBToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F311C994E6E00AFD31D /* QBToolBar.m */; };
+		FB5C6F371C994E8B00AFD31D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F361C994E8B00AFD31D /* BaseViewController.m */; };
+		FB5C6F3A1C994EB500AFD31D /* CornerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F391C994EB500AFD31D /* CornerView.m */; };
+		FB5C6F3D1C99524100AFD31D /* ChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F3C1C99524100AFD31D /* ChatManager.m */; };
+		FB5C6F411C99526A00AFD31D /* OpponentCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F401C99526A00AFD31D /* OpponentCollectionViewCell.m */; };
+		FB5C6F451C99528200AFD31D /* QMSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F441C99528200AFD31D /* QMSoundManager.m */; };
+		FB5C6F4D1C99619200AFD31D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F4C1C99619200AFD31D /* Settings.m */; };
+		FB5C6F531C99658000AFD31D /* QBUUser+IndexAndColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F501C99658000AFD31D /* QBUUser+IndexAndColor.m */; };
+		FB5C6F541C99658000AFD31D /* UsersDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5C6F521C99658000AFD31D /* UsersDataSource.m */; };
 		FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */; };
 		FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6F7E851C587DB5002F63F3 /* CartViewController.m */; };
 		FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7D2FD21C5F0E6600EEF1EC /* SetupViewContronller.m */; };
@@ -203,6 +217,34 @@
 		FB44223C1C51D4530083B341 /* CustomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnimationController.m; sourceTree = "<group>"; };
 		FB44223D1C51D4530083B341 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FB44223E1C51D4530083B341 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		FB5C6F221C994E4000AFD31D /* CallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
+		FB5C6F231C994E4000AFD31D /* CallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
+		FB5C6F241C994E4000AFD31D /* LocalVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalVideoView.h; sourceTree = "<group>"; };
+		FB5C6F251C994E4000AFD31D /* LocalVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalVideoView.m; sourceTree = "<group>"; };
+		FB5C6F261C994E4000AFD31D /* OpponentsFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpponentsFlowLayout.h; sourceTree = "<group>"; };
+		FB5C6F271C994E4000AFD31D /* OpponentsFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpponentsFlowLayout.m; sourceTree = "<group>"; };
+		FB5C6F2C1C994E6E00AFD31D /* QBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBButton.h; sourceTree = "<group>"; };
+		FB5C6F2D1C994E6E00AFD31D /* QBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBButton.m; sourceTree = "<group>"; };
+		FB5C6F2E1C994E6E00AFD31D /* QBButtonsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBButtonsFactory.h; sourceTree = "<group>"; };
+		FB5C6F2F1C994E6E00AFD31D /* QBButtonsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBButtonsFactory.m; sourceTree = "<group>"; };
+		FB5C6F301C994E6E00AFD31D /* QBToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QBToolBar.h; sourceTree = "<group>"; };
+		FB5C6F311C994E6E00AFD31D /* QBToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QBToolBar.m; sourceTree = "<group>"; };
+		FB5C6F351C994E8B00AFD31D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		FB5C6F361C994E8B00AFD31D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		FB5C6F381C994EB500AFD31D /* CornerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CornerView.h; sourceTree = "<group>"; };
+		FB5C6F391C994EB500AFD31D /* CornerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CornerView.m; sourceTree = "<group>"; };
+		FB5C6F3B1C99524100AFD31D /* ChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatManager.h; sourceTree = "<group>"; };
+		FB5C6F3C1C99524100AFD31D /* ChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatManager.m; sourceTree = "<group>"; };
+		FB5C6F3F1C99526A00AFD31D /* OpponentCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpponentCollectionViewCell.h; sourceTree = "<group>"; };
+		FB5C6F401C99526A00AFD31D /* OpponentCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpponentCollectionViewCell.m; sourceTree = "<group>"; };
+		FB5C6F431C99528200AFD31D /* QMSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSoundManager.h; sourceTree = "<group>"; };
+		FB5C6F441C99528200AFD31D /* QMSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QMSoundManager.m; sourceTree = "<group>"; };
+		FB5C6F4B1C99619200AFD31D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		FB5C6F4C1C99619200AFD31D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		FB5C6F4F1C99658000AFD31D /* QBUUser+IndexAndColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QBUUser+IndexAndColor.h"; sourceTree = "<group>"; };
+		FB5C6F501C99658000AFD31D /* QBUUser+IndexAndColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "QBUUser+IndexAndColor.m"; sourceTree = "<group>"; };
+		FB5C6F511C99658000AFD31D /* UsersDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersDataSource.h; sourceTree = "<group>"; };
+		FB5C6F521C99658000AFD31D /* UsersDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersDataSource.m; sourceTree = "<group>"; };
 		FB6F7E801C5877E6002F63F3 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		FB6F7E811C5877E6002F63F3 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		FB6F7E841C587DB5002F63F3 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
@@ -426,6 +468,7 @@
 		FB05A9A71C5225D700F4DC97 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				FB5C6F3E1C99526A00AFD31D /* OpponentCollectionViewCell */,
 				FB05A9A81C5225E100F4DC97 /* LeftCustomCell.h */,
 				FB05A9A91C5225E100F4DC97 /* LeftCustomCell.m */,
 				FB117DD11C5F5E3F00F8E222 /* ItemsTableViewCell.h */,
@@ -545,6 +588,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FB5C6F201C994E4000AFD31D /* QuickBlox */,
 				FBFAB4B91C96980A00B41597 /* MemberViewController */,
 				A5E26C221C9599F100CD1B5B /* ProfileViewController */,
 				FBFB7AB61C61A7310088ED92 /* ForgotPasswordViewController */,
@@ -579,6 +623,88 @@
 				FB44223E1C51D4530083B341 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		FB5C6F201C994E4000AFD31D /* QuickBlox */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F4E1C99658000AFD31D /* UsersDataSource */,
+				FB5C6F4A1C99619200AFD31D /* Settings */,
+				FB5C6F421C99528200AFD31D /* QMSoundManager */,
+				FB5C6F2B1C994E6E00AFD31D /* QBToolBar */,
+				FB5C6F211C994E4000AFD31D /* CallViewController */,
+			);
+			path = QuickBlox;
+			sourceTree = "<group>";
+		};
+		FB5C6F211C994E4000AFD31D /* CallViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F351C994E8B00AFD31D /* BaseViewController.h */,
+				FB5C6F361C994E8B00AFD31D /* BaseViewController.m */,
+				FB5C6F221C994E4000AFD31D /* CallViewController.h */,
+				FB5C6F231C994E4000AFD31D /* CallViewController.m */,
+				FB5C6F241C994E4000AFD31D /* LocalVideoView.h */,
+				FB5C6F251C994E4000AFD31D /* LocalVideoView.m */,
+				FB5C6F261C994E4000AFD31D /* OpponentsFlowLayout.h */,
+				FB5C6F271C994E4000AFD31D /* OpponentsFlowLayout.m */,
+			);
+			path = CallViewController;
+			sourceTree = "<group>";
+		};
+		FB5C6F2B1C994E6E00AFD31D /* QBToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F3B1C99524100AFD31D /* ChatManager.h */,
+				FB5C6F3C1C99524100AFD31D /* ChatManager.m */,
+				FB5C6F381C994EB500AFD31D /* CornerView.h */,
+				FB5C6F391C994EB500AFD31D /* CornerView.m */,
+				FB5C6F2C1C994E6E00AFD31D /* QBButton.h */,
+				FB5C6F2D1C994E6E00AFD31D /* QBButton.m */,
+				FB5C6F2E1C994E6E00AFD31D /* QBButtonsFactory.h */,
+				FB5C6F2F1C994E6E00AFD31D /* QBButtonsFactory.m */,
+				FB5C6F301C994E6E00AFD31D /* QBToolBar.h */,
+				FB5C6F311C994E6E00AFD31D /* QBToolBar.m */,
+			);
+			path = QBToolBar;
+			sourceTree = "<group>";
+		};
+		FB5C6F3E1C99526A00AFD31D /* OpponentCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F3F1C99526A00AFD31D /* OpponentCollectionViewCell.h */,
+				FB5C6F401C99526A00AFD31D /* OpponentCollectionViewCell.m */,
+			);
+			path = OpponentCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		FB5C6F421C99528200AFD31D /* QMSoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F431C99528200AFD31D /* QMSoundManager.h */,
+				FB5C6F441C99528200AFD31D /* QMSoundManager.m */,
+			);
+			path = QMSoundManager;
+			sourceTree = "<group>";
+		};
+		FB5C6F4A1C99619200AFD31D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F4B1C99619200AFD31D /* Settings.h */,
+				FB5C6F4C1C99619200AFD31D /* Settings.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FB5C6F4E1C99658000AFD31D /* UsersDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FB5C6F4F1C99658000AFD31D /* QBUUser+IndexAndColor.h */,
+				FB5C6F501C99658000AFD31D /* QBUUser+IndexAndColor.m */,
+				FB5C6F511C99658000AFD31D /* UsersDataSource.h */,
+				FB5C6F521C99658000AFD31D /* UsersDataSource.m */,
+			);
+			path = UsersDataSource;
 			sourceTree = "<group>";
 		};
 		FB6F7E7F1C5877D0002F63F3 /* SignUpViewController */ = {
@@ -882,16 +1008,22 @@
 				FB05A9A01C521D9A00F4DC97 /* LoginViewController.m in Sources */,
 				FBCB74331C92AE1300CF017B /* QRToggleTorchButton.m in Sources */,
 				FBFAB4D11C96A33C00B41597 /* UsersPaginator.m in Sources */,
+				FB5C6F411C99526A00AFD31D /* OpponentCollectionViewCell.m in Sources */,
 				A5E26C2E1C959D2000CD1B5B /* CustomCellEditProfile.m in Sources */,
 				FB4422221C51CD1C0083B341 /* QuickBlox.xcdatamodeld in Sources */,
+				FB5C6F281C994E4000AFD31D /* CallViewController.m in Sources */,
 				FBCB74311C92AE1300CF017B /* QRCodeReaderView.m in Sources */,
 				A5E26C281C959A3600CD1B5B /* ProfileEditViewController.m in Sources */,
 				A5E26C251C959A0100CD1B5B /* ProfileViewController.m in Sources */,
+				FB5C6F371C994E8B00AFD31D /* BaseViewController.m in Sources */,
+				FB5C6F331C994E6E00AFD31D /* QBButtonsFactory.m in Sources */,
 				FB44223F1C51D4530083B341 /* CustomAnimationController.m in Sources */,
+				FB5C6F321C994E6E00AFD31D /* QBButton.m in Sources */,
 				FB1AA96E1C6052990095D816 /* CommonFeature.m in Sources */,
 				FBCB74141C92A0C800CF017B /* RWLabel.m in Sources */,
 				FBFAB4D01C96A33C00B41597 /* StorageUser.m in Sources */,
 				FB1AA96A1C6052030095D816 /* DatePickerViewController.m in Sources */,
+				FB5C6F3D1C99524100AFD31D /* ChatManager.m in Sources */,
 				FBCB74321C92AE1300CF017B /* QRCodeReaderViewController.m in Sources */,
 				FB6F7E861C587DB5002F63F3 /* CartViewController.m in Sources */,
 				FB8DFD6D1C916CF0004C344A /* AdmodManager.m in Sources */,
@@ -899,29 +1031,37 @@
 				FB05A9AB1C5225E100F4DC97 /* LeftCustomCell.m in Sources */,
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
 				FBCB742F1C92AE1300CF017B /* QRCameraSwitchButton.m in Sources */,
+				FB5C6F531C99658000AFD31D /* QBUUser+IndexAndColor.m in Sources */,
 				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
+				FB5C6F3A1C994EB500AFD31D /* CornerView.m in Sources */,
 				FBFAB4BF1C969D2200B41597 /* CustomCellMember.m in Sources */,
+				FB5C6F291C994E4000AFD31D /* LocalVideoView.m in Sources */,
 				A52288E81C8746B60032DD5C /* SubStatisticsViewController.m in Sources */,
 				FBFAB4D61C96AD3A00B41597 /* UserModel.m in Sources */,
 				A52010FE1C95D4E600943E53 /* UIActionSheet+Blocks.m in Sources */,
 				FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */,
 				A5E26C191C95816100CD1B5B /* CustomViewProfile.m in Sources */,
+				FB5C6F2A1C994E4000AFD31D /* OpponentsFlowLayout.m in Sources */,
 				FB117DD01C5F5B2C00F8E222 /* ItemsTableViewController.m in Sources */,
 				A5E26C2B1C959AB900CD1B5B /* CustomCellProfile.m in Sources */,
+				FB5C6F4D1C99619200AFD31D /* Settings.m in Sources */,
 				FB7D2FD71C5F0E9900EEF1EC /* StatisticsViewController.m in Sources */,
 				FBFAB4BC1C96981500B41597 /* MemberViewController.m in Sources */,
 				FB6F7E821C5877E6002F63F3 /* SignUpViewController.m in Sources */,
 				A52010FB1C95D40800943E53 /* CameraObject.m in Sources */,
+				FB5C6F541C99658000AFD31D /* UsersDataSource.m in Sources */,
 				FB4422391C51D4240083B341 /* AppDelegate.m in Sources */,
 				A52288E51C8742570032DD5C /* CustomCellOnlyText.m in Sources */,
 				FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */,
 				FB05A99B1C521B3500F4DC97 /* LeftTableViewController.m in Sources */,
 				FB117DE71C5F846600F8E222 /* AddItemTableViewCell.m in Sources */,
+				FB5C6F341C994E6E00AFD31D /* QBToolBar.m in Sources */,
 				FBCB74301C92AE1300CF017B /* QRCodeReader.m in Sources */,
 				FB117DD41C5F5E3F00F8E222 /* ItemsTableViewCell.m in Sources */,
+				FB5C6F451C99528200AFD31D /* QMSoundManager.m in Sources */,
 				FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */,
 				FB4422161C51CD1C0083B341 /* main.m in Sources */,
 			);

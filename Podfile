@@ -17,6 +17,7 @@ pod 'MBLocationManager'
 pod 'GoogleMaps'
 pod 'MBCalendarKit'
 pod 'QuickBlox'
+pod 'Quickblox-WebRTC'
 pod 'NMPaginator'
 pod "FDKeychain"
 pod 'SwipeBack'

@@ -9,6 +9,7 @@
 #import "ProfileViewController.h"
 #import "CustomCellProfile.h"
 #import <Quickblox/Quickblox.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileViewController ()
 @property (nonatomic, strong) QBUUser *user;
@@ -72,24 +73,10 @@
             cell.addressLabel.text = [jsonResponse valueForKey:@"address"];
             cell.descriptionLabel.text = [jsonResponse valueForKey:@"description"];
         }
-    }
-    
-    NSUInteger userProfilePictureID = self.user.blobID;
-    // download user profile picture
-    if (userProfilePictureID) {
         cell.activityIndicator.hidden = NO;
         [cell.activityIndicator startAnimating];
-        [QBRequest downloadFileWithID:userProfilePictureID successBlock:^(QBResponse * _Nonnull response, NSData * _Nonnull fileData) {
-            if (fileData) {
-                UIImage *image = [UIImage imageWithData:fileData];
-                cell.avatarImage.image = image;
-                [cell.activityIndicator stopAnimating];
-                cell.activityIndicator.hidden = YES;
-            }
-        } statusBlock:^(QBRequest * _Nonnull request, QBRequestStatus * _Nullable status) {
-            
-        } errorBlock:^(QBResponse * _Nonnull response) {
-            cell.avatarImage.image = [UIImage imageNamed:@"profileDefault"];
+        NSURL* url = [NSURL URLWithString:[jsonResponse valueForKey:@"privateUrl"]];
+        [cell.avatarImage sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"IconDefault"] options:SDWebImageCacheMemoryOnly completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
             [cell.activityIndicator stopAnimating];
             cell.activityIndicator.hidden = YES;
         }];

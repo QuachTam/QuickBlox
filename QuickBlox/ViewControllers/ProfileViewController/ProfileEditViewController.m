@@ -208,14 +208,13 @@
                 NSString *jsonStr = [[NSString alloc] initWithData:data
                                                           encoding:NSUTF8StringEncoding];
                 updateParameters.customData = jsonStr;
-                
-                [QBRequest updateCurrentUser:updateParameters successBlock:^(QBResponse *response, QBUUser *user) {
+                [self updateCurrentUserWithContentDictionary:contentDictionary success:^(QBResponse *response, QBUUser *user){
                     [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
                     [CommonFeature showAlertTitle:nil Message:@"Update Profile successfully" duration:2.0 showIn:self blockDismissView:^{
                         [[NSNotificationCenter defaultCenter] postNotificationName:@"didCompleteUpdateProfile" object:nil];
                     }];
                     self.isChange = NO;
-                } errorBlock:^(QBResponse *response) {
+                } fail:^(QBResponse *response){
                     [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
                     [CommonFeature showAlertTitle:nil Message:@"Update Profile error" duration:2.0 showIn:self blockDismissView:nil];
                     self.isChange = NO;
@@ -223,6 +222,23 @@
             }
         }];
     }
+}
+
+- (void)updateCurrentUserWithContentDictionary:(NSDictionary *)contentDictionary success:(void(^)(QBResponse *response, QBUUser *user))success fail:(void(^)(QBResponse *response))fail{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:contentDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonStr = [[NSString alloc] initWithData:data
+                                              encoding:NSUTF8StringEncoding];
+    QBUpdateUserParameters *updateParameters = [QBUpdateUserParameters new];
+    updateParameters.customData = jsonStr;
+    [QBRequest updateCurrentUser:updateParameters successBlock:^(QBResponse *response, QBUUser *user) {
+        if (success) {
+            success(response, user);
+        }
+    } errorBlock:^(QBResponse *response) {
+        if (fail) {
+            fail(response);
+        }
+    }];
 }
 
 - (void)updateAvatar:(UIImage *)image{
@@ -269,5 +285,36 @@
             [CommonFeature showAlertTitle:nil Message:@"Upload avatar error" duration:2.0 showIn:self blockDismissView:nil];
         }];
     }
+}
+
+- (NSString *)setPrivateUrlToCustomData:(NSString *)privateAvatar {
+    NSMutableDictionary *currentDict = [self getInfoOfCustomdata];
+    if (!currentDict) {
+        return nil;
+    }
+    NSString *json = [self setAvatarCurrentUserToCustomdata:privateAvatar dictianaryInfo:currentDict];
+    return json;
+}
+
+- (NSString*)setAvatarCurrentUserToCustomdata:(NSString *)privateAvatar dictianaryInfo:(NSMutableDictionary *)dictianaryInfo {
+    if (!privateAvatar) {
+        return nil;
+    }
+    [dictianaryInfo setObject:privateAvatar forKey:@"privateUrl"];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictianaryInfo options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonStr = [[NSString alloc] initWithData:data
+                                              encoding:NSUTF8StringEncoding];
+    return jsonStr;
+}
+
+- (NSMutableDictionary *)getInfoOfCustomdata {
+    NSData *data = [self.user.customData dataUsingEncoding:NSUTF8StringEncoding];
+    if (!data) {
+        return nil;
+    }
+    NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:kNilOptions
+                                                                   error:nil];
+    return [[NSMutableDictionary alloc] initWithDictionary:jsonResponse];
 }
 @end
