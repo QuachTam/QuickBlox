@@ -21,6 +21,7 @@
     #import "AdmodManager.h"
     #import <Quickblox/Quickblox.h>
     #import <QuickbloxWebRTC/QuickbloxWebRTC.h>
+    #import "QuickBloxCommon.h"
     #define _LSFromTable NSLocalizedStringFromTable
     #define _LS NSLocalizedString
 #endif

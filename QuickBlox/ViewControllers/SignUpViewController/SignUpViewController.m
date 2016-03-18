@@ -67,6 +67,7 @@
                 user.login = self.nameTextField.text;
                 user.email = self.emailTextField.text;
                 user.phone = self.phoneTextField.text;
+                
                 // Registration/sign up of User
                 [QBRequest signUp:user successBlock:^(QBResponse *response, QBUUser *user) {
                     // Sign up was successful

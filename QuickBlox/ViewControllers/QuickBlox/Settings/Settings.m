@@ -48,7 +48,6 @@ NSString *const kMediaConfigKey = @"mediaConfig";
     NSData *mediaConfig = [NSKeyedArchiver archivedDataWithRootObject:self.mediaConfiguration];
     
     [defaults setInteger:self.preferredCameraPostion forKey:kPreferredCameraPosition];
-    [defaults setInteger:self.listType forKey:kListOfUsersKey];
     [defaults setInteger:self.remoteVideoViewRendererType forKey:kVideoRendererType];
     
     [defaults setObject:self.stunServers forKey:kStunServerListKey];
@@ -62,7 +61,6 @@ NSString *const kMediaConfigKey = @"mediaConfig";
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    self.listType = [defaults integerForKey:kListOfUsersKey];
     self.stunServers = [defaults arrayForKey:kStunServerListKey];
     
     AVCaptureDevicePosition postion = [defaults integerForKey:kPreferredCameraPosition];
@@ -100,31 +98,10 @@ NSString *const kMediaConfigKey = @"mediaConfig";
     self.remoteVideoViewRendererType = type;
 }
 
-- (void)setListType:(ListOfUsers)listType {
-
-    _listType = listType;
-    
-    switch (self.listType) {
-            
-        case ListOfUsersPROD:
-        case ListOfUsersQA:
-        case ListOfUsersDEV: {
-            //Quickblox preferences
-            [QBSettings setApplicationID:92];
-            [QBSettings setAuthKey:@"wJHdOcQSxXQGWx5"];
-            [QBSettings setAuthSecret:@"BTFsj7Rtt27DAmT"];
-            
-            break;
-        }
-        case ListOfUsersWEB: {
-            
-            [QBSettings setApplicationID:28287];
-            [QBSettings setAuthKey:@"XydaWcf8OO9xhGT"];
-            [QBSettings setAuthSecret:@"JZfqTspCvELAmnW"];
-            
-            break;
-        }
-    }
+- (void)setListType {
+    [QBSettings setApplicationID:92];
+    [QBSettings setAuthKey:@"wJHdOcQSxXQGWx5"];
+    [QBSettings setAuthSecret:@"BTFsj7Rtt27DAmT"];
 }
 
 @end

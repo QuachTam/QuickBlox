@@ -37,6 +37,9 @@
     self.paginator = [[UsersPaginator alloc] initWithPageSize:10 delegate:self];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [self.paginator fetchFirstPage];
+    
+    NSArray *array = [QBChat instance].contactList.pendingApproval;
+    NSLog(@"pendingApproval");
 }
 
 #pragma mark
@@ -134,6 +137,8 @@
     }else{
         cell.friendButton.hidden = NO;
     }
+    cell.friendButton.tag = indexPath.row;
+    [cell.friendButton addTarget:self action:@selector(actionAddFriend:) forControlEvents:UIControlEventTouchUpInside];
     if (userModel.privateUrl.length) {
         cell.indicator.hidden = NO;
         [cell.indicator startAnimating];
@@ -167,6 +172,15 @@
     return size.height + 1.0f; // Add 1.0f for the cell separator height
 }
 
+- (void)actionAddFriend:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    UserModel *userModel = [StorageUser instance].users[[sender tag]];
+    // connect to Chat
+    QuickBloxCommon* qbCommon =  [QuickBloxCommon shareInstance];
+    [qbCommon addUserToContactListRequestWithID:userModel.user.ID success:^(NSError *error) {
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

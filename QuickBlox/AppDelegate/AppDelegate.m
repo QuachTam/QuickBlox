@@ -11,6 +11,7 @@
 #import "GAITracker.h"
 #import "GAI.h"
 #import "GAIFields.h"
+#import "QuickBloxCommon.h"
 
 const NSUInteger kApplicationID = 33971;
 NSString *const kAuthKey        = @"K8NJhtA66Xa6pwF";
@@ -48,6 +49,8 @@ NSString *const kGoogleAnalytics = @"UA-74945025-2";
     [QBSettings setAuthKey:kAuthKey];
     [QBSettings setAuthSecret:kAuthSecret];
     [QBSettings setAccountKey:kAccountKey];
+    
+    [QuickBloxCommon shareInstance];
     
     [self setUpGoogleAnalytics];
     

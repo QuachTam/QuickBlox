@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet RWLabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *friendButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintWidthButtonAddfriend;
 
 @end

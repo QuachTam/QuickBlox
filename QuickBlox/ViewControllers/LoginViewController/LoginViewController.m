@@ -10,6 +10,7 @@
 #import <Quickblox/Quickblox.h>
 #include "SWRevealViewController.h"
 #import "Keychain.h"
+#import "ChatManager.h"
 
 
 @interface LoginViewController ()
@@ -72,13 +73,28 @@
     if (self.emailTextField.text.length && self.passwordTextField.text.length) {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         [QBRequest logInWithUserEmail:self.emailTextField.text password:self.passwordTextField.text successBlock:^(QBResponse *response, QBUUser *user) {
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
-            SWRevealViewController *rootView = [self.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
-            if (sender) {
-                Keychain *keyObject = [Keychain shareInstance];
-                [keyObject setKeyChainWithPassword:self.passwordTextField.text email:self.emailTextField.text];
-            }
-            [self.navigationController pushViewController:rootView animated:YES];
+            __weak __typeof(self)weakSelf = self;
+            QBUUser *current = [QBSession currentSession].currentUser;
+            current.password = self.passwordTextField.text;
+            [[ChatManager instance] logInWithUser:current completion:^(BOOL error) {
+                if (!error) {
+                    [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                    SWRevealViewController *rootView = [weakSelf.storyboard instantiateViewControllerWithIdentifier:@"SWRevealViewController"];
+                    if (sender) {
+                        Keychain *keyObject = [Keychain shareInstance];
+                        [keyObject setKeyChainWithPassword:weakSelf.passwordTextField.text email:weakSelf.emailTextField.text];
+                    }
+                    [weakSelf.navigationController pushViewController:rootView animated:YES];
+                }
+                else {
+                    [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                }
+            } disconnectedBlock:^{
+                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+            } reconnectedBlock:^{
+                [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+            }];
+            
         } errorBlock:^(QBResponse *response) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             NSLog(@"Response error %@:", response.error);

@@ -62,21 +62,9 @@ NSString *const kPasswordKey = @"password";
     return self;
 }
 
-- (NSString *)strWithList:(ListOfUsers)list {
+- (void)loadUsersWithList {
     
-    switch (list) {
-            
-        case ListOfUsersQA: return @"QA";
-        case ListOfUsersDEV: return @"DEV";
-        case ListOfUsersWEB: return @"WEB";
-            
-        default:return @"PROD";
-    }
-}
-
-- (void)loadUsersWithList:(ListOfUsers)list {
-    
-    NSString *plistPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@Users", [self strWithList:list]]
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Users"]
                                                           ofType:@"plist"];
     
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:plistPath];
@@ -127,14 +115,10 @@ NSString *const kPasswordKey = @"password";
 }
 
 - (NSArray *)idsWithUsers:(NSArray *)users {
-    
     NSMutableArray *ids = [NSMutableArray arrayWithCapacity:users.count];
-    
     [users enumerateObjectsUsingBlock:^(QBUUser  *obj, NSUInteger idx, BOOL *stop) {
-        
         [ids addObject:@(obj.ID)];
     }];
-
     return ids.copy;
 }
 

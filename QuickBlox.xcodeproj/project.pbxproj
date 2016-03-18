@@ -123,6 +123,9 @@
 		FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7AB81C61A73D0088ED92 /* ForgotPasswordViewController.m */; };
 		FBFB7ABF1C61A9F00088ED92 /* ObjectsPaginator.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */; };
 		FBFB7AC01C61A9F00088ED92 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFB7ABE1C61A9F00088ED92 /* Storage.m */; };
+		FBFDA0321C9BA56400B18DB7 /* QuickBloxCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFDA0311C9BA56400B18DB7 /* QuickBloxCommon.m */; };
+		FBFDA0361C9BDF5100B18DB7 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFDA0351C9BDF5100B18DB7 /* FriendsViewController.m */; };
+		FBFDA03A1C9BEF5500B18DB7 /* ServiceFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFDA0391C9BEF5500B18DB7 /* ServiceFriends.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -316,6 +319,12 @@
 		FBFB7ABC1C61A9F00088ED92 /* ObjectsPaginator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectsPaginator.m; sourceTree = "<group>"; };
 		FBFB7ABD1C61A9F00088ED92 /* Storage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
 		FBFB7ABE1C61A9F00088ED92 /* Storage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Storage.m; sourceTree = "<group>"; };
+		FBFDA0301C9BA56400B18DB7 /* QuickBloxCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickBloxCommon.h; sourceTree = "<group>"; };
+		FBFDA0311C9BA56400B18DB7 /* QuickBloxCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickBloxCommon.m; sourceTree = "<group>"; };
+		FBFDA0341C9BDF5100B18DB7 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		FBFDA0351C9BDF5100B18DB7 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		FBFDA0381C9BEF5500B18DB7 /* ServiceFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceFriends.h; sourceTree = "<group>"; };
+		FBFDA0391C9BEF5500B18DB7 /* ServiceFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceFriends.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -564,6 +573,7 @@
 				FB05A9A71C5225D700F4DC97 /* CustomCell */,
 				FB4422361C51D4240083B341 /* AppDelegate */,
 				FB44223A1C51D4530083B341 /* SWRevealViewController */,
+				FBFDA0371C9BEF3400B18DB7 /* Services */,
 				FB44222E1C51D40B0083B341 /* ViewControllers */,
 				FB44221D1C51CD1C0083B341 /* Main.storyboard */,
 				FB4422231C51CD1C0083B341 /* Assets.xcassets */,
@@ -588,6 +598,7 @@
 		FB44222E1C51D40B0083B341 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FBFDA0331C9BDF4000B18DB7 /* FriendsViewController */,
 				FB5C6F201C994E4000AFD31D /* QuickBlox */,
 				FBFAB4B91C96980A00B41597 /* MemberViewController */,
 				A5E26C221C9599F100CD1B5B /* ProfileViewController */,
@@ -628,6 +639,7 @@
 		FB5C6F201C994E4000AFD31D /* QuickBlox */ = {
 			isa = PBXGroup;
 			children = (
+				FBFDA02F1C9BA55600B18DB7 /* QuickBloxCommon */,
 				FB5C6F4E1C99658000AFD31D /* UsersDataSource */,
 				FB5C6F4A1C99619200AFD31D /* Settings */,
 				FB5C6F421C99528200AFD31D /* QMSoundManager */,
@@ -843,6 +855,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FBFDA02F1C9BA55600B18DB7 /* QuickBloxCommon */ = {
+			isa = PBXGroup;
+			children = (
+				FBFDA0301C9BA56400B18DB7 /* QuickBloxCommon.h */,
+				FBFDA0311C9BA56400B18DB7 /* QuickBloxCommon.m */,
+			);
+			path = QuickBloxCommon;
+			sourceTree = "<group>";
+		};
+		FBFDA0331C9BDF4000B18DB7 /* FriendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBFDA0341C9BDF5100B18DB7 /* FriendsViewController.h */,
+				FBFDA0351C9BDF5100B18DB7 /* FriendsViewController.m */,
+			);
+			path = FriendsViewController;
+			sourceTree = "<group>";
+		};
+		FBFDA0371C9BEF3400B18DB7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FBFDA0381C9BEF5500B18DB7 /* ServiceFriends.h */,
+				FBFDA0391C9BEF5500B18DB7 /* ServiceFriends.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1032,7 +1071,9 @@
 				FB4422401C51D4530083B341 /* SWRevealViewController.m in Sources */,
 				FBCB742F1C92AE1300CF017B /* QRCameraSwitchButton.m in Sources */,
 				FB5C6F531C99658000AFD31D /* QBUUser+IndexAndColor.m in Sources */,
+				FBFDA0361C9BDF5100B18DB7 /* FriendsViewController.m in Sources */,
 				A55CDFD61C6261C800E9DB1A /* ModelItem.m in Sources */,
+				FBFDA03A1C9BEF5500B18DB7 /* ServiceFriends.m in Sources */,
 				FBFB7AB91C61A73D0088ED92 /* ForgotPasswordViewController.m in Sources */,
 				FB7D2FD31C5F0E6600EEF1EC /* SetupViewContronller.m in Sources */,
 				FB1AA9851C60D4460095D816 /* Keychain.m in Sources */,
@@ -1064,6 +1105,7 @@
 				FB5C6F451C99528200AFD31D /* QMSoundManager.m in Sources */,
 				FB117DE41C5F804A00F8E222 /* AddItemViewController.m in Sources */,
 				FB4422161C51CD1C0083B341 /* main.m in Sources */,
+				FBFDA0321C9BA56400B18DB7 /* QuickBloxCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,6 +1224,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1232,6 +1275,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/QuickBlox/Resource/QuickBlox-PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (
