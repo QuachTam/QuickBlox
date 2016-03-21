@@ -13,11 +13,18 @@
 #import <QuickBlox/Quickblox.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UserModel.h"
+#import "UsersDataSource.h"
+#import "CallViewController.h"
+#import "IncomingCallViewController.h"
 
-@interface MemberViewController ()<NMPaginatorDelegate>
+@interface MemberViewController ()<NMPaginatorDelegate, IncomingCallViewControllerDelegate, QBRTCClientDelegate>
 @property (nonatomic, strong) UsersPaginator *paginator;
 @property (nonatomic, strong) NSMutableArray *arrayTemp;
 @property (nonatomic, strong) QBUUser *currentUser;
+@property (strong, nonatomic) NSMutableArray *selectedUsers;
+@property (strong, nonatomic) UINavigationController *nav;
+@property (weak, nonatomic) QBRTCSession *currentSession;
+
 @end
 
 @implementation MemberViewController
@@ -32,14 +39,15 @@
         [self.menuButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    [QBRTCClient.instance addDelegate:self];
+    [QBRTCConfig setDTLSEnabled:YES];
+    
     self.currentUser = [QBSession currentSession].currentUser;
     self.arrayTemp = [NSMutableArray new];
     self.paginator = [[UsersPaginator alloc] initWithPageSize:10 delegate:self];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     [self.paginator fetchFirstPage];
-    
-    NSArray *array = [QBChat instance].contactList.pendingApproval;
-    NSLog(@"pendingApproval");
+    self.selectedUsers = [NSMutableArray new];
 }
 
 #pragma mark
@@ -170,6 +178,121 @@
     [sizingCell layoutIfNeeded];
     CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     return size.height + 1.0f; // Add 1.0f for the cell separator height
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    [self.selectedUsers removeAllObjects];
+    UserModel *userModel = [StorageUser instance].users[indexPath.row];
+    [self.selectedUsers addObject:userModel.user];
+    [self callWithConferenceType:QBRTCConferenceTypeVideo];
+}
+
+- (void)callWithConferenceType:(QBRTCConferenceType)conferenceType {
+    
+    if ([self usersToCall]) {
+        
+        NSParameterAssert(!self.currentSession);
+        NSParameterAssert(!self.nav);
+        
+        NSArray *opponentsIDs = [UsersDataSource.instance idsWithUsers:self.selectedUsers];
+        //Create new session
+        QBRTCSession *session = [QBRTCClient.instance createNewSessionWithOpponents:opponentsIDs withConferenceType:conferenceType];
+        
+        if (session) {
+            
+            self.currentSession = session;
+            CallViewController *callViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"CallViewController"];
+            callViewController.session = self.currentSession;
+            
+            self.nav = [[UINavigationController alloc] initWithRootViewController:callViewController];
+            self.nav.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+            
+            [[self rootViewController] presentViewController:self.nav animated:NO completion:nil];
+        }
+        else {
+            
+            [SVProgressHUD showErrorWithStatus:@"You should login to use chat API. Session hasn’t been created. Please try to relogin the chat."];
+        }
+    }
+}
+
+- (UIViewController *)rootViewController {
+    return UIApplication.sharedApplication.delegate.window.rootViewController;
+}
+
+#pragma mark - Selected users
+
+- (BOOL)usersToCall {
+    
+    BOOL isOK = (self.selectedUsers.count > 0);
+    
+    if (!isOK) {
+        
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Please select one or more users", nil)];
+    }
+    
+    return isOK;
+}
+
+#pragma mark - QBWebRTCChatDelegate
+
+- (void)didReceiveNewSession:(QBRTCSession *)session userInfo:(NSDictionary *)userInfo {
+    
+    if (self.currentSession) {
+        
+        [session rejectCall:@{@"reject" : @"busy"}];
+        return;
+    }
+    
+    self.currentSession = session;
+    
+    [QBRTCSoundRouter.instance initialize];
+    
+    NSParameterAssert(!self.nav);
+    
+    IncomingCallViewController *incomingViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"IncomingCallViewController"];
+    incomingViewController.delegate = self;
+    
+    self.nav = [[UINavigationController alloc] initWithRootViewController:incomingViewController];
+    
+    incomingViewController.session = session;
+    
+    [self presentViewController:self.nav animated:NO completion:nil];
+}
+
+- (void)sessionDidClose:(QBRTCSession *)session {
+    
+    [QBRTCClient deinitializeRTC];
+    if (session == self.currentSession ) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            self.nav.view.userInteractionEnabled = NO;
+            [self.nav dismissViewControllerAnimated:NO completion:nil];
+            self.currentSession = nil;
+            self.nav = nil;
+        });
+    }
+}
+
+- (void)incomingCallViewController:(IncomingCallViewController *)vc didAcceptSession:(QBRTCSession *)session {
+    
+    CallViewController *callViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"CallViewController"];
+    
+    callViewController.session = session;
+    self.nav.viewControllers = @[callViewController];
+}
+
+- (void)incomingCallViewController:(IncomingCallViewController *)vc didRejectSession:(QBRTCSession *)session {
+    
+    [session rejectCall:nil];
+    [self.nav dismissViewControllerAnimated:NO completion:nil];
+    self.nav = nil;
 }
 
 - (void)actionAddFriend:(id)sender {

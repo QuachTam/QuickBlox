@@ -22,6 +22,9 @@
     #import <Quickblox/Quickblox.h>
     #import <QuickbloxWebRTC/QuickbloxWebRTC.h>
     #import "QuickBloxCommon.h"
+    #import "SVProgressHUD.h"
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
     #define _LSFromTable NSLocalizedStringFromTable
     #define _LS NSLocalizedString
 #endif

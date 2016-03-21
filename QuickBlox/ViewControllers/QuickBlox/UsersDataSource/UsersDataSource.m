@@ -7,7 +7,8 @@
 //
 
 #import "UsersDataSource.h"
-
+#import "StorageUser.h"
+#import "UserModel.h"
 @interface UsersDataSource()
 
 @property (strong, nonatomic, readonly) NSArray *colors;
@@ -144,9 +145,9 @@ NSString *const kPasswordKey = @"password";
 }
 
 - (QBUUser *)userWithID:(NSNumber *)userID {
-    
     NSPredicate *userWithIDPredicate = [NSPredicate predicateWithFormat:@"ID == %@", userID];
-    return [[self.users filteredArrayUsingPredicate:userWithIDPredicate] firstObject];
+    UserModel *userModel = [[[StorageUser instance].users filteredArrayUsingPredicate:userWithIDPredicate] firstObject];
+    return userModel.user;
 }
 
 @end

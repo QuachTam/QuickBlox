@@ -11,10 +11,10 @@
 #include "SWRevealViewController.h"
 #import "Keychain.h"
 #import "ChatManager.h"
-
+#import "Settings.h"
 
 @interface LoginViewController ()
-
+@property (strong, nonatomic) Settings *settings;
 @end
 
 @implementation LoginViewController
@@ -25,6 +25,7 @@
     
     self.loginView.layer.cornerRadius = 4.0f;
     self.loginView.layer.masksToBounds = YES;
+    self.settings = Settings.instance;
 }
 
 - (void)viewDidLoad {
@@ -76,6 +77,7 @@
             __weak __typeof(self)weakSelf = self;
             QBUUser *current = [QBSession currentSession].currentUser;
             current.password = self.passwordTextField.text;
+            // connect to Chat
             [[ChatManager instance] logInWithUser:current completion:^(BOOL error) {
                 if (!error) {
                     [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
@@ -88,19 +90,75 @@
                 }
                 else {
                     [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                    [CommonFeature showAlertTitle:@"Login Error" Message:@"" duration:2.0 showIn:self blockDismissView:nil];
                 }
             } disconnectedBlock:^{
                 [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                [CommonFeature showAlertTitle:@"Login Error" Message:@"" duration:2.0 showIn:self blockDismissView:nil];
             } reconnectedBlock:^{
                 [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+                [CommonFeature showAlertTitle:@"Login Error" Message:@"" duration:2.0 showIn:self blockDismissView:nil];
             }];
             
         } errorBlock:^(QBResponse *response) {
             [MBProgressHUD hideHUDForView:self.view animated:YES];
             NSLog(@"Response error %@:", response.error);
+            [CommonFeature showAlertTitle:@"Login Error" Message:response.error.error.domain duration:2.0 showIn:self blockDismissView:nil];
         }];
     }
 }
+
+- (void)applyConfiguration {
+    
+    NSMutableArray *iceServers = [NSMutableArray array];
+    
+    for (NSString *url in self.settings.stunServers) {
+        
+        QBRTCICEServer *server = [QBRTCICEServer serverWithURL:url username:@"" password:@""];
+        [iceServers addObject:server];
+    }
+    
+    [iceServers addObjectsFromArray:[self quickbloxICE]];
+    
+    [QBRTCConfig setICEServers:iceServers];
+    [QBRTCConfig setMediaStreamConfiguration:self.settings.mediaConfiguration];
+    [QBRTCConfig setStatsReportTimeInterval:1.f];
+}
+
+- (NSArray *)quickbloxICE {
+    
+    NSString *password = @"baccb97ba2d92d71e26eb9886da5f1e0";
+    NSString *userName = @"quickblox";
+    
+    NSArray *urls = @[
+                      @"turn.quickblox.com",       //USA
+                      @"turnsingapore.quickblox.com",   //Singapore
+                      @"turnireland.quickblox.com"      //Ireland
+                      ];
+    
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:urls.count];
+    
+    for (NSString *url in urls) {
+        
+        QBRTCICEServer *stunServer = [QBRTCICEServer serverWithURL:[NSString stringWithFormat:@"stun:%@", url]
+                                                          username:@""
+                                                          password:@""];
+        
+        
+        QBRTCICEServer *turnUDPServer = [QBRTCICEServer serverWithURL:[NSString stringWithFormat:@"turn:%@:3478?transport=udp", url]
+                                                             username:userName
+                                                             password:password];
+        
+        QBRTCICEServer *turnTCPServer = [QBRTCICEServer serverWithURL:[NSString stringWithFormat:@"turn:%@:3478?transport=tcp", url]
+                                                             username:userName
+                                                             password:password];
+        
+        [result addObjectsFromArray:@[stunServer, turnTCPServer, turnUDPServer]];
+    }
+    
+    return result;
+}
+
 
 - (void)saveKeychani:(NSString *)email password:(NSString*)password {
     Keychain *keyObject = [Keychain shareInstance];

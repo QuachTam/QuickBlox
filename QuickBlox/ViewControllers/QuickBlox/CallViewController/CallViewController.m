@@ -19,6 +19,7 @@
 #import "UsersDataSource.h"
 #import "Settings.h"
 #import <mach/mach.h>
+#import "SharingViewController.h"
 
 NSString *const kOpponentCollectionViewCellIdentifier = @"OpponentCollectionViewCellIdentifier";
 NSString *const kSharingViewControllerIdentifier = @"SharingViewController";
@@ -164,6 +165,7 @@ const NSTimeInterval kRefreshTimeInterval = 1.f;
                                                      repeats:YES];
     [self playCallingSound:nil];
     //Start call
+    [QBRTCClient initializeRTC];
     NSDictionary *userInfo = @{@"startCall" : @"userInfo"};
     [self.session startCall:userInfo];
     
@@ -208,11 +210,11 @@ const NSTimeInterval kRefreshTimeInterval = 1.f;
         
         [self.toolbar addButton:[QBButtonsFactory screenShare] action: ^(UIButton *sender) {
             
-//            SharingViewController *sharingVC =
-//            [weakSelf.storyboard instantiateViewControllerWithIdentifier:kSharingViewControllerIdentifier];
-//            sharingVC.session = weakSelf.session;
-//            
-//            [weakSelf.navigationController pushViewController:sharingVC animated:YES];
+            SharingViewController *sharingVC =
+            [weakSelf.storyboard instantiateViewControllerWithIdentifier:kSharingViewControllerIdentifier];
+            sharingVC.session = weakSelf.session;
+            
+            [weakSelf.navigationController pushViewController:sharingVC animated:YES];
         }];
     }
     

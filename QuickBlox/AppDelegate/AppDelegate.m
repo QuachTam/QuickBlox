@@ -14,8 +14,8 @@
 #import "QuickBloxCommon.h"
 
 const NSUInteger kApplicationID = 33971;
-NSString *const kAuthKey        = @"K8NJhtA66Xa6pwF";
-NSString *const kAuthSecret     = @"HXdyzv3HPyEzYa-";
+NSString *const kAuthKey        = @"KZfBTY9vZJjMXTr";
+NSString *const kAuthSecret     = @"J-W9zNGH73zwpq7";
 NSString *const kAccountKey     = @"zPcbuL6B9knt6pSuXqKj";
 NSString *const kGoogleAnalytics = @"UA-74945025-2";
 
@@ -52,9 +52,43 @@ NSString *const kGoogleAnalytics = @"UA-74945025-2";
     
     [QuickBloxCommon shareInstance];
     
-    [self setUpGoogleAnalytics];
     
+    
+    [self setUpGoogleAnalytics];
+    [self registerForRemoteNotifications];
     return YES;
+}
+
+- (void)registerForRemoteNotifications{
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    else{
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+    }
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound];
+#endif
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *deviceIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    QBMSubscription *subscription = [QBMSubscription subscription];
+    subscription.notificationChannel = QBMNotificationChannelAPNS;
+    subscription.deviceUDID = deviceIdentifier;
+    subscription.deviceToken = deviceToken;
+    
+    [QBRequest createSubscription:subscription successBlock:^(QBResponse *response, NSArray *objects) {
+        
+    } errorBlock:^(QBResponse *response) {
+        
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
